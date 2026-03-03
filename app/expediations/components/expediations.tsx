@@ -1,4 +1,5 @@
-import { ExpeditionCard } from "@/components/ui/card";
+import { ExpeditionCard } from "@/components/ui/Expediation_Card";
+
 type Expedition = {
   title: string;
   imageSrc: string;

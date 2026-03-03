@@ -47,10 +47,7 @@ const Navbar = () => {
             className="rounded-lg"
           />
           <span className="font-display text-lg font-bold tracking-tight">
-            Langtang{" "}
-            <span className={scrolled ? "text-primary" : "text-white"}>
-              Outdoor
-            </span>
+            Langtang <span className="text-primary">Outdoor</span>
           </span>
         </Link>
 
