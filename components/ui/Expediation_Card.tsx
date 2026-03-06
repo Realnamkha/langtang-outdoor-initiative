@@ -5,7 +5,6 @@ import MountainIcon from "@/public/assets/mountain";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./button";
 
 type ExpeditionCardProps = {
   title?: string;
@@ -13,8 +12,8 @@ type ExpeditionCardProps = {
   date?: string;
   duration?: string;
   altitude?: string;
-  activity?: string; // optional
-  region?: string; // optional
+  activity?: string;
+  region?: string;
   link: string;
 };
 
@@ -28,77 +27,110 @@ export const ExpeditionCard: React.FC<ExpeditionCardProps> = ({
   region,
   link,
 }) => {
-  return (
-    <article className="bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform transition-transform duration-300 hover:-translate-y-2 relative">
-      {/* Date badge */}
-      {date && (
-        <span className="absolute top-3 right-3 z-10 bg-yellow-400 px-3 py-1 rounded-md text-xs font-bold uppercase">
-          {date}
-        </span>
-      )}
+  const cardTitle = title || link;
 
-      {/* Image */}
-      <div className="relative w-full h-72 md:h-80">
+  return (
+    <article className="group relative bg-white rounded-3xl overflow-hidden flex flex-col shadow-[0_2px_16px_rgba(0,0,0,0.06)] hover:shadow-[0_16px_48px_rgba(1,186,240,0.18)] transition-all duration-500 hover:-translate-y-2">
+      {/* Image container */}
+      <div className="relative w-full h-80 overflow-hidden">
         <Image
           src={imageSrc}
-          alt={title || "Expedition Image"}
-          className="object-cover rounded-t-xl"
+          alt={cardTitle}
+          className="object-cover scale-100 group-hover:scale-110 transition-transform duration-700 ease-in-out"
           fill
           sizes="(max-width: 768px) 100vw, 33vw"
-          priority={true}
+          priority
         />
-      </div>
 
-      {/* Card body */}
-      <div className="p-4 flex flex-col gap-3">
-        {/* Meta info: duration & altitude */}
-        <div className="flex justify-between items-center text-gray-700 text-sm font-medium">
-          {duration && (
-            <div className="flex items-center gap-1.5">
-              <ClockIcon className="w-5 h-5" />
-              <span>{duration}</span>
-            </div>
-          )}
-          {altitude && (
-            <div className="flex items-center gap-1.5">
-              <MountainIcon className="w-5 h-5" />
-              <span>{altitude}</span>
-            </div>
-          )}
-        </div>
+        {/* Deep cinematic gradient */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
-        {/* Activity & Region badges */}
-        <div className="flex flex-wrap gap-2 mt-1">
+        {/* Top badges row */}
+        <div className="absolute top-3 left-3 right-3 flex justify-between items-start z-10">
           {activity && (
-            <span className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+            <span className="bg-white/15 backdrop-blur-md border border-white/20 text-white text-[10px] font-semibold uppercase tracking-widest px-3 py-1.5 rounded-full">
               {activity}
             </span>
           )}
-          {region && (
-            <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
-              {region}
+          {date && (
+            <span className="ml-auto bg-[#01baf0] text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg">
+              {date}
             </span>
           )}
         </div>
 
-        {/* Title */}
-        {title && (
-          <h3 className="font-serif text-lg font-semibold mt-2">{title}</h3>
+        {/* Title overlaid on image bottom */}
+        <div className="absolute bottom-0 left-0 right-0 p-5 z-10">
+          <h3 className="font-extrabold text-white text-lg leading-snug tracking-tight drop-shadow-sm line-clamp-2">
+            {cardTitle}
+          </h3>
+          {region && (
+            <p className="text-white/70 text-xs font-medium mt-1 tracking-wide uppercase">
+              {region}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Card body */}
+      <div className="p-5 flex flex-col gap-4 flex-1">
+        {/* Meta pills */}
+        {(duration || altitude) && (
+          <div className="flex items-center gap-3">
+            {duration && (
+              <div className="flex items-center gap-2 bg-[#F0FAFE] border border-[#01baf0]/15 rounded-full px-3.5 py-1.5">
+                <ClockIcon className="w-3.5 h-3.5 text-[#01baf0]" />
+                <span className="text-xs font-semibold text-[#0D1B2A]">
+                  {duration}
+                </span>
+              </div>
+            )}
+            {altitude && (
+              <div className="flex items-center gap-2 bg-[#F0FAFE] border border-[#01baf0]/15 rounded-full px-3.5 py-1.5">
+                <MountainIcon className="w-3.5 h-3.5 text-[#01baf0]" />
+                <span className="text-xs font-semibold text-[#0D1B2A]">
+                  {altitude}
+                </span>
+              </div>
+            )}
+          </div>
         )}
 
-        {/* Button */}
-        <div className="mt-2">
-          <Button className="w-full text-center">
-            <Link
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full"
+        {/* Spacer to push button to bottom */}
+        <div className="flex-1" />
+
+        {/* Thin divider */}
+        <div className="h-px w-full bg-linear-to-r from-[#01baf0]/20 via-gray-100 to-transparent" />
+
+        {/* CTA */}
+        <Link
+          href={link}
+          rel="noopener noreferrer"
+          className="group/btn relative flex items-center justify-between w-full rounded-2xl bg-[#01baf0] hover:bg-[#01a8d9] px-5 py-3.5 text-white text-sm font-semibold transition-all duration-300 shadow-[0_4px_16px_rgba(1,186,240,0.25)] hover:shadow-[0_4px_24px_rgba(1,186,240,0.45)] overflow-hidden"
+        >
+          {/* Shimmer effect */}
+          <span className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+
+          <span className="relative z-10">
+            {title ? "View Details" : "Explore"}
+          </span>
+          <span className="relative z-10 flex items-center justify-center w-7 h-7 rounded-full bg-white/10 group-hover/btn:bg-white/20 transition-colors">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2.5}
             >
-              {title ? "View Details" : link}
-            </Link>
-          </Button>
-        </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </span>
+        </Link>
       </div>
     </article>
   );

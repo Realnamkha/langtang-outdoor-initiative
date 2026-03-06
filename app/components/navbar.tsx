@@ -57,7 +57,7 @@ const Navbar = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`transition-colors hover:text-green-600 ${
+              className={`transition-colors hover:text-primary ${
                 scrolled ? "text-black" : "text-white"
               }`}
             >

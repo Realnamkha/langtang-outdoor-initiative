@@ -1,106 +1,49 @@
 "use client";
+
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import Link from "next/link";
+import React from "react";
 
-interface Activity {
-  image: string;
+type SimpleCardProps = {
   title: string;
+  imageSrc: string;
   link: string;
-}
+};
 
-const activities: Activity[] = [
-  {
-    image: "/people_01.jpg",
-    title: "14 Peaks Exclusive",
-    link: "#",
-  },
-  {
-    image: "/people_02.jpg",
-    title: "Langtang Trekking",
-    link: "#",
-  },
-  {
-    image: "/people_03.jpg",
-    title: "Everest Base Camp",
-    link: "#",
-  },
-  {
-    image: "/people_01.jpg",
-    title: "14 Peaks Exclusive",
-    link: "#",
-  },
-  {
-    image: "/people_02.jpg",
-    title: "Langtang Trekking",
-    link: "#",
-  },
-  {
-    image: "/people_03.jpg",
-    title: "Everest Base Camp",
-    link: "#",
-  },
-];
-
-export default function RotatingCarousel() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % activities.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
+export const SimpleCard: React.FC<SimpleCardProps> = ({
+  title,
+  imageSrc,
+  link,
+}) => {
   return (
-    <div className="relative flex justify-center items-center py-8">
-      <div className="flex gap-4 perspective-1000">
-        {activities.map((activity, index) => {
-          // Determine position relative to current
-          let scale = 0.8;
-          let opacity = 0.5;
-          let zIndex = 0;
+    <Link
+      href={link}
+      className="group relative block w-full aspect-6/7 rounded-3xl overflow-hidden shadow-[0_4px_24px_rgba(0,0,0,0.10)] hover:shadow-[0_12px_32px_rgba(1,186,240,0.2)] transition-all duration-500 hover:-translate-y-1"
+    >
+      {/* Image */}
+      <Image
+        src={imageSrc}
+        alt={title}
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover scale-100 group-hover:scale-105 transition-transform duration-700 ease-in-out"
+        priority
+      />
 
-          if (index === current) {
-            scale = 1;
-            opacity = 1;
-            zIndex = 10;
-          } else if (
-            index === (current - 1 + activities.length) % activities.length ||
-            index === (current + 1) % activities.length
-          ) {
-            scale = 0.85;
-            opacity = 0.6;
-            zIndex = 5;
-          }
+      {/* Gradient — deepens on hover for better contrast */}
+      <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent group-hover:from-black/85 transition-all duration-500" />
 
-          return (
-            <div
-              key={index}
-              className="relative transition-all duration-500 ease-in-out rounded-xl shadow-lg cursor-pointer"
-              style={{
-                transform: `scale(${scale})`,
-                opacity: opacity,
-                zIndex: zIndex,
-              }}
-              onClick={() => setCurrent(index)}
-            >
-              <div className="overflow-hidden rounded-xl w-64 h-80">
-                <Image
-                  src={activity.image}
-                  alt={activity.title}
-                  width={256}
-                  height={320}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="text-center mt-2 font-bold uppercase">
-                {activity.title}
-              </div>
-              <a href={activity.link} className="absolute inset-0"></a>
-            </div>
-          );
-        })}
+      {/* Bottom bar */}
+      <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="flex items-center justify-center px-5 py-4 bg-white/20 border-t border-white/10">
+          <span
+            style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}
+            className="text-white text-2xl font-bold tracking-wide leading-tight"
+          >
+            {title}
+          </span>
+        </div>
       </div>
-    </div>
+    </Link>
   );
-}
+};

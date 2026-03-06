@@ -1,88 +1,71 @@
 "use client";
 
 import Image from "next/image";
-import * as React from "react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { ExpeditionCard } from "@/components/ui/Expediation_Card";
-
-type Expedition = {
-  title?: string;
-  imageSrc: string;
-  date?: string;
-  duration?: string;
-  altitude?: string;
-  activity?: string;
-  region?: string;
-  link: string;
-};
-
-const expeditions: Expedition[] = [
-  {
-    imageSrc: "/pic2.jpeg",
-    link: "Trekking",
-  },
-  {
-    imageSrc: "/people_03.jpg",
-    link: "Bouldering",
-  },
-  {
-    imageSrc: "/people_04.jpg",
-    link: "Expediation",
-  },
-  {
-    imageSrc: "/people_01.jpg",
-    link: "Adventure",
-  },
-  {
-    imageSrc: "/pic4.jpg",
-    link: "Cultural Tour",
-  },
-];
+import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 export default function Hero_Second() {
   return (
-    <section className="relative min-h-screen mt-4 w-full flex flex-col justify-center px-8 md:px-16">
-      {/* Header */}
-      <div className="w-full flex flex-col justify-start items-center text-center mb-8">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Popular Activities at Langtang Outdoor Initiative
-        </h1>
-        <p className="text-lg md:text-xl text-gray-700 max-w-3xl">
-          Explore the breathtaking landscapes of Langtang. Enjoy hiking,
-          camping, and wildlife spotting in one of Nepal’s most beautiful
-          regions.
-        </p>
-      </div>
+    <section className="relative w-full flex flex-col justify-center px-6 md:px-16 mt-12 mb-12 pt-8 overflow-hidden">
+      <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[#01baf0] opacity-[0.06] blur-3xl -translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#01baf0] opacity-[0.06] blur-3xl translate-x-1/3 translate-y-1/3" />
 
-      {/* Carousel */}
-      <div className="w-full flex justify-center mt-10 p-4">
-        <div className="w-full max-w-7xl relative">
-          <Carousel>
-            <CarouselContent className="flex overflow-visible">
-              {expeditions.map((expedition, index) => (
-                <CarouselItem
-                  key={index}
-                  className="md:basis-1/2 lg:basis-1/3 shrink-0"
-                >
-                  <ExpeditionCard {...expedition} />
-                </CarouselItem>
-              ))}
-            </CarouselContent>
+      <div className="flex flex-col md:flex-row items-center gap-16 w-full max-w-6xl mx-auto">
+        {/* Image */}
+        <motion.div
+          className="w-full md:w-[48%] shrink-0"
+          initial={{ opacity: 0, x: -100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
+          <div className="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_24px_64px_rgba(1,186,240,0.12)]">
+            <Image
+              src="/pic3.jpeg"
+              alt="Langtang Mountain"
+              fill
+              priority
+              className="object-cover hover:scale-[1.03] transition-transform duration-700 ease-in-out"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+            <div className="absolute top-4 left-4 bg-[#01baf0] text-white text-xs font-bold uppercase tracking-widest px-3 py-1.5 rounded-full shadow-md">
+              Langtang
+            </div>
+          </div>
+        </motion.div>
 
-            <CarouselPrevious className="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-blue-500 p-3 rounded-full shadow-md z-20">
-              &#8592;
-            </CarouselPrevious>
-            <CarouselNext className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-blue-500 p-3 rounded-full shadow-md z-20">
-              &#8594;
-            </CarouselNext>
-          </Carousel>
-        </div>
+        {/* Text */}
+        <motion.div
+          className="w-full md:w-[52%] flex flex-col gap-6"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.5 }}
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-[#01baf0] text-xs font-semibold uppercase tracking-[0.15em]">
+              Expedition & Trekking Company
+            </span>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-extrabold leading-[1.1] text-[#0D1B2A] tracking-tight">
+            Langtang <span className="text-[#01baf0]">Outdoor</span> Initiative
+          </h2>
+          <p className="text-gray-500 text-base md:text-[1.05rem] leading-[1.85]">
+            We are a Nepal-based expedition and trekking company dedicated to
+            taking you beyond the ordinary. From the glacial valleys of Langtang
+            to the summit ridges of the Himalayas, we craft journeys that
+            connect you with ancient cultures, raw wilderness, and your own
+            inner strength.
+          </p>
+
+          <Button
+            variant="outline"
+            className="self-start rounded-full px-7 py-5 text-sm font-semibold border-2 border-[#01baf0]/60 text-[#01baf0] hover:bg-[#01baf0]/8 hover:text-[#01baf0] hover:-translate-y-0.5 transition-all"
+          >
+            About Us
+          </Button>
+        </motion.div>
       </div>
     </section>
   );
