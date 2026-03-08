@@ -9,7 +9,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { href: "expediations", label: "Expediations" },
+    { href: "expeditions", label: "Expeditions" },
     { href: "adventures", label: "Adventures" },
     { href: "culturaltours", label: "Cultural-Tours" },
     { href: "about", label: "About" },
@@ -47,7 +47,7 @@ const Navbar = () => {
             className="rounded-lg"
           />
           <span className="font-display text-lg font-bold tracking-tight">
-            Langtang <span className="text-primary">Outdoor</span>
+            Langtang <span className="text-primary">Outdoor Initiative</span>
           </span>
         </Link>
 

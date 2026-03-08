@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type ExpeditionCardProps = {
+type MyCardProps = {
   title?: string;
   imageSrc: string;
   date?: string;
@@ -17,7 +17,7 @@ type ExpeditionCardProps = {
   link: string;
 };
 
-export const ExpeditionCard: React.FC<ExpeditionCardProps> = ({
+export const MyCard: React.FC<MyCardProps> = ({
   title,
   imageSrc,
   date,
@@ -43,7 +43,7 @@ export const ExpeditionCard: React.FC<ExpeditionCardProps> = ({
         />
 
         {/* Deep cinematic gradient */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
 
         {/* Top badges row */}
         <div className="absolute top-3 left-3 right-3 flex justify-between items-start z-10">

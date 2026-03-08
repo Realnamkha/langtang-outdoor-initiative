@@ -27,7 +27,7 @@ const activities: Activity[] = [
   },
   {
     title: "Expedition",
-    imageSrc: "/people_04.jpg",
+    imageSrc: "/expi.jpg",
     link: "/activities/expedition",
   },
   {

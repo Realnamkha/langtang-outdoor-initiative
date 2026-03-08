@@ -1,11 +1,11 @@
-import Expediations from "./components/expediations";
+import Expeditions from "./components/expeditions";
 import Hero from "./components/hero";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <Expediations />
+      <Expeditions />
     </div>
   );
 }

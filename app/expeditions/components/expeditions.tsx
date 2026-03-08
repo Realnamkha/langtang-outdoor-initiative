@@ -1,63 +1,15 @@
 "use client";
 
-import { ExpeditionCard } from "@/components/ui/Expediation_Card";
+import { MyCard } from "@/components/ui/My_Card";
+import { expeditions } from "@/lib/expedition";
 import { motion } from "framer-motion";
-
-type Expedition = {
-  title: string;
-  imageSrc: string;
-  date?: string;
-  duration: string;
-  altitude: string;
-  activity?: string;
-  region?: string;
-  link: string;
-};
-
-const expeditions: Expedition[] = [
-  {
-    title: "Yala Peak 2026",
-    imageSrc: "/pic2.jpeg",
-    duration: "60 days",
-    altitude: "6000 M",
-    link: "/expediations/yala-peak-2026",
-  },
-  {
-    title: "Mt. K2 Expedition Summer 2026",
-    imageSrc: "/people_03.jpg",
-    duration: "60 days",
-    altitude: "8611 M",
-    link: "",
-  },
-  {
-    title: "Mt. K2 Expedition Summer 2026",
-    imageSrc: "/people_04.jpg",
-    duration: "60 days",
-    altitude: "8611 M",
-    link: "",
-  },
-  {
-    title: "Mt. K2 Expedition Summer 2026",
-    imageSrc: "/people_01.jpg",
-    duration: "60 days",
-    altitude: "8611 M",
-    link: "",
-  },
-  {
-    title: "Mt. K2 Expedition Summer 2026",
-    imageSrc: "/pic4.jpg",
-    duration: "60 days",
-    altitude: "8611 M",
-    link: "",
-  },
-];
 
 export default function Expeditions() {
   return (
     <section className="relative w-full bg-[#F8FBFF] px-6 md:px-16 py-20 overflow-hidden">
       {/* Background blobs */}
       <div className="absolute top-0 left-0 w-96 h-96 rounded-full bg-[#01baf0] opacity-[0.06] blur-3xl -translate-x-1/2 -translate-y-1/2" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] rounded-full bg-[#01baf0] opacity-[0.06] blur-3xl translate-x-1/3 translate-y-1/3" />
+      <div className="absolute bottom-0 right-0 w-125 h-125 rounded-full bg-[#01baf0] opacity-[0.06] blur-3xl translate-x-1/3 translate-y-1/3" />
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
@@ -90,7 +42,7 @@ export default function Expeditions() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {expeditions.map((expedition, index) => (
             <motion.div
-              key={index}
+              key={expedition.slug}
               initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{
@@ -100,7 +52,10 @@ export default function Expeditions() {
               }}
               viewport={{ once: false, amount: 0.2 }}
             >
-              <ExpeditionCard {...expedition} />
+              <MyCard
+                {...expedition}
+                link={`/expeditions/${expedition.slug}`}
+              />
             </motion.div>
           ))}
         </div>
