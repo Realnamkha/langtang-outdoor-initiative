@@ -49,7 +49,7 @@ export default function Hero_Second() {
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold leading-[1.1] text-[#0D1B2A] tracking-tight">
-            Langtang <span className="text-[#01baf0]">Outdoor</span> Initiative
+            Langtang <span className="text-[#01baf0]">Outdoor Initiative</span>
           </h2>
           <p className="text-gray-500 text-base md:text-[1.05rem] leading-[1.85]">
             We are a Nepal-based expedition and trekking company dedicated to

@@ -7,6 +7,7 @@ import Image from "next/image";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   const navLinks = [
     { href: "expeditions", label: "Expeditions" },
@@ -15,18 +16,6 @@ const Navbar = () => {
     { href: "about", label: "About" },
     { href: "contact", label: "Contact" },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <nav
@@ -98,6 +87,19 @@ const Navbar = () => {
           ))}
         </div>
       )}
+
+      {/* ── Progress bar — flush at bottom of navbar ── */}
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-transparent">
+        <div
+          className="h-full transition-none"
+          style={{
+            width: `${progress}%`,
+            background: "linear-gradient(to right, #01baf0, #0191c8)",
+            boxShadow:
+              "0 0 8px rgba(1,186,240,0.6), 0 0 2px rgba(1,186,240,0.4)",
+          }}
+        />
+      </div>
     </nav>
   );
 };

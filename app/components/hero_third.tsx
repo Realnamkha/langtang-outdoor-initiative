@@ -19,15 +19,19 @@ type Activity = {
 };
 
 const activities: Activity[] = [
-  { title: "Trekking", imageSrc: "/pic2.jpeg", link: "/activities/trekking" },
+  {
+    title: "Trekking",
+    imageSrc: "/langtang.jpg",
+    link: "/activities/trekking",
+  },
   {
     title: "Bouldering",
-    imageSrc: "/people_03.jpg",
+    imageSrc: "/bouldering_02.jpeg",
     link: "/activities/bouldering",
   },
   {
     title: "Expedition",
-    imageSrc: "/expi.jpg",
+    imageSrc: "/expe_03.jpg",
     link: "/activities/expedition",
   },
   {
@@ -67,7 +71,7 @@ export default function Hero_Third() {
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] tracking-tight leading-[1.1]">
             Popular Activities at{" "}
-            <span className="text-[#01baf0]">Langtang Outdoor</span>
+            <span className="text-[#01baf0]">Langtang</span> Outdoor Initiative
           </h2>
         </motion.div>
 
