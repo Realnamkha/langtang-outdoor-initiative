@@ -50,7 +50,7 @@ export default function Expeditions() {
                 delay: index * 0.1,
                 ease: "easeOut",
               }}
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <MyCard
                 {...expedition}

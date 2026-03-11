@@ -691,7 +691,7 @@ export const expeditions: Expedition[] = [
   {
     title: "Gangchempo Peak",
     slug: "gangchempo-peak",
-    imageSrc: "/pic4.jpg",
+    imageSrc: "/expe_05.jpg",
     duration: "18 Days",
     altitude: "6,388 M",
     region: "Langtang, Nepal",

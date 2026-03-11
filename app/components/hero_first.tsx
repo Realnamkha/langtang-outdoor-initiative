@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -24,10 +25,12 @@ export default function Hero() {
           Experience breathtaking Himalayan adventures with Langtang Outdoor
           Initiative.
         </p>
-
-        <button className="mt-6 px-6 py-3 rounded-lg bg-primary hover:opacity-90 transition">
+        <Link
+          href="/langtang"
+          className="mt-6 px-6 py-3 rounded-lg bg-primary hover:opacity-90 transition"
+        >
           Discover Langtang
-        </button>
+        </Link>
       </div>
     </section>
   );

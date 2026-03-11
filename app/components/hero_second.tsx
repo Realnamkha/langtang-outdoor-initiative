@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero_Second() {
   return (
@@ -58,12 +59,12 @@ export default function Hero_Second() {
             connect you with ancient cultures, raw wilderness, and your own
             inner strength.
           </p>
-
           <Button
             variant="outline"
             className="self-start rounded-full px-7 py-5 text-sm font-semibold border-2 border-[#01baf0]/60 text-[#01baf0] hover:bg-[#01baf0]/8 hover:text-[#01baf0] hover:-translate-y-0.5 transition-all"
+            asChild
           >
-            About Us
+            <Link href="/about">About Us</Link>
           </Button>
         </motion.div>
       </div>

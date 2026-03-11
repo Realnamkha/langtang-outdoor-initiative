@@ -22,13 +22,6 @@ export default function Hero({ expedition }: { expedition: Expedition }) {
       {/* left vignette */}
       <div className="absolute inset-0 bg-linear-to-r from-black/50 to-transparent" />
 
-      {/* breadcrumb */}
-      <div className="absolute top-8 left-10 z-10">
-        <span className="font-mono-dm text-[10px] tracking-[0.2em] uppercase text-white/50">
-          Expeditions / {expedition.title}
-        </span>
-      </div>
-
       {/* title block */}
       <div className="absolute inset-0 flex flex-col justify-end px-10 pb-20">
         <h1

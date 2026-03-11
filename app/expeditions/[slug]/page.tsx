@@ -3,9 +3,7 @@ import Hero from "./components/Hero";
 import StatsBar from "./components/Statsbar";
 import TripOverview from "./components/TripOverview";
 import Itinerary from "./components/Itinerary";
-import Gallery from "./components/Gallery";
 import CtaBlock from "./components/CtaBlock";
-import ScrollProgress from "./components/ScrollProgress";
 
 export function generateStaticParams() {
   return expeditions.map((e) => ({ slug: e.slug }));
@@ -27,7 +25,6 @@ export default async function ExpeditionPage({
       <TripOverview expedition={expedition} />
       <Itinerary expedition={expedition} />
       <CtaBlock expedition={expedition} />
-      <Gallery expedition={expedition} />
     </main>
   );
 }
