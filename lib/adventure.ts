@@ -1,3 +1,5 @@
+import type { ItineraryDay } from "@/components/ui/Itinerary";
+
 export type Adventure = {
   title: string;
   slug: string;
@@ -11,6 +13,7 @@ export type Adventure = {
   whatsIncluded: string[];
   quickFacts: { label: string; val: string; icon: string }[];
   gallery: string[];
+  itinerary: ItineraryDay[];
 };
 
 export const adventures: Adventure[] = [
@@ -47,6 +50,56 @@ export const adventures: Adventure[] = [
       { label: "Min. Age", val: "14 Years", icon: "user" },
     ],
     gallery: ["/expe_01.jpg", "/pic2.jpeg", "/people_03.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrive Kathmandu — Gear Check & Briefing",
+        description:
+          "Arrive in Kathmandu and transfer to your hotel. Evening gear check, safety briefing, and introductions with your guide team.",
+      },
+      {
+        day: "Day 2",
+        title: "Drive Kathmandu → Syabrubesi",
+        description:
+          "Early morning drive through the hills to Syabrubesi (1,550m). Arrive, settle into the teahouse, and take a short warm-up walk along the river.",
+      },
+      {
+        day: "Day 3",
+        title: "Trek to Lama Hotel — First Boulder Session",
+        description:
+          "Trek through subtropical forest to Lama Hotel (2,380m). Afternoon introductory bouldering session on riverside rock formations with your instructor.",
+      },
+      {
+        day: "Day 4",
+        title: "Trek to Langtang Village — Valley Boulderfield",
+        description:
+          "Continue up the valley to Langtang Village (3,430m). Explore the glacial moraines and tackle the first significant boulderfield problems.",
+      },
+      {
+        day: "Day 5",
+        title: "Langtang Village — Full Bouldering Day",
+        description:
+          "Rest day from trekking, full day dedicated to bouldering. Problems range from easy traverses to technical V4+ lines depending on your progress.",
+      },
+      {
+        day: "Day 6",
+        title: "Trek to Kyanjin Gompa",
+        description:
+          "Final push to Kyanjin Gompa (3,870m). Short afternoon session on the high-altitude boulderfield with panoramic views of Langtang Lirung.",
+      },
+      {
+        day: "Day 7",
+        title: "Kyanjin — Summit Boulder Problems & Acclimatisation",
+        description:
+          "Optional morning hike to Kyanjin Ri. Afternoon dedicated to the most challenging boulder problems of the trip at altitude.",
+      },
+      {
+        day: "Day 8",
+        title: "Return Trek & Depart",
+        description:
+          "Begin descent back through the valley, catch the afternoon jeep to Kathmandu. Evening farewell dinner.",
+      },
+    ],
   },
   {
     title: "Normal Trek",
@@ -81,6 +134,68 @@ export const adventures: Adventure[] = [
       { label: "Max Altitude", val: "3,870m", icon: "mountain" },
     ],
     gallery: ["/landscape_01.jpg", "/people_03.jpg", "/expe_02.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrive Kathmandu — Welcome & Briefing",
+        description:
+          "Arrive in Kathmandu, transfer to hotel. Evening welcome dinner and trek briefing with your guide.",
+      },
+      {
+        day: "Day 2",
+        title: "Drive Kathmandu → Syabrubesi",
+        description:
+          "Scenic 7–8 hour drive to Syabrubesi (1,550m), the starting point of the Langtang trek. Overnight in teahouse.",
+      },
+      {
+        day: "Day 3",
+        title: "Trek Syabrubesi → Lama Hotel",
+        description:
+          "First day on trail through dense subtropical forest following the Langtang Khola river. Arrive at Lama Hotel (2,380m).",
+      },
+      {
+        day: "Day 4",
+        title: "Trek Lama Hotel → Langtang Village",
+        description:
+          "The valley opens up dramatically as you climb to Langtang Village (3,430m). First views of Langtang Lirung and surrounding peaks.",
+      },
+      {
+        day: "Day 5",
+        title: "Trek Langtang Village → Kyanjin Gompa",
+        description:
+          "Short but rewarding day through yak pastures to Kyanjin Gompa (3,870m). Explore the monastery and visit the famous yak cheese factory.",
+      },
+      {
+        day: "Day 6",
+        title: "Kyanjin — Acclimatisation & Exploration",
+        description:
+          "Rest and acclimatise. Optional hike to Kyanjin Ri (4,773m) or Tsergo Ri for panoramic Himalayan views.",
+      },
+      {
+        day: "Day 7",
+        title: "Trek Kyanjin → Lama Hotel",
+        description:
+          "Begin the descent back through the valley, covering ground quickly on familiar trail. Overnight at Lama Hotel.",
+      },
+      {
+        day: "Day 8",
+        title: "Trek Lama Hotel → Syabrubesi",
+        description:
+          "Final day of trekking back to Syabrubesi through the forest. Celebrate with a meal at the teahouse.",
+      },
+      {
+        day: "Day 9",
+        title: "Drive Syabrubesi → Kathmandu",
+        description:
+          "Morning drive back to Kathmandu. Afternoon free to explore Thamel, shop for souvenirs, or rest.",
+      },
+      {
+        day: "Day 10",
+        title: "Departure Day",
+        description:
+          "Transfer to Tribhuvan International Airport for your onward flight. Safe travels!",
+      },
+    ],
   },
   {
     title: "Via Ferrata",
@@ -114,6 +229,38 @@ export const adventures: Adventure[] = [
       { label: "Min. Age", val: "16 Years", icon: "user" },
     ],
     gallery: ["/expe_02.jpg", "/expe_01.jpg", "/pic4.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrive Kathmandu — Kit Fitting & Safety Briefing",
+        description:
+          "Arrive in Kathmandu and transfer to your hotel. Afternoon kit fitting, harness sizing, and a thorough safety briefing with your certified instructor.",
+      },
+      {
+        day: "Day 2",
+        title: "Drive to Langtang & Practice Session",
+        description:
+          "Drive to the valley and complete a ground-level practice session on the lower via ferrata sections — learning cable clip technique and movement fundamentals.",
+      },
+      {
+        day: "Day 3",
+        title: "Main Via Ferrata Route — Full Ascent",
+        description:
+          "The centrepiece of the trip. Full guided ascent of the main Via Ferrata route with exposed ridgeline traverses and panoramic Himalayan views throughout.",
+      },
+      {
+        day: "Day 4",
+        title: "Secondary Route & Technical Sections",
+        description:
+          "Tackle the secondary route featuring more technical ladder sections and a dramatic cliff-face traverse above the valley floor.",
+      },
+      {
+        day: "Day 5",
+        title: "Descent & Return to Kathmandu",
+        description:
+          "Morning descent and drive back to Kathmandu. Evening farewell dinner to celebrate the climb.",
+      },
+    ],
   },
   {
     title: "Highlining & Slacklining",
@@ -147,6 +294,26 @@ export const adventures: Adventure[] = [
       { label: "Min. Age", val: "12 Years", icon: "user" },
     ],
     gallery: ["/expe_04.jpg", "/expe_01.jpg", "/people_03.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrive & Ground-Level Slackline Training",
+        description:
+          "Transfer to Langtang base. Morning orientation and full afternoon on ground-level slacklines — learning balance, falls, and line-walking fundamentals.",
+      },
+      {
+        day: "Day 2",
+        title: "Highline Introduction & Progression Sessions",
+        description:
+          "Morning introduction to the highline setup — rigging, leash systems, and safety checks. Afternoon progression sessions for those ready to step onto the elevated line.",
+      },
+      {
+        day: "Day 3",
+        title: "Free Session & Return to Kathmandu",
+        description:
+          "Morning free session to push your limits on whichever line suits your level. Pack up, debrief with instructors, and transfer back to Kathmandu.",
+      },
+    ],
   },
   {
     title: "Combo Trek",
@@ -182,8 +349,83 @@ export const adventures: Adventure[] = [
       { label: "Min. Age", val: "16 Years", icon: "user" },
     ],
     gallery: ["/people_04.jpg", "/expe_01.jpg", "/expe_02.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrive Kathmandu — Multi-Discipline Briefing",
+        description:
+          "Arrive in Kathmandu. Full evening briefing covering all four disciplines, kit fitting, and introductions to your specialist guide team.",
+      },
+      {
+        day: "Day 2",
+        title: "Drive to Syabrubesi & Slackline Intro",
+        description:
+          "Drive to Syabrubesi. Afternoon ground-level slackline session to warm up the body and get a feel for balance before the trek begins.",
+      },
+      {
+        day: "Day 3",
+        title: "Trek Syabrubesi → Lama Hotel",
+        description:
+          "First day trekking through subtropical forest to Lama Hotel (2,380m). River crossings, wildlife, and the first real taste of the valley.",
+      },
+      {
+        day: "Day 4",
+        title: "Via Ferrata — Lower Route",
+        description:
+          "Morning Via Ferrata session on the lower cliff sections. Learn cable technique and ascend your first iron-rung route with valley views below.",
+      },
+      {
+        day: "Day 5",
+        title: "Trek to Langtang Village — Boulder Intro",
+        description:
+          "Trek to Langtang Village (3,430m). Late afternoon introductory bouldering session on riverside rock formations.",
+      },
+      {
+        day: "Day 6",
+        title: "Full Bouldering Day",
+        description:
+          "Dedicated bouldering day in Langtang Village. Work through a range of problems from beginner traverses to technical lines with your instructor.",
+      },
+      {
+        day: "Day 7",
+        title: "Via Ferrata — Main Route Ascent",
+        description:
+          "The headline climb of the trip — full ascent of the main Via Ferrata route. Exposed ridgelines, panoramic peaks, and genuine altitude.",
+      },
+      {
+        day: "Day 8",
+        title: "Trek to Kyanjin Gompa",
+        description:
+          "Trek to Kyanjin Gompa (3,870m) through open yak pastures. Visit the monastery and cheese factory. Rest and acclimatise.",
+      },
+      {
+        day: "Day 9",
+        title: "Highline Session above Kyanjin",
+        description:
+          "The signature moment of the Combo Trek — a highline rigged above the valley floor at altitude with Langtang Lirung as your backdrop.",
+      },
+      {
+        day: "Day 10",
+        title: "Kyanjin Ri Hike & Final Boulder Problems",
+        description:
+          "Optional sunrise hike to Kyanjin Ri (4,773m). Afternoon final bouldering session — push your hardest problem of the trip.",
+      },
+      {
+        day: "Day 11",
+        title: "Full Descent to Syabrubesi",
+        description:
+          "Long descent day back to Syabrubesi, covering the full valley in one push. Celebration dinner at the teahouse.",
+      },
+      {
+        day: "Day 12",
+        title: "Drive to Kathmandu & Farewell",
+        description:
+          "Morning drive back to Kathmandu. Certificate of completion presentation and farewell dinner with the full team.",
+      },
+    ],
   },
 ];
+
 export function getAdventureBySlug(slug: string) {
   return adventures.find((e) => e.slug === slug);
 }

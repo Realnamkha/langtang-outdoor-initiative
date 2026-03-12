@@ -32,26 +32,10 @@ const Intro = ({ title, desc, img }: IntroProps) => {
           </h3>
 
           <p className="text-gray-500 text-base leading-relaxed">{desc}</p>
-
-          <div className="grid grid-cols-2 gap-6 pt-2">
-            {[
-              { label: "Difficulty", value: "Moderate" },
-              { label: "Start Point", value: "Syabrubesi" },
-              { label: "Highest Point", value: "Tsergo Ri 4,984m" },
-              { label: "Trek Style", value: "Tea House" },
-            ].map((item) => (
-              <div key={item.label}>
-                <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-                  {item.label}
-                </p>
-                <p className="text-sm font-bold text-[#0a0a0a]">{item.value}</p>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Image */}
-        <div className="relative w-full h-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl">
+        <div className="relative w-full h-96 lg:h-120 rounded-3xl overflow-hidden shadow-2xl">
           <Image
             src={img}
             alt="Kyanjin Gompa"

@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "../components/navbar";
+import FeatureCard from "@/components/ui/Feature_Card";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -129,41 +130,30 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
+                img: "/nature_01.jpg",
                 title: "Sustainability",
                 desc: "We operate with a minimal footprint, following Leave No Trace principles and partnering with local conservation efforts in every region we trek.",
               },
               {
+                img: "/people_02.jpg",
                 title: "Community First",
                 desc: "A portion of every booking directly supports Tamang village schools, trail maintenance, and post-earthquake reconstruction in the Langtang region.",
               },
               {
+                img: "/expe_04.jpg",
                 title: "Safety Always",
                 desc: "All our guides are certified in wilderness first aid. We carry emergency equipment on every trek and maintain strict altitude sickness protocols.",
               },
-            ].map((item) => (
+            ].map((item, i) => (
               <motion.div
                 key={item.title}
-                className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                 initial="hidden"
                 whileInView="show"
+                variants={fadeUp}
                 viewport={{ once: true }}
+                custom={i}
               >
-                <div
-                  className="w-10 h-10 rounded-xl mb-5 flex items-center justify-center"
-                  style={{
-                    background: "linear-gradient(135deg, #01baf0, #0191c8)",
-                  }}
-                >
-                  <span className="text-white text-lg font-black">
-                    {item.title[0]}
-                  </span>
-                </div>
-                <h4 className="text-lg font-bold text-[#0a0a0a] mb-3">
-                  {item.title}
-                </h4>
-                <p className="text-gray-500 text-sm leading-relaxed">
-                  {item.desc}
-                </p>
+                <FeatureCard {...item} />
               </motion.div>
             ))}
           </div>
@@ -200,17 +190,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
             {[
               {
-                name: "Pemba Tamang",
+                name: "John Doe",
                 role: "Head Guide & Founder",
                 img: "/pic3.jpeg",
               },
               {
-                name: "Dawa Sherpa",
+                name: "John Doe",
                 role: "Senior Trek Leader",
                 img: "/pic3.jpeg",
               },
               {
-                name: "Anita Gurung",
+                name: "John Doe",
                 role: "Cultural Guide",
                 img: "/pic3.jpeg",
               },
