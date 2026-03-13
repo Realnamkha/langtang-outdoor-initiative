@@ -20,7 +20,7 @@ export const adventures: Adventure[] = [
   {
     title: "Boulder Trek",
     slug: "boulder-trek",
-    imageSrc: "/expe_01.jpg",
+    imageSrc: "/bouldering_04.jpeg",
     duration: "8 Days",
     difficulty: "Moderate",
     region: "Langtang, Nepal",

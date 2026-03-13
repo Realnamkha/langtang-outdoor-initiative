@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen w-full">
       {/* Background Image */}
       <Image
-        src="/pic2.jpeg"
+        src="/lirung_01.jpg"
         alt="Langtang Mountain"
         fill
         priority
