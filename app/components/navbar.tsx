@@ -9,9 +9,10 @@ const Navbar = ({ transparent = true }) => {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
+    { href: "events", label: "Event" },
     { href: "expeditions", label: "Expeditions" },
     { href: "adventures", label: "Adventures" },
-    { href: "culturaltours", label: "Cultural-Tours" },
+    { href: "cultural-tours", label: "Cultural-Tours" },
     { href: "about", label: "About" },
     { href: "contact", label: "Contact" },
   ];
@@ -36,7 +37,7 @@ const Navbar = ({ transparent = true }) => {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/logo.jpg"
+            src="/logo_final.jpg"
             alt="Mountain"
             width={72}
             height={72}

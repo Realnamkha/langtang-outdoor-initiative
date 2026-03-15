@@ -2,61 +2,42 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full">
+    <section className="relative h-[70vh] w-full flex justify-center">
       {/* Background Image */}
       <Image
-        src="/pic3.jpeg"
+        src="/expe_04.jpg"
         alt="Langtang Mountain"
         fill
         priority
-        className="object-cover"
+        className="object-cover object-[center_90%]"
       />
 
       {/* Dark Overlay — stronger at bottom for silhouette blend */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/70" />
 
       {/* Centered Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center text-white px-4">
-        <p className="text-xs uppercase tracking-[0.3em] text-white/60 font-semibold mb-5">
-          Langtang · Nepal
-        </p>
-
+      <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4">
+        {/* Heading */}
         <h1
-          className="text-5xl md:text-7xl font-black leading-[1.0] tracking-tight"
+          className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.95] tracking-tight"
           style={{ fontFamily: "'Georgia', serif" }}
         >
           Langtang{" "}
           <span
             className="text-transparent bg-clip-text"
             style={{
-              backgroundImage: "linear-gradient(90deg, #01baf0, #38d9ff)",
+              backgroundImage: "linear-gradient(90deg, #01baf0, #0191c8)",
             }}
           >
             Expeditions
           </span>
         </h1>
 
-        <div
-          className="w-12 h-[2px] rounded-full my-6 mx-auto"
-          style={{ background: "linear-gradient(90deg, #01baf0, #38d9ff)" }}
-        />
-
-        <p className="max-w-xl text-base md:text-lg text-white/75 leading-relaxed">
-          Experience breathtaking Himalayan adventures with Langtang Outdoor
-          Initiative.
+        <p className="mt-4 max-w-lg text-sm md:text-base text-white/60 leading-relaxed">
+          Boulder, trek, climb, and soar — five ways to experience the raw heart
+          of the Langtang Himalayas.
         </p>
       </div>
-
-      {/* ── Langtang Lirung Mountain Silhouette ── */}
-      {/*
-        Langtang Lirung (7,234m) has a distinctive asymmetric profile:
-        - A broad western shoulder rising gradually
-        - A sharp main summit pyramid slightly right of centre
-        - A secondary northeast peak
-        - Jagged ridgelines dropping to both sides
-        The silhouette fills the bottom of the hero and transitions into
-        the page background (#f8f7f4).
-      */}
 
       <div className="absolute bottom-0 left-0 right-0 z-20">
         <svg

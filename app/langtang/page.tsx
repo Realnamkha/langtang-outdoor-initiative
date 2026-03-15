@@ -78,7 +78,7 @@ export default function LangtangIntro() {
           {/* Right: Image */}
           <div className="relative w-full h-[440px] lg:h-[560px] rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/expe_05.jpg"
+              src="/langtang.jpg"
               alt="Langtang Valley"
               fill
               className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"

@@ -33,9 +33,18 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#0a0a0a] text-white">
+    <footer className="bg-[#0a0a0a] relative">
+      <Image
+        src="/pic4.jpg"
+        alt="Langtang Mountain"
+        fill
+        priority
+        className="object-cover object-[center_70%] "
+      />
+      <div className="absolute inset-0 bg-black/50 z-0" />
+
       {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
+      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 z-10 relative">
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="col-span-2 sm:col-span-1">
@@ -47,7 +56,7 @@ const Footer = () => {
                 height={52}
                 className="rounded-lg"
               />
-              <span className="font-bold text-base leading-tight">
+              <span className="font-bold text-base leading-tight text-white">
                 Langtang <br />
                 <span className="text-[#01baf0]">Outdoor Initiative</span>
               </span>
@@ -62,7 +71,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="w-9 h-9 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:border-[#01baf0] hover:text-[#01baf0] transition-all duration-200"
+                  className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-gray-300 hover:border-[#01baf0] hover:text-[#01baf0] transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -80,7 +89,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <Link
                     href={link.path}
-                    className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span>{link.label}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 group-hover:opacity-100 transition-all duration-200 text-[#01baf0]" />
@@ -100,7 +109,7 @@ const Footer = () => {
                 <li key={item.path}>
                   <Link
                     href={item.path}
-                    className="text-sm text-gray-400 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
                   >
                     <span>{item.label}</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-200 text-[#01baf0]" />
@@ -118,7 +127,7 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-[#01baf0] mt-0.5 shrink-0" />
-                <span className="text-sm text-gray-400 leading-relaxed">
+                <span className="text-sm text-gray-300 leading-relaxed">
                   Langtang Village, Rasuwa District, Bagmati Province, Nepal
                 </span>
               </li>
@@ -126,7 +135,7 @@ const Footer = () => {
                 <Phone className="w-4 h-4 text-[#01baf0] shrink-0" />
                 <a
                   href="tel:+977XXXXXXXXX"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                  className="text-sm text-gray-300 hover:text-white transition-colors"
                 >
                   +977 XX-XXXXXXX
                 </a>
@@ -135,7 +144,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-[#01baf0] shrink-0" />
                 <a
                   href="mailto:info@langtangoutdoor.com"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                  className="text-sm text-gray-300 hover:text-white transition-colors"
                 >
                   info@langtangoutdoor.com
                 </a>
@@ -146,11 +155,11 @@ const Footer = () => {
 
         {/* Divider + Bottom bar */}
         <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-gray-400">
             © {new Date().getFullYear()} Langtang Outdoor Initiative. All rights
             reserved.
           </p>
-          <div className="flex items-center gap-5 text-xs text-gray-500">
+          <div className="flex items-center gap-5 text-xs text-gray-400">
             <Link
               href="/privacy"
               className="hover:text-white transition-colors"
