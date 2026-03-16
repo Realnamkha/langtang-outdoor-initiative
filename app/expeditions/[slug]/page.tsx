@@ -4,6 +4,7 @@ import TripOverview from "./components/TripOverview";
 import Itinerary from "@/components/ui/Itinerary";
 import CtaBlock from "./components/CtaBlock";
 import { ExpeditionStatsBar } from "./components/ExpeditionStatsBar";
+import InclusionsExclusions from "./components/InclusionExclusion";
 
 export function generateStaticParams() {
   return expeditions.map((e) => ({ slug: e.slug }));
@@ -23,6 +24,7 @@ export default async function ExpeditionPage({
       <Hero expedition={expedition} />
       <ExpeditionStatsBar expedition={expedition} />
       <TripOverview expedition={expedition} />
+      <InclusionsExclusions />
       <Itinerary itinerary={expedition.itinerary} />
       <CtaBlock expedition={expedition} />
     </main>

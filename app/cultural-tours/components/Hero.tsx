@@ -9,7 +9,7 @@ const CulturalHero = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-14 px-8 md:px-20 py-20 min-h-[calc(100vh-72px)]">
         {/* Left — Image */}
-        <div className="w-full md:w-[45%] flex justify-center">
+        <div className="w-full md:w-[55%] flex justify-center">
           <div className="relative group">
             {/* Image card */}
             <div className="relative w-72 h-[420px] md:w-[360px] md:h-[500px] rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.15),0_4px_16px_rgba(0,0,0,0.1)] z-10">
@@ -26,7 +26,7 @@ const CulturalHero = () => {
         </div>
 
         {/* Right — Text */}
-        <div className="w-full md:w-[55%] flex flex-col gap-6">
+        <div className="w-full md:w-[45%] flex flex-col gap-6">
           {/* Eyebrow */}
           {/* Eyebrow */}
           <p className="text-[11px] font-semibold tracking-[2.5px] uppercase text-[#01baf0]">
