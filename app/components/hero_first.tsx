@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/lirung_01.jpg"
+        src="/lirung_01.JPG"
         alt="Langtang Mountain panorama"
         fill
         priority
@@ -14,26 +14,25 @@ export default function Hero() {
         sizes="100vw"
       />
 
-      {/* Gradient Overlay — richer than flat black */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-black/30" />
 
-      {/* Subtle vignette */}
-
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center text-white px-4">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight tracking-tight whitespace-nowrap">
-          Langtang{" "}
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center text-white px-6">
+        <h1 className="text-[2.2rem] sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+          Langtang
+          <br className="sm:hidden" />{" "}
           <span className="text-primary italic font-light">
             Outdoor Initiative
           </span>
         </h1>
 
-        <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg leading-relaxed">
+        <p className="mt-5 max-w-xl text-sm sm:text-base text-white/80 md:text-lg leading-relaxed">
           Experience breathtaking Himalayan adventures with Langtang Outdoor
           Initiative — where the mountains meet your spirit.
         </p>
 
-        {/* CTA group */}
+        {/* CTA */}
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
           <Link
             href="/langtang"

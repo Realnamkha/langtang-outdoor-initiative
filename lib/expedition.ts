@@ -336,7 +336,7 @@ export const expeditions: Expedition[] = [
   {
     title: "Tserko Peak",
     slug: "tserko-peak",
-    imageSrc: "/people_03.jpg",
+    imageSrc: "/lirung_02.jpg",
     duration: "14 Days",
     altitude: "4,984 M",
     region: "Langtang, Nepal",
