@@ -8,8 +8,8 @@ export async function POST(req: Request) {
   const { firstName, lastName, email, phone, interest, message } = body;
 
   await resend.emails.send({
-    from: "onboarding@resend.dev", // use this until you verify a domain
-    to: "namkhagyatso99@gmail.com", // ← your real email here
+    from: "onboarding@resend.dev",
+    to: "namkhagyasto999@gmail.com",
     subject: `New Inquiry from ${firstName} ${lastName}`,
     html: `
       <p><strong>Name:</strong> ${firstName} ${lastName}</p>

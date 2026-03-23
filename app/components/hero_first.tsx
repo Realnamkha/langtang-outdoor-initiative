@@ -28,8 +28,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-5 max-w-xl text-sm sm:text-base text-white/80 md:text-lg leading-relaxed">
-          Experience breathtaking Himalayan adventures with Langtang Outdoor
-          Initiative — where the mountains meet your spirit.
+          We don't just show you the mountain, we invite you into heartbeat of
+          the Langtang Valley
         </p>
 
         {/* CTA */}

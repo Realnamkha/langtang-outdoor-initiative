@@ -4,6 +4,7 @@ import { MyCard } from "@/components/ui/My_Card";
 import { expeditions } from "@/lib/expedition";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Expeditions() {
   return (
@@ -64,6 +65,60 @@ export default function Expeditions() {
             </motion.div>
           ))}
         </div>
+      </div>
+      {/* CTA Banner */}
+      <div className="mt-14 md:mt-20">
+        <motion.div
+          className="max-w-8xl mx-auto rounded-3xl overflow-hidden relative"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Mountain image clearly visible */}
+          <div className="absolute inset-0">
+            <Image
+              src="/footer.jpg"
+              alt=""
+              fill
+              className="object-cover object-[center_50%]"
+              aria-hidden="true"
+            />
+            {/* Light tint — mountain shows through */}
+            <div className="absolute inset-0 bg-[#01baf0]/30" />
+          </div>
+
+          {/* Dot grid */}
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle, white 1px, transparent 1px)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+
+          <div className="relative z-10 py-14 md:py-16 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="flex flex-col gap-3 max-w-lg">
+              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
+                For Further Expedition
+              </h2>
+              <p className="text-white/80 text-[15px] leading-relaxed">
+                Whether you are a first-time trekker or a seasoned mountaineer,
+                we have an experience crafted for you.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+              <Link
+                href="/contact"
+                className="px-7 py-3.5 rounded-full border-2 border-[#01baf0]/60 text-white font-semibold text-sm tracking-wide hover:bg-white/15 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+              >
+                Contact Us →
+              </Link>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

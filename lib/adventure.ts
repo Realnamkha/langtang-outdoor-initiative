@@ -31,7 +31,7 @@ export const adventures: Adventure[] = [
   {
     title: "Boulder Trek",
     slug: "boulder-trek",
-    imageSrc: "/trekking_01.jpg",
+    imageSrc: "/bouldering_04.jpeg",
     duration: "18 Days",
     difficulty: "Moderate – Hard",
     region: "Langtang, Nepal",
@@ -387,6 +387,544 @@ What sets this experience apart is the complete freedom of exploration — the o
     title: "Langtang Trek",
     slug: "langtang-trek",
     imageSrc: "/langtang.jpg",
+    duration: "10 Days",
+    difficulty: "Easy – Moderate",
+    region: "Langtang, Nepal",
+    price: "$550",
+    description: `Just a day's drive from Kathmandu, the Langtang Valley Trek — often called the "Valley of Glaciers" — is a breathtaking journey through Nepal's Himalayan heartland. The trail begins in lush subtropical forests and ascends through vibrant stands of rhododendron, bamboo, and pine before the canopy thins and the valley dramatically opens to reveal a theater of ice and rock: the massive Langtang Lirung (7,227m), the pyramid-shaped Gangchempo (6,387m), and the jagged ridgeline of Langtang Ri.
+
+Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to the Langtangpa people, the region carries a rich history of trans-Himalayan trade and migration. Trekkers pass fluttering prayer flags, intricate mani walls, and ancient monasteries like Kyanjin Gompa — where traditions remain vivid through local rituals, the historic yak cheese factory, and a community defined by extraordinary resilience. Whether you're standing on the summit of Tserko Ri or sharing butter tea in a village teahouse, Langtang offers a profound connection to both the mountains and the spiritual soul of the Himalayas.`,
+    highlights: [
+      "Full valley traverse from subtropical forest to high alpine meadow",
+      "Summit Tserko Ri (5,000m) for a 360° panorama of the Langtang and Jugal Himalayan ranges",
+      "Overnight at Kyanjin Gompa — explore the monastery and ancient stone architecture",
+      "Visit the famous yak cheese factory at Kyanjin",
+      "Acclimatisation hike to the Glacier Lake (4,000m) on arrival at Kyanjin",
+      "Deep immersion in Langtangpa and Tamang culture throughout",
+    ],
+    quickFacts: [
+      { label: "Starting Point", val: "Syabrubesi, Nepal", icon: "mapPin" },
+      { label: "Trek Style", val: "Teahouse Trek", icon: "tent" },
+      { label: "Best Season", val: "Mar – May · Sep – Nov", icon: "calendar" },
+      { label: "Permits", val: "TIMS + Langtang NP", icon: "fileText" },
+      { label: "Physical Level", val: "Easy – Moderate", icon: "activity" },
+    ],
+    gallery: ["/landscape_01.jpg", "/people_03.jpg", "/expe_02.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival in Kathmandu — Briefing & Welcome Dinner",
+        badge: "Arrival",
+        altitude: "1,350m",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Arrive at Tribhuvan International Airport (TIA) and transfer to your hotel in the vibrant heart of Kathmandu.",
+          },
+          {
+            label: "Activity",
+            content:
+              "Dedicated trek briefing and gear inspection session. Head out for last-minute shopping — poles, down jackets, or snacks — whatever you still need.",
+          },
+          {
+            label: "Evening",
+            content:
+              "A warm Welcome Dinner with the full team. Authentic Nepali flavors, first introductions, and the excitement of what's ahead.",
+          },
+        ],
+      },
+      {
+        day: "Day 2",
+        title: "Drive Kathmandu to Syabrubesi",
+        badge: "Transfer",
+        altitude: "1,550m",
+        distance: "125 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Departure",
+            content: "7:30 AM departure by private jeep from Kathmandu.",
+          },
+          {
+            label: "The Journey",
+            content:
+              "A 6–7 hour scenic drive through winding mountain roads, passing the roaring Trishuli River and terraced hillside farms.",
+          },
+          {
+            label: "Overnight",
+            content:
+              "Arrive at Syabrubesi (1,550m) — a riverside town and the gateway to Langtang. Settle into the hotel and rest.",
+          },
+        ],
+      },
+      {
+        day: "Day 3",
+        title: "Trek Syabrubesi to Lama Hotel",
+        badge: "Trek",
+        altitude: "2,470m",
+        distance: "11 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Trail begins at 7:30 AM. An off-road stretch to Domen marks the start of true wilderness. Route: Syabrubesi — Domen — Pairo — Bamboo — Rimche — Lama Hotel.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Hike through the dramatic Langtang River gorge. One-hour lunch stop at Bamboo village.",
+          },
+          {
+            label: "Afternoon",
+            content:
+              "Steady climb through lush forest arrives at Lama Hotel (2,470m) — your first night in a traditional teahouse.",
+          },
+        ],
+      },
+      {
+        day: "Day 4",
+        title: "Trek Lama Hotel to Langtang Village",
+        badge: "Trek",
+        altitude: "3,450m",
+        distance: "12 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Highlights",
+            content:
+              "Walking through 'Wood Land' — a dense alpine forest threaded with waterfalls and streams. Route: Lama Hotel — Riverside — Wood Land — Ghoda Tabela — Thangshyap — Chamki — Gomba — Langtang Village.",
+          },
+          {
+            label: "The Transition",
+            content:
+              "At Ghoda Tabela (lunch stop), the dense forest opens into wide glacial valleys. Vegetation thins visibly as altitude rises.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at the rebuilt Langtang Village (3,450m) — a community that stands as a testament to extraordinary resilience.",
+          },
+        ],
+      },
+      {
+        day: "Day 5",
+        title: "Trek Langtang Village to Kyanjin Gompa",
+        badge: "Trek",
+        altitude: "3,855m",
+        distance: "6.5 km",
+        duration: "3 hrs",
+        sections: [
+          {
+            label: "Culture",
+            content:
+              "A shorter 3-hour hike through Mundu, Sindum, and Yamphu. Ancient stone architecture and local Buddhist art line the route.",
+          },
+          {
+            label: "Arrival",
+            content:
+              "Arrive at Kyanjin Gompa (3,855m) by 1:00 PM. Explore the monastery and the famous yak cheese factory.",
+          },
+          {
+            label: "Acclimat.",
+            content:
+              "Sunset acclimatisation hike to the Glacier Lake (4,000m) — a gentle push to help your body adapt to the thin air before tomorrow's summit attempt.",
+          },
+        ],
+      },
+      {
+        day: "Day 6",
+        title: "Summit Day — Tserko Ri (5,000m)",
+        badge: "Summit",
+        altitude: "5,000m",
+        distance: "9.5 km",
+        duration: "7–8 hrs",
+        sections: [
+          {
+            label: "The Climb",
+            content:
+              "5:30 AM start. A steep, relentless, utterly rewarding ascent to Tserko Ri summit (5,000m).",
+          },
+          {
+            label: "The Reward",
+            content:
+              "A full 360° theater of peaks — the entire Langtang and Jugal Himalayan ranges laid out before you. Packed lunch at the top.",
+          },
+          {
+            label: "Descent",
+            content:
+              "Choose your descent: the steep direct route down or a scenic gradual detour around the mountain. Both return to Kyanjin Gompa.",
+          },
+        ],
+      },
+      {
+        day: "Day 7",
+        title: "Trek Kyanjin Gompa to Lama Hotel",
+        badge: "Trek",
+        altitude: "2,470m",
+        distance: "18 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "With the high peaks at your back, the long descent through the valley begins. The air thickens and the legs feel lighter with every metre lost.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Refuel with lunch at Ghoda Tabela before re-entering the forest.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Settle back into Lama Hotel (2,470m) for the night — familiar faces, familiar teahouse.",
+          },
+        ],
+      },
+      {
+        day: "Day 8",
+        title: "Trek Lama Hotel to Syabrubesi",
+        badge: "Trek",
+        altitude: "1,550m",
+        distance: "11 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "A final morning walk through rhododendron and bamboo forest. The air is thick and warm again.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Lunch stop at Pairo village before the last stretch into Syabrubesi.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive in Syabrubesi — the end of the trail. Celebrate the completion of the walk with the team over a well-earned meal.",
+          },
+        ],
+      },
+      {
+        day: "Day 9",
+        title: "Drive Syabrubesi to Kathmandu",
+        badge: "Transfer",
+        altitude: "1,350m",
+        distance: "125 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Departure",
+            content:
+              "8:00 AM jeep departure from Syabrubesi for the return drive to Kathmandu.",
+          },
+          {
+            label: "Afternoon",
+            content:
+              "Check into the hotel for a long-overdue hot shower and rest.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Farewell party and group dinner. The perfect time for souvenir shopping in Thamel.",
+          },
+        ],
+      },
+      {
+        day: "Day 10",
+        title: "Departure",
+        badge: "Departure",
+        altitude: "1,350m",
+        sections: [
+          {
+            label: "Morning",
+            content: "Final breakfast in Kathmandu together.",
+          },
+          {
+            label: "Departure",
+            content:
+              "Private transfer to Tribhuvan International Airport for your onward flight. Safe travels — and see you on the next one.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Highline",
+    slug: "highline",
+    imageSrc: "/people_03.jpg",
+    duration: "10 Days",
+    difficulty: "Easy – Moderate",
+    region: "Langtang, Nepal",
+    price: "$550",
+    description: `Just a day's drive from Kathmandu, the Langtang Valley Trek — often called the "Valley of Glaciers" — is a breathtaking journey through Nepal's Himalayan heartland. The trail begins in lush subtropical forests and ascends through vibrant stands of rhododendron, bamboo, and pine before the canopy thins and the valley dramatically opens to reveal a theater of ice and rock: the massive Langtang Lirung (7,227m), the pyramid-shaped Gangchempo (6,387m), and the jagged ridgeline of Langtang Ri.
+
+Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to the Langtangpa people, the region carries a rich history of trans-Himalayan trade and migration. Trekkers pass fluttering prayer flags, intricate mani walls, and ancient monasteries like Kyanjin Gompa — where traditions remain vivid through local rituals, the historic yak cheese factory, and a community defined by extraordinary resilience. Whether you're standing on the summit of Tserko Ri or sharing butter tea in a village teahouse, Langtang offers a profound connection to both the mountains and the spiritual soul of the Himalayas.`,
+    highlights: [
+      "Full valley traverse from subtropical forest to high alpine meadow",
+      "Summit Tserko Ri (5,000m) for a 360° panorama of the Langtang and Jugal Himalayan ranges",
+      "Overnight at Kyanjin Gompa — explore the monastery and ancient stone architecture",
+      "Visit the famous yak cheese factory at Kyanjin",
+      "Acclimatisation hike to the Glacier Lake (4,000m) on arrival at Kyanjin",
+      "Deep immersion in Langtangpa and Tamang culture throughout",
+    ],
+    quickFacts: [
+      { label: "Starting Point", val: "Syabrubesi, Nepal", icon: "mapPin" },
+      { label: "Trek Style", val: "Teahouse Trek", icon: "tent" },
+      { label: "Best Season", val: "Mar – May · Sep – Nov", icon: "calendar" },
+      { label: "Permits", val: "TIMS + Langtang NP", icon: "fileText" },
+      { label: "Physical Level", val: "Easy – Moderate", icon: "activity" },
+    ],
+    gallery: ["/landscape_01.jpg", "/people_03.jpg", "/expe_02.jpg"],
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival in Kathmandu — Briefing & Welcome Dinner",
+        badge: "Arrival",
+        altitude: "1,350m",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Arrive at Tribhuvan International Airport (TIA) and transfer to your hotel in the vibrant heart of Kathmandu.",
+          },
+          {
+            label: "Activity",
+            content:
+              "Dedicated trek briefing and gear inspection session. Head out for last-minute shopping — poles, down jackets, or snacks — whatever you still need.",
+          },
+          {
+            label: "Evening",
+            content:
+              "A warm Welcome Dinner with the full team. Authentic Nepali flavors, first introductions, and the excitement of what's ahead.",
+          },
+        ],
+      },
+      {
+        day: "Day 2",
+        title: "Drive Kathmandu to Syabrubesi",
+        badge: "Transfer",
+        altitude: "1,550m",
+        distance: "125 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Departure",
+            content: "7:30 AM departure by private jeep from Kathmandu.",
+          },
+          {
+            label: "The Journey",
+            content:
+              "A 6–7 hour scenic drive through winding mountain roads, passing the roaring Trishuli River and terraced hillside farms.",
+          },
+          {
+            label: "Overnight",
+            content:
+              "Arrive at Syabrubesi (1,550m) — a riverside town and the gateway to Langtang. Settle into the hotel and rest.",
+          },
+        ],
+      },
+      {
+        day: "Day 3",
+        title: "Trek Syabrubesi to Lama Hotel",
+        badge: "Trek",
+        altitude: "2,470m",
+        distance: "11 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Trail begins at 7:30 AM. An off-road stretch to Domen marks the start of true wilderness. Route: Syabrubesi — Domen — Pairo — Bamboo — Rimche — Lama Hotel.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Hike through the dramatic Langtang River gorge. One-hour lunch stop at Bamboo village.",
+          },
+          {
+            label: "Afternoon",
+            content:
+              "Steady climb through lush forest arrives at Lama Hotel (2,470m) — your first night in a traditional teahouse.",
+          },
+        ],
+      },
+      {
+        day: "Day 4",
+        title: "Trek Lama Hotel to Langtang Village",
+        badge: "Trek",
+        altitude: "3,450m",
+        distance: "12 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Highlights",
+            content:
+              "Walking through 'Wood Land' — a dense alpine forest threaded with waterfalls and streams. Route: Lama Hotel — Riverside — Wood Land — Ghoda Tabela — Thangshyap — Chamki — Gomba — Langtang Village.",
+          },
+          {
+            label: "The Transition",
+            content:
+              "At Ghoda Tabela (lunch stop), the dense forest opens into wide glacial valleys. Vegetation thins visibly as altitude rises.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at the rebuilt Langtang Village (3,450m) — a community that stands as a testament to extraordinary resilience.",
+          },
+        ],
+      },
+      {
+        day: "Day 5",
+        title: "Trek Langtang Village to Kyanjin Gompa",
+        badge: "Trek",
+        altitude: "3,855m",
+        distance: "6.5 km",
+        duration: "3 hrs",
+        sections: [
+          {
+            label: "Culture",
+            content:
+              "A shorter 3-hour hike through Mundu, Sindum, and Yamphu. Ancient stone architecture and local Buddhist art line the route.",
+          },
+          {
+            label: "Arrival",
+            content:
+              "Arrive at Kyanjin Gompa (3,855m) by 1:00 PM. Explore the monastery and the famous yak cheese factory.",
+          },
+          {
+            label: "Acclimat.",
+            content:
+              "Sunset acclimatisation hike to the Glacier Lake (4,000m) — a gentle push to help your body adapt to the thin air before tomorrow's summit attempt.",
+          },
+        ],
+      },
+      {
+        day: "Day 6",
+        title: "Summit Day — Tserko Ri (5,000m)",
+        badge: "Summit",
+        altitude: "5,000m",
+        distance: "9.5 km",
+        duration: "7–8 hrs",
+        sections: [
+          {
+            label: "The Climb",
+            content:
+              "5:30 AM start. A steep, relentless, utterly rewarding ascent to Tserko Ri summit (5,000m).",
+          },
+          {
+            label: "The Reward",
+            content:
+              "A full 360° theater of peaks — the entire Langtang and Jugal Himalayan ranges laid out before you. Packed lunch at the top.",
+          },
+          {
+            label: "Descent",
+            content:
+              "Choose your descent: the steep direct route down or a scenic gradual detour around the mountain. Both return to Kyanjin Gompa.",
+          },
+        ],
+      },
+      {
+        day: "Day 7",
+        title: "Trek Kyanjin Gompa to Lama Hotel",
+        badge: "Trek",
+        altitude: "2,470m",
+        distance: "18 km",
+        duration: "6–7 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "With the high peaks at your back, the long descent through the valley begins. The air thickens and the legs feel lighter with every metre lost.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Refuel with lunch at Ghoda Tabela before re-entering the forest.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Settle back into Lama Hotel (2,470m) for the night — familiar faces, familiar teahouse.",
+          },
+        ],
+      },
+      {
+        day: "Day 8",
+        title: "Trek Lama Hotel to Syabrubesi",
+        badge: "Trek",
+        altitude: "1,550m",
+        distance: "11 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "A final morning walk through rhododendron and bamboo forest. The air is thick and warm again.",
+          },
+          {
+            label: "Midday",
+            content:
+              "Lunch stop at Pairo village before the last stretch into Syabrubesi.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive in Syabrubesi — the end of the trail. Celebrate the completion of the walk with the team over a well-earned meal.",
+          },
+        ],
+      },
+      {
+        day: "Day 9",
+        title: "Drive Syabrubesi to Kathmandu",
+        badge: "Transfer",
+        altitude: "1,350m",
+        distance: "125 km",
+        duration: "5–6 hrs",
+        sections: [
+          {
+            label: "Departure",
+            content:
+              "8:00 AM jeep departure from Syabrubesi for the return drive to Kathmandu.",
+          },
+          {
+            label: "Afternoon",
+            content:
+              "Check into the hotel for a long-overdue hot shower and rest.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Farewell party and group dinner. The perfect time for souvenir shopping in Thamel.",
+          },
+        ],
+      },
+      {
+        day: "Day 10",
+        title: "Departure",
+        badge: "Departure",
+        altitude: "1,350m",
+        sections: [
+          {
+            label: "Morning",
+            content: "Final breakfast in Kathmandu together.",
+          },
+          {
+            label: "Departure",
+            content:
+              "Private transfer to Tribhuvan International Airport for your onward flight. Safe travels — and see you on the next one.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Via Ferrata",
+    slug: "via-ferrata",
+    imageSrc: "/via_02.jpg",
     duration: "10 Days",
     difficulty: "Easy – Moderate",
     region: "Langtang, Nepal",
