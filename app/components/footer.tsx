@@ -35,7 +35,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#0a0a0a] relative">
       <Image
-        src="/pic4.jpg"
+        src="/pic4.JPG"
         alt="Langtang Mountain"
         fill
         priority

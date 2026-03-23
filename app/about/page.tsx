@@ -118,12 +118,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                img: "/nature_01.jpg",
+                img: "/nature_01.JPG",
                 title: "Sustainability",
                 desc: "We operate with a minimal footprint, following Leave No Trace principles and partnering with local conservation efforts in every region we trek.",
               },
               {
-                img: "/people_02.jpg",
+                img: "/people_02.JPG",
                 title: "Community First",
                 desc: "A portion of every booking directly supports Tamang village schools, trail maintenance, and post-earthquake reconstruction in the Langtang region.",
               },

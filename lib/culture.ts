@@ -114,7 +114,7 @@ export const culturalTours: CulturalTour[] = [
   {
     title: "Horse Backpacking",
     slug: "horse-backpacking",
-    imageSrc: "/pic4.jpg",
+    imageSrc: "/pic4.JPG",
     duration: "9 Days",
     difficulty: "Moderate",
     region: "Mustang & Upper Kali Gandaki, Nepal",
@@ -297,7 +297,7 @@ export const culturalTours: CulturalTour[] = [
   {
     title: "Pilgrimage Tour",
     slug: "pilgrimage-tour",
-    imageSrc: "/pic4.jpg",
+    imageSrc: "/pic4.JPG",
     duration: "8 Days",
     difficulty: "Easy – Moderate",
     region: "Kathmandu Valley, Muktinath & Gosaikunda, Nepal",

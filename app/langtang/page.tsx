@@ -17,7 +17,7 @@ const features = [
     desc: "Pass ancient gompas, mani walls, and monasteries. The Tamang people welcome trekkers with warmth rooted in centuries of tradition.",
   },
   {
-    img: "/nature_01.jpg",
+    img: "/nature_01.JPG",
     title: "Untouched Nature",
     desc: "The Langtang National Park shelters red pandas, Himalayan tahr, and snow leopards within some of Asia's most pristine wilderness.",
   },
