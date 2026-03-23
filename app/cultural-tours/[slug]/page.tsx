@@ -49,24 +49,6 @@ export default async function CulturalPage({
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050f1a]/60 via-transparent to-transparent" />
-
-                  <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
-                    <div>
-                      <p className="text-white/60 text-[10px] tracking-widest uppercase mb-0.5">
-                        From
-                      </p>
-                      <p
-                        className="text-white text-3xl font-black leading-none"
-                        style={{ fontFamily: "'Playfair Display', serif" }}
-                      >
-                        {tour.price}
-                      </p>
-                      <p className="text-white/50 text-[11px]">per person</p>
-                    </div>
-                    <span className="bg-[#01baf0] text-white text-[10px] font-bold tracking-widest uppercase px-3 py-1.5 rounded-full">
-                      {tour.difficulty}
-                    </span>
-                  </div>
                 </div>
 
                 <div className="absolute -top-4 -right-4 z-20 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-[#e8f3f9] px-4 py-2.5 flex items-center gap-2">

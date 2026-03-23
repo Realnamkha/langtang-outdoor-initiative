@@ -1,50 +1,36 @@
+// _components/Hero.tsx
+
 import Image from "next/image";
+import { Adventure } from "@/lib/adventure";
 
-interface IntroProps {
-  img: string;
-  title: string;
-  desc: string;
-}
-
-const Intro = ({ title, desc, img }: IntroProps) => {
+export default function Hero({ adventure }: { adventure: Adventure }) {
   return (
-    <section className="bg-[#f8f7f4] py-24 px-6 mt-5">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Text */}
-        <div className="flex flex-col gap-6">
-          <div className="flex items-center gap-2">
-            <div className="h-px w-8 bg-[#01baf0]" />
-            <span className="text-xs uppercase tracking-[0.25em] text-[#01baf0] font-semibold">
-              {title} Overview
-            </span>
-          </div>
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ height: "55vh", minHeight: 580 }}
+    >
+      <Image
+        src={adventure.imageSrc}
+        alt={adventure.title}
+        fill
+        priority
+        className="object-cover object-[center_80%]"
+      />
 
-          <h3 className="text-3xl md:text-4xl font-black text-[#0a0a0a] tracking-tight leading-tight">
-            What to{" "}
-            <span
-              className="text-transparent bg-clip-text"
-              style={{
-                backgroundImage: "linear-gradient(90deg, #01baf0, #0191c8)",
-              }}
-            >
-              Expect
-            </span>
-          </h3>
+      {/* bottom fade */}
+      <div className="absolute inset-0 bg-linear-to-b from-black/20 via-transparent to-[#080c12]" />
+      {/* left vignette */}
+      <div className="absolute inset-0 bg-linear-to-r from-black/50 to-transparent" />
 
-          <p className="text-gray-500 text-base leading-relaxed">{desc}</p>
-        </div>
-
-        {/* Image */}
-        <div className="relative w-full h-96 lg:h-120 rounded-3xl overflow-hidden shadow-2xl">
-          <Image
-            src={img}
-            alt="Kyanjin Gompa"
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-700 ease-in-out"
-          />
-        </div>
+      {/* title block */}
+      <div className="absolute inset-0 flex flex-col justify-end px-10 pb-20">
+        <h1
+          className="font-display text-white leading-[0.92]"
+          style={{ fontSize: "clamp(3.2rem, 8vw, 6.5rem)", fontWeight: 300 }}
+        >
+          {adventure.title}
+        </h1>
       </div>
     </section>
   );
-};
-export default Intro;
+}

@@ -9,12 +9,12 @@ const Navbar = ({ transparent = true }) => {
   const [scrolled, setScrolled] = useState(false);
 
   const navLinks = [
-    { href: "events", label: "Event" },
-    { href: "expeditions", label: "Expeditions" },
-    { href: "adventures", label: "Adventures" },
-    { href: "cultural-tours", label: "Cultural-Tours" },
-    { href: "about", label: "About" },
-    { href: "contact", label: "Contact" },
+    { href: "/events", label: "Events" },
+    { href: "/expeditions", label: "Expeditions" },
+    { href: "/adventures", label: "Adventures" },
+    { href: "/cultural-tours", label: "Cultural Tours" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
   ];
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);

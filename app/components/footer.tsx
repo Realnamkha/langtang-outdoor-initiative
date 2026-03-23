@@ -13,9 +13,9 @@ import {
 const Footer = () => {
   const expeditions = [
     { label: "Langtang Valley Trek", path: "/expeditions/langtang-valley" },
-    { label: "Gosaikunda Lake Trek", path: "/expeditions/gosaikunda" },
-    { label: "Helambu Circuit", path: "/expeditions/helambu" },
-    { label: "Tamang Heritage Trail", path: "/expeditions/tamang" },
+    { label: "Yala Peak Expedition", path: "/expeditions/gosaikunda" },
+    { label: "Langtang Bouldering", path: "/expeditions/helambu" },
+    { label: "Festive Pack", path: "/expeditions/tamang" },
   ];
 
   const quickLinks = [
@@ -50,7 +50,7 @@ const Footer = () => {
           <div className="col-span-2 sm:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
               <Image
-                src="/logo.jpg"
+                src="/logo_final.jpg"
                 alt="Langtang Outdoor Initiative"
                 width={52}
                 height={52}

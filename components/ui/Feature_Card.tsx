@@ -8,7 +8,7 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ img, title, desc }: FeatureCardProps) => {
   return (
-    <div className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-default border border-gray-100">
+    <div className="group bg-white rounded-2xl overflow-hidden shadow-sm">
       {/* Image */}
       <div className="relative w-full h-52 overflow-hidden">
         <Image
@@ -25,19 +25,18 @@ const FeatureCard = ({ img, title, desc }: FeatureCardProps) => {
       <div className="p-6 flex flex-col gap-3">
         {/* Accent line + title */}
         <div className="flex items-center gap-3">
-          <div
-            className="w-1 h-5 rounded-full flex-shrink-0"
-            style={{ background: "linear-gradient(180deg, #01baf0, #0191c8)" }}
-          />
+          <div className="relative w-6 h-6 shrink-0">
+            <Image src="/2.png" alt="" fill className="object-contain" />
+          </div>
           <h4
-            className="text-base font-black text-[#0a0a0a] tracking-tight"
+            className="text-base font-black text-[#0a0a0a] tracking-tight text-center"
             style={{ fontFamily: "'Georgia', serif" }}
           >
             {title}
           </h4>
         </div>
 
-        <p className="text-gray-500 text-sm leading-relaxed pl-4">{desc}</p>
+        <p className="text-gray-500 text-sm leading-relaxed pl-10">{desc}</p>
       </div>
     </div>
   );

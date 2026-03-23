@@ -11,6 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { SimpleCard } from "@/components/ui/Activity_Card";
+import { div } from "framer-motion/client";
+import Link from "next/link";
+import Image from "next/image";
 
 type Activity = {
   title: string;
@@ -56,11 +59,11 @@ export default function Hero_Third() {
   );
 
   return (
-    <section className="relative w-full flex flex-col items-center bg-white px-6 md:px-16 py-24 overflow-hidden">
+    <section className="relative w-full flex flex-col items-center bg-white px-6 md:px-16 overflow-hidden">
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#01baf0] opacity-[0.05] blur-3xl translate-x-1/3 -translate-y-1/3" />
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[#01baf0] opacity-[0.05] blur-3xl -translate-x-1/3 translate-y-1/3" />
 
-      <div className="w-full max-w-7xl relative z-10 flex flex-col items-center gap-14">
+      <div className="w-full max-w-7xl relative z-10 flex flex-col items-center gap-14 pb-28">
         {/* Header */}
         <motion.div
           className="flex flex-col items-center text-center gap-5 max-w-2xl"
@@ -70,8 +73,8 @@ export default function Hero_Third() {
           viewport={{ once: false, amount: 0.5 }}
         >
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] tracking-tight leading-[1.1]">
-            Popular Activities at{" "}
-            <span className="text-[#01baf0]">Langtang</span> Outdoor Initiative
+            Popular Activities at Langtang {""}
+            <span className="text-[#01baf0]">Outdoor Initiative</span>
           </h2>
         </motion.div>
 
