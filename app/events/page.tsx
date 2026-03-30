@@ -45,7 +45,6 @@ function EventCard({
   index: number;
 }) {
   const [hovered, setHovered] = useState(false);
-  const pct = Math.round(((event.spots - event.spotsLeft) / event.spots) * 100);
 
   return (
     <div
