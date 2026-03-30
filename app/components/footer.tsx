@@ -28,7 +28,11 @@ const Footer = () => {
 
   const socials = [
     { Icon: Facebook, path: "https://facebook.com", label: "Facebook" },
-    { Icon: Instagram, path: "https://instagram.com", label: "Instagram" },
+    {
+      Icon: Instagram,
+      path: "https://www.instagram.com/langtang_outdoor_initiative/",
+      label: "Instagram",
+    },
     { Icon: Youtube, path: "https://youtube.com", label: "YouTube" },
   ];
 
@@ -39,7 +43,8 @@ const Footer = () => {
         alt="Langtang Mountain"
         fill
         priority
-        className="object-cover object-[center_70%] "
+        // className="object-cover object-[30%_70%] sm:object-[40%_70%]"
+        className="object-cover object-[60%_70%]"
       />
       <div className="absolute inset-0 bg-black/50 z-0" />
 
@@ -131,14 +136,23 @@ const Footer = () => {
                   Langtang Village, Rasuwa District, Bagmati Province, Nepal
                 </span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-[#01baf0] shrink-0" />
-                <a
-                  href="tel:+977XXXXXXXXX"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  +977 XX-XXXXXXX
-                </a>
+              <li className="flex items-start gap-3">
+                <Phone className="w-4 h-4 text-[#01baf0] mt-1 shrink-0" />
+
+                <div className="flex flex-col">
+                  <a
+                    href="tel:+9779843023847"
+                    className="text-sm text-gray-300 hover:text-white transition-colors"
+                  >
+                    +977 9843023847
+                  </a>
+                  <a
+                    href="tel:+9779843023847"
+                    className="text-sm text-gray-300 hover:text-white transition-colors"
+                  >
+                    +977 9843023847
+                  </a>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-[#01baf0] shrink-0" />
@@ -146,7 +160,7 @@ const Footer = () => {
                   href="mailto:info@langtangoutdoor.com"
                   className="text-sm text-gray-300 hover:text-white transition-colors"
                 >
-                  info@langtangoutdoor.com
+                  langtang.outdoor7227@gmail.com
                 </a>
               </li>
             </ul>

@@ -386,7 +386,7 @@ What sets this experience apart is the complete freedom of exploration — the o
   {
     title: "Langtang Trek",
     slug: "langtang-trek",
-    imageSrc: "/langtang.jpg",
+    imageSrc: "/trek_02.jpg",
     duration: "10 Days",
     difficulty: "Easy – Moderate",
     region: "Langtang, Nepal",

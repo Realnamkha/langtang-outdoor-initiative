@@ -19,15 +19,13 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center text-white px-6">
-        <h1 className="text-[2.2rem] sm:text-5xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
+        <h1 className="text-[2.2rem] sm:text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight">
           Langtang
           <br className="sm:hidden" />{" "}
-          <span className="text-primary italic font-light">
-            Outdoor Initiative
-          </span>
+          <span className="text-white">Outdoor Initiative</span>
         </h1>
 
-        <p className="mt-5 max-w-xl text-sm sm:text-base text-white/80 md:text-lg leading-relaxed">
+        <p className="mt-5 max-w-xl text-sm sm:text-base text-white md:text-lg leading-relaxed">
           We don't just show you the mountain, we invite you into heartbeat of
           the Langtang Valley
         </p>

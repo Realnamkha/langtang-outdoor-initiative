@@ -9,6 +9,9 @@ import { notFound } from "next/navigation";
 import { ArrowRight } from "lucide-react";
 import Hero from "./component/Intro";
 import TripOverview from "./component/TripOverview";
+import EventCardImage from "./component/Glass_Card";
+import BoulderAddOns from "./component/Boulderadd";
+import BoulderSelector from "./component/Boulderadd";
 
 export function generateStaticParams() {
   return adventures.map((a) => ({ slug: a.slug }));
@@ -22,6 +25,9 @@ export default async function AdventurePage({
   const { slug } = await params;
   const adventure = getAdventureBySlug(slug);
   if (!adventure) notFound();
+  const showSpecialCards =
+    adventure.title === "Highline" ||
+    adventure.title.toLocaleLowerCase() === "via ferrata";
 
   return (
     <main className="bg-[#f8f7f4] text-gray-900 overflow-x-hidden">
@@ -33,16 +39,48 @@ export default async function AdventurePage({
         <TripOverview adventure={adventure} />
       </div>
       {/* ── Inclusions / Exclusions ──────────────────────────────────────── */}
+
+      {/* ── Itinerary ────────────────────────────────────────────────────── */}
+      {!showSpecialCards && (
+        <section className="bg-white">
+          <Itinerary itinerary={adventure.itinerary} />
+        </section>
+      )}
+
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
+      <div className="max-w-6xl mx-auto px-4 py-12">
+        <div className="grid gap-6 sm:grid-cols-2">
+          {/* Card 1 */}
+          <EventCardImage
+            title="The 6-Hour Summit"
+            subHeadline="Short on time? Touch the base of Langtang Lirung and be back for lunch."
+            hook="A 1.9km iron path engineered for safety and thrill. No climbing experience required."
+            imageSrc="/via_01.jpg"
+            date="April 2026"
+            duration="6 Hours"
+            activity="The Day Adventure"
+            region="Langtang, Nepal"
+            link="/book-day-adventure"
+          />
+
+          {/* Card 2 */}
+          <EventCardImage
+            title="Langtang Sunrise Trek"
+            subHeadline="Catch the first rays over the Himalayan peaks."
+            hook="An early morning trek with breathtaking views. Suitable for beginners."
+            imageSrc="/via_02.jpg"
+            date="April 2026"
+            duration="4 Hours"
+            activity="The Trek Upgrade"
+            region="Langtang, Nepal"
+            link="/book-sunrise-trek"
+          />
+        </div>
+      </div>
+      <BoulderSelector />
       <section className="bg-gray-50">
         <InclusionsExclusions />
       </section>
-
-      {/* ── Itinerary ────────────────────────────────────────────────────── */}
-      <section className="bg-white">
-        <Itinerary itinerary={adventure.itinerary} />
-      </section>
-
-      {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <section className="bg-gray-50 py-24 px-4 sm:px-6">
         <div className="max-w-5xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden bg-gray-900 px-8 py-16 md:px-16">
@@ -93,6 +131,10 @@ export default async function AdventurePage({
             </div>
           </div>
         </div>
+
+        {/* If you want to include sub-headline & hook inside the card, modify EventCardImage component slightly: */}
+
+        {/* Inside EventCardImage, under the title: */}
       </section>
     </main>
   );

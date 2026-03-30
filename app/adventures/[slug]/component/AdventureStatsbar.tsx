@@ -1,8 +1,12 @@
+"use client";
 import { Clock, Activity, MapPin, Users } from "lucide-react";
+import { useRouter } from "next/navigation";
 import StatsBar, { type StatItem } from "@/components/ui/StatsBar";
 import { Adventure } from "@/lib/adventure";
 
 export function AdventureStatsBar({ adventure }: { adventure: Adventure }) {
+  const router = useRouter();
+
   const stats: StatItem[] = [
     {
       icon: <Clock size={16} strokeWidth={1.5} />,
@@ -23,6 +27,7 @@ export function AdventureStatsBar({ adventure }: { adventure: Adventure }) {
       icon: <Users size={16} strokeWidth={1.5} />,
       val: "Book Now",
       type: "cta",
+      onClick: () => router.push("/booking"),
     },
   ];
 

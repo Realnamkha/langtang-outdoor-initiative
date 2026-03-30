@@ -18,7 +18,7 @@ export default function Adventures() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             viewport={{ once: false, amount: 0.5 }}
           >
-            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2A] tracking-tight leading-[1.1] max-w-2xl">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#0D1B2] tracking-tight leading-[1.1] max-w-2xl">
               Our <span className="text-[#01baf0]">Adventures</span>
             </h2>
             <p className="text-gray-500 text-base max-w-xl leading-relaxed">

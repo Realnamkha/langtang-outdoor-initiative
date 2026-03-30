@@ -41,21 +41,19 @@ export default function AboutPage() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.3 }}
           >
-            <div className="absolute -bottom-4 -right-4 w-full h-full rounded-3xl bg-[#01baf0]/10 -z-10" />
             <div className="relative w-full h-[480px] sm:h-[560px] rounded-3xl overflow-hidden">
               <Image
-                src="/bouldering_03.jpeg"
+                src="/logo_final.jpg"
                 alt="Our Story"
                 fill
                 className="object-cover transition-transform duration-700 hover:scale-[1.03]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
             </div>
           </motion.div>
 
           {/* Text */}
           <motion.div
-            className="flex flex-col gap-7"
+            className="flex flex-col gap-4"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
@@ -69,28 +67,30 @@ export default function AboutPage() {
             </div>
 
             <p className="text-gray-500 text-[15px] leading-[1.9]">
-              Langtang Outdoor Initiative was founded by a group of passionate
-              local guides and trekkers who grew up in the shadow of the
-              Himalayas. After years of leading expeditions across Nepal, we
-              came together with one shared vision — to offer authentic,
-              responsible, and life-changing mountain experiences.
+              Established in 2022 by the local youth of the region, Langtang
+              Outdoor Initiative (LOI) is more than an adventure company, it is
+              a movement. We were founded on a singular, powerful vision: to
+              bridge the gap between world-class adventure tourism and the
+              profound, quiet beauty of our ancestral home. We believe that true
+              exploration should never come at the cost of heritage. As the
+              guardians of this valley, we stand for sustainable development
+              that moves hand-in-hand with our local culture, traditions, and
+              environment.
             </p>
             <p className="text-gray-500 text-[15px] leading-[1.9]">
-              Rooted in the Langtang region, we carry deep respect for the land,
-              the people, and the traditions that have shaped this landscape for
-              centuries. Every trek we organise gives back to local communities
-              and supports sustainable mountain tourism.
-            </p>
-            <p className="text-gray-500 text-[15px] leading-[1.9]">
-              Rooted in the Langtang region, we carry deep respect for the land,
-              the people, and the traditions that have shaped this landscape for
-              centuries. Every trek we organise gives back to local communities
-              and supports sustainable mountain tourism.
+              At LOI, our work goes beyond guiding expeditions. We are deeply
+              committed to preserving the identity of Langtang—its stories, its
+              people, and its way of life. Through community-driven initiatives,
+              youth engagement, and responsible tourism practices, we aim to
+              create opportunities for locals while offering visitors an
+              authentic and meaningful experience. Every trail we walk, every
+              climb we organize, and every experience we curate is rooted in
+              respect—for nature, for culture, and for the generations that call
+              Langtang home. LOI is not just about reaching destinations; it is
+              about building connections, empowering communities, and ensuring
+              that the spirit of Langtang continues to thrive for years to come.
             </p>
           </motion.div>
-        </div>
-        <div className="mt-4">
-          <LogoStrip />
         </div>
       </section>
       <section className="relative bg-[#f8f7f4] py-28 px-6 overflow-hidden">
@@ -119,18 +119,18 @@ export default function AboutPage() {
             {[
               {
                 img: "/nature_01.JPG",
-                title: "Sustainability",
-                desc: "We operate with a minimal footprint, following Leave No Trace principles and partnering with local conservation efforts in every region we trek.",
+                title: "Reviving the Vanishing",
+                desc: "We integrate the fading traditions and unique cultural identity of Langtang into every adventure, ensuring our history survives alongside our trails.",
               },
               {
                 img: "/people_02.JPG",
-                title: "Community First",
-                desc: "A portion of every booking directly supports Tamang village schools, trail maintenance, and post-earthquake reconstruction in the Langtang region.",
+                title: "Radical Authenticity",
+                desc: "While others look across the map, we look deeper into our own backyard. By focusing exclusively on the Langtang region, we provide a level of intimate, expert knowledge that only a local can offer.",
               },
               {
                 img: "/expe_04.jpg",
-                title: "Safety Always",
-                desc: "All our guides are certified in wilderness first aid. We carry emergency equipment on every trek and maintain strict altitude sickness protocols.",
+                title: "Purposeful Adventure",
+                desc: "We don't just guide; we create experiences that respect the land and empower the community that calls it home",
               },
             ].map((item) => (
               <FeatureCard key={item.title} {...item} />

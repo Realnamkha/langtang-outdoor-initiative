@@ -52,7 +52,7 @@ const Navbar = ({ transparent = true }) => {
               className="rounded-lg"
             />
             <span className="font-display text-lg font-bold tracking-tight">
-              Langtang <span className="text-primary">Outdoor Initiative</span>
+              <span className="text-primary">Langtang </span>Outdoor Initiative
             </span>
           </Link>
 
