@@ -15,7 +15,7 @@ export type Adventure = {
   title: string;
   slug: string;
   imageSrc: string;
-  duration?: string;
+  duration: string;
   difficulty: string;
   region?: string;
   price?: string;

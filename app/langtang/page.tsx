@@ -47,8 +47,12 @@ export default function LangtangIntro() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((item) => (
-              <FeatureCard key={item.title} {...item} />
+            {features.map((item, index) => (
+              <FeatureCard
+                key={item.title}
+                {...item}
+                imgClass={index === 2 ? "object-[center_70%]" : ""}
+              />
             ))}
           </div>
         </div>

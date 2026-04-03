@@ -4,9 +4,10 @@ interface FeatureCardProps {
   img: string;
   title: string;
   desc: string;
+  imgClass?: string;
 }
 
-const FeatureCard = ({ img, title, desc }: FeatureCardProps) => {
+const FeatureCard = ({ img, title, desc, imgClass }: FeatureCardProps) => {
   return (
     <div className="group bg-white rounded-2xl overflow-hidden shadow-sm">
       {/* Image */}
@@ -15,7 +16,7 @@ const FeatureCard = ({ img, title, desc }: FeatureCardProps) => {
           src={img}
           alt={title}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out"
+          className={`object-cover ${imgClass || "object-center"}`}
         />
         {/* Subtle bottom fade for blending into card body */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/10 via-transparent to-transparent pointer-events-none" />
