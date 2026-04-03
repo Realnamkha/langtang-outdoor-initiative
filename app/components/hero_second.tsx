@@ -84,7 +84,7 @@ export default function Hero_Second() {
               aria-hidden="true"
             />
             {/* Light tint — mountain shows through */}
-            <div className="absolute inset-0 bg-[#01baf0]/30" />
+            <div className="absolute inset-0 bg-black/20" />
           </div>
 
           {/* Dot grid */}
@@ -111,7 +111,7 @@ export default function Hero_Second() {
             <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
               <Link
                 href="/expeditions"
-                className="px-7 py-3.5 rounded-full bg-white text-[#0191c8] font-bold text-sm tracking-wide hover:bg-white/90 hover:-translate-y-0.5 transition-all shadow-lg whitespace-nowrap"
+                className="px-7 py-3.5 rounded-full bg-primary text-white font-bold text-sm tracking-wide hover:bg-primary/90 hover:-translate-y-0.5 transition-all shadow-lg whitespace-nowrap"
               >
                 View Expeditions
               </Link>

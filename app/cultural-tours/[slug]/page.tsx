@@ -17,11 +17,6 @@ export default async function CulturalPage({
 
   return (
     <>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
-        rel="stylesheet"
-      />
-
       <div
         className="min-h-screen bg-[#f8f7f4"
         style={{ fontFamily: "'DM Sans', sans-serif" }}
@@ -117,7 +112,53 @@ export default async function CulturalPage({
         <TripOverview tour={tour} />
 
         {/* ── ITINERARY ── */}
-        <Itinerary itinerary={tour.itinerary} />
+        {/* ── COMING SOON ── */}
+        <section className="relative w-full py-24 md:py-36 overflow-hidden bg-[#050f1a]">
+          {/* Ambient glows */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-[#01baf0] opacity-[0.06] blur-[100px] pointer-events-none" />
+          <div className="absolute top-0 left-0 w-72 h-72 rounded-full bg-[#0191c8] opacity-[0.05] blur-3xl pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-72 h-72 rounded-full bg-[#01baf0] opacity-[0.05] blur-3xl pointer-events-none" />
+
+          {/* Subtle grid texture */}
+          <div
+            className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style={{
+              backgroundImage: `linear-gradient(#01baf0 1px, transparent 1px), linear-gradient(90deg, #01baf0 1px, transparent 1px)`,
+              backgroundSize: "60px 60px",
+            }}
+          />
+
+          <div className="relative z-10 max-w-3xl mx-auto px-6 text-center flex flex-col items-center gap-6">
+            {/* Heading */}
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-tight"
+              style={{ fontFamily: "'Playfair Display', serif" }}
+            >
+              More Details <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#01baf0] to-[#0191c8]">
+                Coming Soon
+              </span>
+            </h2>
+
+            {/* Description */}
+            <p className="text-[14px] md:text-[15px] text-[#7a99ad] leading-relaxed max-w-xl">
+              We're crafting the full itinerary, day-by-day highlights,
+              accommodation details, and everything else you need to plan your
+              perfect journey. Stay tuned — it's going to be worth the wait.
+            </p>
+
+            {/* Animated dots / pulse */}
+            <div className="flex items-center gap-2 py-2">
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="w-2 h-2 rounded-full bg-[#01baf0] animate-bounce"
+                  style={{ animationDelay: `${i * 0.18}s` }}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

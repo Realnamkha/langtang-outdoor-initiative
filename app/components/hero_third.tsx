@@ -31,7 +31,7 @@ const activities: Activity[] = [
 export default function Hero_Third() {
   return (
     <section className="relative w-full flex flex-col items-center bg-white px-6 md:px-16 overflow-hidden">
-      <div className="w-full max-w-7xl relative z-10 flex flex-col items-center gap-14 py-12">
+      <div className="w-full max-w-6xl relative z-10 flex flex-col items-center gap-14 py-12">
         {/* Header */}
         <motion.div
           className="flex flex-col items-center text-center gap-4 max-w-2xl"

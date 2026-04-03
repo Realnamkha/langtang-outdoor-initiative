@@ -23,7 +23,7 @@ export const culturalTours: CulturalTour[] = [
     imageSrc: "/buddhist_03.jpg",
     duration: "7 Days",
     difficulty: "Easy",
-    region: "Kathmandu Valley & Langtang, Nepal",
+    region: "Langtang, Nepal",
     price: "$590",
     description: `Nepal's festivals are not performances staged for tourists — they are living, breathing expressions of faith, community, and identity that have shaped Himalayan culture for centuries. The Festive Pack immerses you in the heart of Nepal's ritual calendar, timing your journey to coincide with the valley's most vibrant celebrations. From the thundering drums of Indra Jatra in Kathmandu's ancient squares to the butter lamp festivals of Tamang monasteries in the hills, each day brings colour, sound, and ceremony that cannot be replicated anywhere else on earth. You will eat, observe, and participate alongside local families — not as a spectator, but as a welcomed guest. Dates vary seasonally to align with Nepal's lunar festival calendar; your guide will brief you on the specific celebrations during your travel window.`,
     highlights: [
@@ -117,7 +117,7 @@ export const culturalTours: CulturalTour[] = [
     imageSrc: "/pic4.JPG",
     duration: "9 Days",
     difficulty: "Moderate",
-    region: "Mustang & Upper Kali Gandaki, Nepal",
+    region: "Langtang,Nepal",
     price: "$1,150",
     description: `For centuries, horse caravans were the lifeblood of the Himalayan trade routes — carrying salt, grain, wool, and goods between Tibet and the plains of Nepal. The Horse Backpacking tour revives this ancient tradition, placing you in the saddle on the same high-altitude trails that Tibetan traders have used for a thousand years. The route traverses the Kali Gandaki Gorge — the world's deepest valley — and climbs into the rain-shadow desert landscapes of Upper Mustang, a region of ochre cliffs, whitewashed villages, and sky-blue monasteries that remained closed to outsiders until 1992. Horses are sourced from local Mustangi families and handled by experienced horsemen who have worked these trails their entire lives. No prior horse-riding experience is required — your pace is set by the terrain and the animal, not a schedule.`,
     highlights: [
@@ -219,7 +219,7 @@ export const culturalTours: CulturalTour[] = [
     imageSrc: "/pic4.jpg",
     duration: "6 Days",
     difficulty: "Easy – Moderate",
-    region: "Langtang & Helambu, Nepal",
+    region: "Langtang,Nepal",
     price: "$420",
     description: `High above the treeline in the Langtang and Helambu highlands, Tamang and Sherpa herding families follow seasonal transhumance routes that have remained unchanged for generations — moving yak, nak, and chauri herds between winter valleys and summer alpine pastures as the snows recede and return. Herding Tourism offers a rare window into this disappearing way of life, placing you directly within a working herding family for several days as a participant, not an observer. You will help move the herd at dawn, learn to read the weather and terrain the way herders do, assist with milk collection and churning butter, and sleep in stone shelters at altitude alongside the family and their animals. This is slow travel at its most honest — deeply physical, culturally intimate, and genuinely unlike any packaged experience on the market.`,
     highlights: [
@@ -291,110 +291,6 @@ export const culturalTours: CulturalTour[] = [
         title: "Final Morning on the Herd & Return",
         description:
           "One last dawn with the animals before descending with your guide back to the road. Return to Kathmandu with a farewell gift of home-produced chhurpi from your host family.",
-      },
-    ],
-  },
-  {
-    title: "Pilgrimage Tour",
-    slug: "pilgrimage-tour",
-    imageSrc: "/pic4.JPG",
-    duration: "8 Days",
-    difficulty: "Easy – Moderate",
-    region: "Kathmandu Valley, Muktinath & Gosaikunda, Nepal",
-    price: "$720",
-    description: `Nepal is one of the most sacred landscapes on earth — the birthplace of the Buddha, the holy abode of Lord Shiva, and a land of living goddesses, sacred lakes, and temples where devotion is not a Sunday ritual but a daily, embodied practice. The Pilgrimage Tour traces some of the most significant sacred sites in the Hindu and Buddhist world, moving between ancient temple complexes, high-altitude holy lakes, and mountain shrines that draw millions of pilgrims from across South Asia every year. Unlike a heritage tour, this journey is structured around participation rather than observation — you will bathe in sacred waters, receive blessings from temple priests, circumambulate stupas with Buddhist pilgrims at dawn, and make offerings at shrines that have been active places of worship for over two thousand years. Whether approached as a spiritual journey or a profound cultural experience, the Pilgrimage Tour is the most quietly moving trip in Nepal's highlands.`,
-    highlights: [
-      "Pashupatinath Temple — Nepal's holiest Hindu site, on the banks of the Bagmati",
-      "Boudhanath Stupa — the largest stupa in Asia and a living centre of Tibetan Buddhism",
-      "Gosaikunda Lake (4,380m) — sacred alpine lake where Shiva is said to have created the water",
-      "Muktinath Temple — one of the holiest sites for both Hindus and Tibetan Buddhists",
-      "Receive tika and blessings from a temple priest at Changu Narayan",
-      "Circumambulate Boudhanath at dawn with Tibetan monks and lay pilgrims",
-    ],
-    whatsIncluded: [
-      "Specialist cultural and religious guide with deep knowledge of both Hindu and Buddhist traditions",
-      "All temple and heritage entrance fees",
-      "Puja offerings and ceremonial materials",
-      "Domestic flight Pokhara – Jomsom (for Muktinath leg)",
-      "3 nights hotel in Kathmandu Valley",
-      "2 nights teahouse on Gosaikunda trail",
-      "1 night guesthouse in Jomsom/Muktinath area",
-      "All breakfasts and select meals",
-      "Airport and all inter-site transfers",
-    ],
-    quickFacts: [
-      { label: "Starting Point", val: "Kathmandu, Nepal", icon: "mapPin" },
-      {
-        label: "Style",
-        val: "Sacred Sites / Pilgrimage",
-        icon: "star",
-      },
-      {
-        label: "Best Season",
-        val: "Mar – May · Sep – Nov",
-        icon: "calendar",
-      },
-      {
-        label: "Permits",
-        val: "Heritage Entry + ACAP",
-        icon: "fileText",
-      },
-      { label: "Difficulty", val: "Easy – Moderate", icon: "activity" },
-      { label: "Min. Age", val: "All Ages", icon: "user" },
-    ],
-    gallery: [
-      "/culture_pilgrimage_01.jpg",
-      "/culture_pilgrimage_02.jpg",
-      "/people_03.jpg",
-    ],
-    itinerary: [
-      {
-        day: "Day 1",
-        title: "Arrive Kathmandu — Sacred City Orientation",
-        description:
-          "Arrive in Kathmandu and transfer to your hotel. Evening introductory walk with your guide through the old city — Indra Chowk, Asan Tole, and the flower and incense markets that supply the valley's temples. Your guide introduces the cosmology and spiritual geography of the Kathmandu Valley.",
-      },
-      {
-        day: "Day 2",
-        title: "Pashupatinath & Boudhanath — Shiva and the Buddha",
-        description:
-          "Morning at Pashupatinath Temple — Nepal's most sacred Hindu site. Witness the morning aarti, observe the cremation ghats on the Bagmati River, and receive a blessing from a resident Shaivite priest. Afternoon at Boudhanath Stupa — join the circumambulation circuit with monks, nuns, and lay pilgrims. Evening at a Tibetan monastery for butter lamp offering.",
-      },
-      {
-        day: "Day 3",
-        title: "Changu Narayan & Swayambhunath — The Oldest Temples",
-        description:
-          "Morning visit to Changu Narayan, a UNESCO World Heritage temple dating to the 4th century — Nepal's oldest standing temple complex. Receive tika blessing from the temple priest. Afternoon at Swayambhunath (the Monkey Temple) for circumambulation and a quiet meditation session in the monastery hall.",
-      },
-      {
-        day: "Day 4",
-        title: "Trek to Gosaikunda — Sacred Lake Ascent Begins",
-        description:
-          "Drive to Dhunche and begin the ascent toward Gosaikunda. Trek through Sing Gompa (3,330m), passing dense forest and the first alpine meadows. Overnight at Sing Gompa — visit the small cheese factory and the hilltop monastery at dusk.",
-      },
-      {
-        day: "Day 5",
-        title: "Gosaikunda Lake — The Holy Water of Shiva",
-        description:
-          "Ascend to Gosaikunda Lake (4,380m) — the glacially-fed sacred lake where, according to Hindu mythology, Lord Shiva plunged his trident to release water after swallowing cosmic poison. Participate in a lakeside puja ceremony with your guide. The lake draws hundreds of thousands of Hindu pilgrims during Janai Purnima (August). Return to Sing Gompa for the night.",
-      },
-      {
-        day: "Day 6",
-        title: "Descend & Fly to Muktinath via Pokhara",
-        description:
-          "Descend from Gosaikunda and drive to Kathmandu. Afternoon flight to Pokhara and onward flight to Jomsom. Transfer to Muktinath area for overnight.",
-      },
-      {
-        day: "Day 7",
-        title: "Muktinath Temple — Where Hindus and Buddhists Meet",
-        description:
-          "Full morning at Muktinath Temple (3,710m) — one of the most significant pilgrimage sites for both Vaishnava Hindus and Tibetan Buddhists, who venerate it as Chumig Gyatsa (Hundred Waters). Bathe in the 108 sacred waterspouts, visit the Buddhist monastery within the temple complex, and make offerings at the eternal flame — a natural gas vent that has burned for centuries. Afternoon return flight to Pokhara.",
-      },
-      {
-        day: "Day 8",
-        title: "Return to Kathmandu — Closing Puja & Farewell",
-        description:
-          "Morning flight Pokhara to Kathmandu. Final visit to Boudhanath for a closing circumambulation and a small personal puja arranged by your guide as a blessing for the journey home. Farewell dinner with the guide team in the evening.",
       },
     ],
   },

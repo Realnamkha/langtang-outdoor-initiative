@@ -9,19 +9,19 @@ import Hero from "./components/Hero";
 
 const features = [
   {
-    img: "/guides.jpg",
-    title: "Guides & Guardians",
-    desc: "Descendants of the Langtangpa community, they carry ancestral knowledge no outsider can teach, buy, or fake.",
+    img: "/guide_02.JPG",
+    title: "Culture",
+    desc: "Sacred Himalayan valley where ancient Tibetan traditions still live—rare, authentic, and fading.",
   },
   {
     img: "/guide_03.jpg",
-    title: "Walk a Sacred Valley",
-    desc: "Langtang is a sacred hidden valley blessed by Guru Padmasambhava. With Langtang Outdoor Initiative, the myths, the mani walls, and the mountains speak, you just need someone who understands the language.",
+    title: "Landscape",
+    desc: "Untouched Himalayan beauty—glaciers, forests, and peaks in one breathtaking valley.",
   },
   {
-    img: "/guide_02.JPG",
-    title: "Support Local Culture",
-    desc: "Every expedition with Langtang Outdoor Initiative flows directly back into the community, keeping culture alive one trek at a time.",
+    img: "/guides.jpg",
+    title: "Adventure",
+    desc: "From trekking to climbing and bouldering, Langtang is Nepal’s rising adventure playground.",
   },
 ];
 

@@ -43,22 +43,6 @@ export default function EventCardImage({
                 "linear-gradient(to top, rgba(0,0,0,0.92) 0%, rgba(0,0,0,0.45) 40%, transparent 70%)",
             }}
           />
-
-          {/* ── Activity + Region pills — top left ── */}
-          <div className="absolute top-4 left-4 flex gap-2 flex-wrap z-10">
-            {activity && (
-              <span className="text-[11px] font-semibold tracking-wide px-3 py-1 rounded-full bg-[#01baf0]/90 text-white uppercase">
-                {activity}
-              </span>
-            )}
-            {region && (
-              <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-black/40 text-white/80 border border-white/15 backdrop-blur-sm">
-                {region}
-              </span>
-            )}
-          </div>
-
-          {/* ── Shimmer line on hover ── */}
           <div className="absolute inset-x-0 top-0 h-[1.5px] bg-gradient-to-r from-transparent via-[#01baf0] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
 
@@ -116,10 +100,7 @@ export default function EventCardImage({
 
           {/* CTA row */}
           <div className="flex items-center justify-between">
-            <span className="text-[13px] text-white/40 font-medium">
-              Langtang Outdoor Initiative
-            </span>
-            <div className="flex items-center gap-2 bg-[#01baf0] hover:bg-[#0199cc] text-white text-[13px] font-semibold px-4 py-2 rounded-full transition-all duration-200 group-hover:gap-3">
+            <div className="flex justify-center items-center w-full gap-2 bg-[#01baf0] hover:bg-[#0199cc] text-white text-[13px] font-semibold p-4 transition-all rounded-2xl duration-200 group-hover:gap-3">
               <span>Explore</span>
               <ArrowRight
                 className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5"

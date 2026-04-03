@@ -1,17 +1,24 @@
-import Navbar from "@/app/components/navbar";
 import { adventures, getAdventureBySlug } from "@/lib/adventure";
 import { AdventureStatsBar } from "./component/AdventureStatsbar";
 import Itinerary from "@/components/ui/Itinerary";
 import InclusionsExclusions from "@/components/ui/InclusionExclusion";
-import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowRight } from "lucide-react";
 import Hero from "./component/Intro";
 import TripOverview from "./component/TripOverview";
 import EventCardImage from "./component/Glass_Card";
 import BoulderAddOns from "./component/Boulderadd";
-import BoulderSelector from "./component/Boulderadd";
+import {
+  viaferrataExcludes,
+  viaferrataIncludes,
+} from "@/lib/via_include_exclude";
+import {
+  highlineExcludes,
+  highlineIncludes,
+} from "@/lib/highline_include_exclude";
+import {
+  includes as defaultIncludes,
+  excludes as defaultExcludes,
+} from "@/lib/include_exclude";
 
 export function generateStaticParams() {
   return adventures.map((a) => ({ slug: a.slug }));
@@ -25,9 +32,8 @@ export default async function AdventurePage({
   const { slug } = await params;
   const adventure = getAdventureBySlug(slug);
   if (!adventure) notFound();
-  const showSpecialCards =
-    adventure.title === "Highline" ||
-    adventure.title.toLocaleLowerCase() === "via ferrata";
+  const Via = adventure.title === "Via Ferrata";
+  const high = adventure.title === "HighLine-SlackLine";
 
   return (
     <main className="bg-[#f8f7f4] text-gray-900 overflow-x-hidden">
@@ -39,50 +45,91 @@ export default async function AdventurePage({
         <TripOverview adventure={adventure} />
       </div>
       {/* ── Inclusions / Exclusions ──────────────────────────────────────── */}
-
+      <section className="bg-gray-50">
+        <InclusionsExclusions
+          includes={
+            Via ? viaferrataIncludes : high ? highlineIncludes : defaultIncludes
+          }
+          excludes={
+            Via ? viaferrataExcludes : high ? highlineExcludes : defaultExcludes
+          }
+        />
+      </section>
       {/* ── Itinerary ────────────────────────────────────────────────────── */}
-      {!showSpecialCards && (
+      {adventure.itinerary && adventure.itinerary.length > 0 && (
         <section className="bg-white">
           <Itinerary itinerary={adventure.itinerary} />
         </section>
       )}
 
       {/* ── CTA ──────────────────────────────────────────────────────────── */}
-      <div className="max-w-6xl mx-auto px-4 py-12">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {/* Card 1 */}
-          <EventCardImage
-            title="The 6-Hour Summit"
-            subHeadline="Short on time? Touch the base of Langtang Lirung and be back for lunch."
-            hook="A 1.9km iron path engineered for safety and thrill. No climbing experience required."
-            imageSrc="/via_01.jpg"
-            date="April 2026"
-            duration="6 Hours"
-            activity="The Day Adventure"
-            region="Langtang, Nepal"
-            link="/book-day-adventure"
-          />
+      {Via && (
+        <div className="max-w-6xl mx-auto px-4 py-12">
+          <div className="grid gap-6 sm:grid-cols-2">
+            {/* Card 1 */}
+            <EventCardImage
+              title="The 6-Hour Summit"
+              subHeadline="Short on time? Touch the base of Langtang Lirung and be back for lunch."
+              hook="A 1.9km iron path engineered for safety and thrill. No climbing experience required."
+              imageSrc="/via_01.jpg"
+              date="April 2026"
+              duration="6 Hours"
+              activity="The Day Adventure"
+              region="Langtang, Nepal"
+              link="/book-day-adventure"
+            />
 
-          {/* Card 2 */}
-          <EventCardImage
-            title="Langtang Sunrise Trek"
-            subHeadline="Catch the first rays over the Himalayan peaks."
-            hook="An early morning trek with breathtaking views. Suitable for beginners."
-            imageSrc="/via_02.jpg"
-            date="April 2026"
-            duration="4 Hours"
-            activity="The Trek Upgrade"
-            region="Langtang, Nepal"
-            link="/book-sunrise-trek"
-          />
+            {/* Card 2 */}
+            <EventCardImage
+              title="Via Ferrate Over Langtang"
+              subHeadline="Catch the first rays over the Himalayan peaks."
+              hook="An early morning trek with breathtaking views. Suitable for beginners."
+              imageSrc="/via_02.jpg"
+              date="April 2026"
+              duration="4 Hours"
+              activity="The Trek Upgrade"
+              region="Langtang, Nepal"
+              link="/book-sunrise-trek"
+            />
+          </div>
         </div>
+      )}
+      {high && (
+        <div className="max-w-6xl mx-auto px-4 py-12">
+          <div className="grid gap-6 sm:grid-cols-2">
+            {/* Card 1 */}
+            <EventCardImage
+              title="The Alpine Flow"
+              subHeadline="Short on time? Touch the base of Langtang Lirung and be back for lunch."
+              hook="A 1.9km iron path engineered for safety and thrill. No climbing experience required."
+              imageSrc="/via_01.jpg"
+              date="April 2026"
+              duration="6 Hours"
+              activity="The Day Adventure"
+              region="Langtang, Nepal"
+              link="/book-day-adventure"
+            />
+
+            {/* Card 2 */}
+            <EventCardImage
+              title="Elevate The Experience"
+              subHeadline="Catch the first rays over the Himalayan peaks."
+              hook="An early morning trek with breathtaking views. Suitable for beginners."
+              imageSrc="/via_02.jpg"
+              date="April 2026"
+              duration="4 Hours"
+              activity="The Trek Upgrade"
+              region="Langtang, Nepal"
+              link="/book-sunrise-trek"
+            />
+          </div>
+        </div>
+      )}
+      <div>
+        <BoulderAddOns activityId={adventure.title} />
       </div>
-      <BoulderSelector />
-      <section className="bg-gray-50">
-        <InclusionsExclusions />
-      </section>
       <section className="bg-gray-50 py-24 px-4 sm:px-6">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden bg-gray-900 px-8 py-16 md:px-16">
             {/* Grid texture */}
             <div
@@ -119,13 +166,6 @@ export default async function AdventurePage({
                   <button className="px-7 py-3.5 rounded-xl bg-[#01baf0] text-white text-sm font-semibold hover:bg-[#0191c8] active:scale-[0.98] transition-all duration-150 shadow-lg shadow-[#01baf0]/20">
                     Book This Adventure
                   </button>
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center gap-1.5 px-7 py-3.5 rounded-xl border border-white/10 text-sm font-semibold text-gray-300 hover:border-white/20 hover:text-white transition-all duration-150"
-                  >
-                    Ask a Question
-                    <ArrowRight size={13} strokeWidth={2} />
-                  </Link>
                 </div>
               </div>
             </div>

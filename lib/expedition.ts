@@ -25,7 +25,7 @@ export const expeditions: Expedition[] = [
     altitude: "5,520 M",
     region: "Langtang, Nepal",
     price: "$1,200",
-    description: `Yala Peak (5,520m) is one of the most accessible trekking peaks in Nepal, located in the heart of the Langtang Valley. Ideal for climbers stepping into high-altitude mountaineering for the first time, Yala offers a genuine summit experience without extreme technical difficulty. The ascent follows a straightforward northeast ridge route with crampons and ice axe, rewarding climbers with sweeping panoramas of Shishapangma, Dorje Lakpa, Langtang Lirung, and the Tibetan plateau. Combined with the rich cultural trail through Tamang villages and the iconic Kyanjin Gompa monastery, this expedition is as spiritually enriching as it is physically demanding.`,
+    description: `Rising to 5,500 meters in the breathtaking Langtang Valley, Yala Peak is one of the best beginner-friendly peaks in the Himalayas. It offers an exciting mix of trekking and climbing, taking you through alpine landscapes, glaciers, and serene high-altitude terrain all without extreme technical difficulty.From the summit, you’re rewarded with spectacular panoramic views, including the majestic Shishapangma (8,027 m) rising across the Tibetan border.With its accessible route, stunning scenery, and real mountaineering feel, Yala Peak is the perfect gateway into Himalayan adventure`,
     gallery: ["/pic2.jpeg", "/people_03.jpg", "/pic4.jpg"],
     quickFacts: [
       { label: "Starting Point", val: "Kathmandu, Nepal", icon: "mapPin" },
@@ -41,290 +41,286 @@ export const expeditions: Expedition[] = [
     itinerary: [
       {
         day: "Day 1",
-        title: "Arrival in Kathmandu",
+        title: "Kathmandu",
         badge: "Arrival",
-        altitude: "1,400m",
+        altitude: "1300M",
+        stay: "Hotel",
         sections: [
           {
-            label: "Arrival",
+            label: "Details",
             content:
-              "Arrive at Tribhuvan International Airport (TIA). Meet your guide and transfer to your hotel in central Kathmandu.",
-          },
-          {
-            label: "Briefing",
-            content:
-              "Full expedition briefing covering gear check, permits, and acclimatization strategy.",
-          },
-          {
-            label: "Evening",
-            content:
-              "Welcome dinner with the team. Authentic Nepali flavors and first introductions.",
+              "Upon your arrival at Tribhuvan International Airport, our team will warmly welcome you and transfer you to your hotel in Kathmandu. After check-in and some time to relax, you will meet your expedition team for a detailed briefing about the Yala Peak climb. A thorough gear check will be conducted, followed by an opportunity to shop for any missing equipment in the local stores. In the evening, enjoy a welcome dinner with the team, get to know your guides and fellow climbers, and prepare for the adventure ahead",
           },
         ],
       },
       {
         day: "Day 2",
-        title: "Drive to Syabrubesi",
-        badge: "Transfer",
-        altitude: "1,550m",
-        distance: "~120 km",
-        duration: "6–8 hrs",
+        title: "Kathmandu to Shyabru-Besi",
+        badge: "Drive",
+        altitude: "1550M",
+        distance: "122KM",
+        duration: "6-7 hrs",
+        stay: "Hotel",
         sections: [
           {
-            label: "Departure",
-            content: "Early morning departure by private jeep from Kathmandu.",
+            label: "Morning",
+            content:
+              "After an early breakfast at 6:30 AM, depart Kathmandu by jeep. Drive along the Trishuli River and through Dhunche, enjoying the winding roads and scenic hillsides.",
           },
           {
-            label: "The Drive",
+            label: "Noon",
             content:
-              "Scenic drive northwest through winding mountain roads, passing terraced fields and traditional Tamang villages.",
+              "Stop for lunch and refreshments at Trishuli while taking in the spectacular views of terraced hills, forests, and local villages.",
           },
           {
-            label: "Overnight",
+            label: "Evening",
             content:
-              "Arrive in Syabrubesi — the gateway to the Langtang Valley. Settle in and rest.",
+              "Arrive at Syabrubesi, check in at your lodge, relax, and enjoy a short walk to explore the local village and its lifestyle.",
           },
         ],
       },
       {
         day: "Day 3",
-        title: "Trek to Lama Hotel",
+        title: "Shyabru-Besi to Lama Hotel",
         badge: "Trek",
-        altitude: "2,380m",
-        distance: "~11 km",
-        duration: "5–6 hrs",
+        altitude: "2470M",
+        distance: "11KM",
+        duration: "7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Enter Langtang National Park and descend into the Langtang Khola gorge.",
+              "Wake up at 6:30 AM, followed by breakfast at 7:00 AM. At 7:30 AM, enjoy a short stretching session on the trail before starting the hike at 8:00 AM. The trek passes through lush subtropical and alpine forests, following the scenic Langtang River.",
           },
           {
-            label: "Trail",
+            label: "Noon",
             content:
-              "The path winds through dense rhododendron and bamboo forest. Watch for red pandas and langur monkeys.",
+              "Stop at Bamboo for lunch and rest. Continue the hike along a steep but rewarding trail, taking in panoramic views of the river valleys and surrounding forests.",
           },
           {
             label: "Evening",
             content:
-              "Arrive at Lama Hotel. First night in a traditional teahouse.",
+              "Arrive at Lama Hotel and check into your tea house accommodation. After settling in, participate in a 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect on the following day",
           },
         ],
       },
       {
         day: "Day 4",
-        title: "Trek to Langtang Village",
+        title: "Lama Hotel to Langtang",
         badge: "Trek",
-        altitude: "3,430m",
-        distance: "~14 km",
-        duration: "5–6 hrs",
+        altitude: "3450M",
+        distance: "12KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "The valley opens up dramatically as altitude increases. Pass through Ghoda Tabela for lunch.",
+              "Wake up at 6:30 AM, enjoy breakfast at 7:00 AM, and a stretching session at 7:45 AM. Begin trekking by 8:00 AM through beautiful alpine forests with the Langtang River flowing alongside.",
           },
           {
-            label: "Highlights",
+            label: "Noon",
             content:
-              "Yak pastures and traditional stone villages. First clear views of Langtang Lirung (7,227m).",
+              "Stop at Ghoda Tabela for lunch. Here, the landscape begins to open up, transitioning from dense forest gorges to wider valleys with lighter vegetation, offering expansive views of the surrounding mountains.",
           },
           {
             label: "Evening",
             content:
-              "Arrive at the rebuilt Langtang Village — a community defined by extraordinary resilience.",
+              "Arrive at Langtang Village and check into tea house. Participate in the usual 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect for the next day.",
           },
         ],
       },
       {
         day: "Day 5",
-        title: "Trek to Kyanjin Gompa",
+        title: "Langtang to Kyanjin",
         badge: "Trek",
-        altitude: "3,870m",
-        distance: "~6 km",
-        duration: "2–3 hrs",
+        altitude: "3855M",
+        distance: "6.5KM",
+        duration: "2-3hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
-            content: "Short but rewarding walk through open alpine meadows.",
+            content:
+              "As the distance is shorter but the elevation increases, the day starts slowly. Wake up at 7:00 AM, enjoy breakfast at 7:30 AM, and begin the trek by 8:00 AM. Take a scenic detour through Mundu Village, the only village in Langtang Valley where traditional architecture is still preserved. This route offers a unique glimpse into the authentic lifestyle and rich culture of the Langtangpa people",
           },
           {
-            label: "Arrival",
+            label: "Noon",
             content:
-              "Arrive at Kyanjin Gompa. Visit the famous monastery and local yak cheese factory.",
+              "Continue to Kyanjin Gompa and have lunch. In the afternoon, a short hike to the nearby glacier lake helps with acclimatization.",
           },
           {
-            label: "Afternoon",
+            label: "Evening",
             content:
-              "Stunning views of Tserko Ri and Langtang Lirung. Prepare gear for higher altitude days.",
+              "Settle at the tea house and join the 45-minute team session to review the day and prepare for the next.",
           },
         ],
       },
       {
         day: "Day 6",
-        title: "Acclimatization at Kyanjin Gompa",
-        badge: "Rest",
-        altitude: "3,870m–4,773m",
-        duration: "4–5 hrs",
+        title: "Kyanjin",
+        badge: "Acclimatization",
+        altitude: "3855M",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Critical rest and acclimatization day. No rushing — let your body adapt.",
+              "Wake up and breakfast as usual. Begin expedition preparation with hands-on gear familiarization, learning how to properly use climbing equipment under the guidance of a professional mountain guide.",
           },
           {
-            label: "Activity",
+            label: "Noon",
             content:
-              "Optional hike to Kyanjin Ri (4,773m) for panoramic views of the Langtang range, Ganesh Himal, and the Tibetan plateau.",
+              "Short local hikes around Kyanjin Gompa for acclimatization, while practicing technical skills learned during the morning session.",
           },
           {
             label: "Evening",
             content:
-              "Hydrate well, eat a full meal, and prepare kit for the base camp approach tomorrow.",
+              "Return to the tea house and participate in the 45-minute team session to review training progress, discuss experiences, and prepare for the Base camp.",
           },
         ],
       },
       {
         day: "Day 7",
-        title: "Trek to Yala Peak Base Camp",
+        title: "Kyanjin to Yala Base Camp",
         badge: "Trek",
-        altitude: "5,000m",
-        distance: "~6 km",
-        duration: "4–5 hrs",
+        altitude: "4880M",
+        distance: "6.9KM",
+        duration: "6hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Leave the teahouse trail behind. Trek across high-altitude yak grazing meadows at Yala Kharka.",
+              "Wake up and have breakfast at 7:30 AM, then start the trek by 8:00 AM. Hike toward the base of Tserko Ri, ascending a steep trail with breathtaking Himalayan views in every direction.",
           },
           {
-            label: "Arrival",
+            label: "Noon",
             content:
-              "Set up base camp at 5,000m. The terrain becomes raw and silent up here.",
+              "Stop for a packed lunch midway through the hike while enjoying the surrounding scenery.",
           },
           {
             label: "Evening",
             content:
-              "Review summit plans, carry out final gear check, and rest early for the pre-dawn start.",
+              "Set up camp in tents at the base camp. Participate in the usual 45-minute team session, then rest early to prepare for an early summit attempt the next day",
           },
         ],
       },
       {
         day: "Day 8",
-        title: "Summit Day — Yala Peak",
+        title: "Yala Base Camp to summit to kyanjin Gompa",
         badge: "Summit",
-        altitude: "5,520m",
-        duration: "8–10 hrs",
+        altitude: "3855M",
+        distance: "18.1KM",
+        duration: "8-9hrs",
+        stay: "Tea-House",
         sections: [
           {
-            label: "Start",
+            label: "Morning",
             content:
-              "Pre-dawn alpine start at 2–3 AM. Crampons and ice axe from the outset.",
+              "Wake up at 4:00 AM, have an early breakfast at 4:30 AM, and begin the summit push by 5:00 AM. Trek in the dark using headlamps, ascending toward Yala Peak.",
           },
           {
-            label: "The Climb",
+            label: "Noon",
             content:
-              "Ascend via the northeast ridge. Non-technical but physically demanding at altitude. Stay roped and focused.",
+              "Mid-hike packed lunch as you continue toward the summit. Reach the top in approximately 4–5 hours from base camp, rewarded with spectacular sunrise views and a sense of achievement.",
           },
           {
-            label: "Summit",
+            label: "Evening",
             content:
-              "360° panorama of Shishapangma, Dorje Lakpa, the entire Langtang range, and the Tibetan plateau. Packed lunch at the top.",
-          },
-          {
-            label: "Descent",
-            content:
-              "Return to base camp by early afternoon. Rest and celebrate with the team.",
+              "Descend directly to Kyanjin Gompa instead of base camp. Join the usual 45-minute team session to review the summit experience and check on everyone’s condition",
           },
         ],
       },
       {
         day: "Day 9",
-        title: "Buffer Day",
-        badge: "Reserve",
-        altitude: "5,000m",
+        title: "Kyanjinn Gompa to Lama Hotel",
+        badge: "Trek",
+        altitude: "2470M",
+        distance: "18km",
+        duration: "7hrs",
+        stay: "Tea-House",
         sections: [
           {
-            label: "Purpose",
+            label: "Morning",
             content:
-              "Reserved for a second summit attempt if weather prevented it on Day 8.",
+              "Wake up and have breakfast as usual, then begin the trek following the same scenic valley trail, retracing your steps while enjoying the landscapes you’ve grown familiar with.",
           },
           {
-            label: "Alternative",
+            label: "Noon",
             content:
-              "If the summit was reached, use this as a full rest and recovery day before the descent.",
+              "Stop for lunch along the way, taking in the rivers, forests, and mountain views, reflecting on the journey so far.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Lama Hotel, check into your tea house, and join the 45-minute team session to share experiences, memories, and highlights of the trek.",
           },
         ],
       },
       {
         day: "Day 10",
-        title: "Trek Back to Langtang Village",
+        title: "Lama Hotel to Shyabru-Besi",
         badge: "Trek",
-        altitude: "3,430m",
-        distance: "~14 km",
-        duration: "5–6 hrs",
+        altitude: "1550M",
+        distance: "11km",
+        duration: "6hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
             content:
-              "Descend from base camp back through Kyanjin Gompa and down the valley.",
+              "Wake up and have breakfast, then begin the final trekking leg through the forested trails of Langtang Valley, retracing the path toward Syabrubesi.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Take your time on the rocky descent. The air thickens noticeably with each metre lost.",
+              "Stop for lunch en route and enjoy the river views and village life along the way.",
           },
           {
             label: "Evening",
             content:
-              "Arrive at Langtang Village. Warm teahouse dinner and reflection on the climb.",
+              "Arrive at Syabrubesi, check into lodge, and join the usual 45-minute team session to reflect on the journey and share final memories before the drive back to Kathmandu.",
           },
         ],
       },
       {
         day: "Day 11",
-        title: "Trek to Syabrubesi",
-        badge: "Trek",
-        altitude: "1,550m",
-        distance: "~22 km",
-        duration: "6–7 hrs",
+        title: "Shyabru-Besi to Kathmandu",
+        badge: "Drive",
+        altitude: "1300M",
+        distance: "122KM",
+        duration: "6-7hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
             content:
-              "Long descent through forest and river crossings. The hard work is behind you.",
+              "After breakfast, depart Syabrubesi by jeep and enjoy the scenic drive back to Kathmandu, passing rivers, terraced hills, and local villages along the way.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Re-enter the lush lower valley. A satisfying final day of trekking.",
+              "Stop for lunch at a local restaurant en route, soaking in the last views of the Langtang Valley.",
           },
           {
             label: "Evening",
-            content: "Arrive in Syabrubesi. Celebratory End of Trail dinner.",
+            content:
+              "Arrive in Kathmandu, check into hotel, and join a farewell program with a group dinner to celebrate the expedition and share memories with team and guides.",
           },
         ],
       },
       {
         day: "Day 12",
-        title: "Drive to Kathmandu — Farewell Dinner",
-        badge: "Transfer",
-        altitude: "1,400m",
-        duration: "6–8 hrs",
+        title: "Kathmandu",
+        badge: "Departure",
+        altitude: "1300M",
         sections: [
           {
-            label: "Morning",
+            label: "Details",
             content:
-              "Morning drive back to Kathmandu through the mountain roads.",
-          },
-          {
-            label: "Afternoon",
-            content: "Check into the hotel. Long-overdue hot shower and rest.",
-          },
-          {
-            label: "Evening",
-            content:
-              "Farewell dinner at a traditional Nepali restaurant with the team.",
+              "After breakfast, enjoy your final moments in Kathmandu before being transferred from the hotel to Tribhuvan International Airport. Depart with unforgettable memories of your Yala Peak expedition, carrying the joy of the journey and the hope of returning for future adventures",
           },
         ],
       },
@@ -337,11 +333,11 @@ export const expeditions: Expedition[] = [
     title: "Tserko Peak",
     slug: "tserko-peak",
     imageSrc: "/tserko_02.jpg",
-    duration: "14 Days",
+    duration: "15 Days",
     altitude: "4,984 M",
     region: "Langtang, Nepal",
     price: "$1,000",
-    description: `Tserko Ri (4,984m) rises dramatically above Kyanjin Gompa and is one of the most rewarding viewpoints in the entire Langtang region. While technically a trekking viewpoint rather than a technical climbing peak, the ascent is steep, strenuous, and deeply satisfying. From the summit, climbers are treated to an unobstructed 360-degree panorama of Langtang Lirung (7,227m), Ganesh Himal, Dorje Lakpa, and the vast Tibetan plateau to the north. The expedition pairs beautifully with the cultural richness of Kyanjin Gompa monastery and authentic teahouse trekking through the heart of Langtang Valley.`,
+    description: `Tserko Peak is a beautiful mountain in the Langtang region, standing at 5,719 meters among the Langtang Himalayan range, just to the left of Yala Peak. This peak combines rocky terrain, glacier fields, and sharp ridges, making it ideal for climbers who want to improve their mountaineering skills. With its challenging routes and breathtaking Himalayan views, Tserko Peak offers an unforgettable adventure for those seeking both skill-building and the thrill of high-altitude climbing`,
     gallery: ["/people_03.jpg", "/pic2.jpeg", "/people_04.jpg"],
     quickFacts: [
       { label: "Starting Point", val: "Kathmandu, Nepal", icon: "mapPin" },
@@ -357,324 +353,362 @@ export const expeditions: Expedition[] = [
     itinerary: [
       {
         day: "Day 1",
-        title: "Arrival in Kathmandu",
+        title: "Kathmandu",
         badge: "Arrival",
-        altitude: "1,400m",
+        altitude: "1300M",
+        stay: "Hotel",
         sections: [
           {
-            label: "Arrival",
+            label: "Details",
             content:
-              "Arrive at Tribhuvan International Airport. Meet your guide and transfer to hotel.",
-          },
-          {
-            label: "Briefing",
-            content:
-              "Team briefing covering permits, gear, and the expedition plan.",
-          },
-          {
-            label: "Evening",
-            content: "Welcome dinner and first introductions with the group.",
+              "Upon your arrival at Tribhuvan International Airport, our team will warmly welcome you and transfer you to your hotel in Kathmandu. After check-in and some time to relax, you will meet your expedition team for a detailed briefing about the Scout Peak climb. A thorough gear check will be conducted, followed by an opportunity to shop for any missing equipment in the local stores. In the evening, enjoy a welcome dinner with the team, get to know your guides and fellow climbers, and prepare for the adventure ahead",
           },
         ],
       },
       {
         day: "Day 2",
-        title: "Drive to Syabrubesi",
-        badge: "Transfer",
-        altitude: "1,550m",
-        distance: "~120 km",
-        duration: "6–8 hrs",
+        title: "Kathmandu to Shyabru-Besi",
+        badge: "Drive",
+        altitude: "1550M",
+        distance: "122KM",
+        duration: "6-7 hrs",
+        stay: "Hotel",
         sections: [
           {
-            label: "Departure",
+            label: "Morning",
             content:
-              "Early morning drive northwest through winding hill roads.",
+              "After an early breakfast at 6:30 AM, depart Kathmandu by jeep. Drive along the Trishuli River and through Dhunche, enjoying the winding roads and scenic hillsides.",
           },
           {
-            label: "The Drive",
+            label: "Noon",
             content:
-              "Pass through Tamang villages and terraced farmland en route to the trailhead.",
+              "Stop for lunch and refreshments at Trishuli while taking in the spectacular views of terraced hills, forests, and local villages.",
           },
           {
-            label: "Overnight",
+            label: "Evening",
             content:
-              "Arrive at Syabrubesi. Settle in and prepare for the trek ahead.",
+              "Arrive at Syabrubesi, check in at your lodge, relax, and enjoy a short walk to explore the local village and its lifestyle.",
           },
         ],
       },
       {
         day: "Day 3",
-        title: "Trek to Lama Hotel",
+        title: "Shyabru-Besi to Lama Hotel",
         badge: "Trek",
-        altitude: "2,380m",
-        distance: "~11 km",
-        duration: "5–6 hrs",
+        altitude: "2470M",
+        distance: "11KM",
+        duration: "7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Enter Langtang National Park and follow the Langtang Khola river trail.",
+              "Wake up at 6:30 AM, followed by breakfast at 7:00 AM. At 7:30 AM, enjoy a short stretching session on the trail before starting the hike at 8:00 AM. The trek passes through lush subtropical and alpine forests, following the scenic Langtang River.",
           },
           {
-            label: "Trail",
+            label: "Noon",
             content:
-              "Dense subtropical forest with good chance of spotting red pandas and langur monkeys.",
+              "Stop at Bamboo for lunch and rest. Continue the hike along a steep but rewarding trail, taking in panoramic views of the river valleys and surrounding forests.",
           },
-          { label: "Evening", content: "First night at Lama Hotel teahouse." },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Lama Hotel and check into your tea house accommodation. After settling in, participate in a 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect on the following day",
+          },
         ],
       },
       {
         day: "Day 4",
-        title: "Trek to Langtang Village",
+        title: "Lama Hotel to Langtang",
         badge: "Trek",
-        altitude: "3,430m",
-        distance: "~14 km",
-        duration: "5–6 hrs",
+        altitude: "3450M",
+        distance: "12KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Ascend through forest into the open valley. Pass yak herders and prayer flags.",
+              "Wake up at 6:30 AM, enjoy breakfast at 7:00 AM, and a stretching session at 7:45 AM. Begin trekking by 8:00 AM through beautiful alpine forests with the Langtang River flowing alongside.",
           },
           {
-            label: "Views",
+            label: "Noon",
             content:
-              "First sweeping views of Langtang Lirung and surrounding peaks.",
+              "Stop at Ghoda Tabela for lunch. Here, the landscape begins to open up, transitioning from dense forest gorges to wider valleys with lighter vegetation, offering expansive views of the surrounding mountains.",
           },
           {
             label: "Evening",
-            content: "Arrive at the rebuilt Langtang Village.",
+            content:
+              "Arrive at Langtang Village and check into tea house. Participate in the usual 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect for the next day.",
           },
         ],
       },
       {
         day: "Day 5",
-        title: "Trek to Kyanjin Gompa",
+        title: "Langtang to Kyanjin",
         badge: "Trek",
-        altitude: "3,870m",
-        distance: "~6 km",
-        duration: "2–3 hrs",
+        altitude: "3855M",
+        distance: "6.5KM",
+        duration: "2-3hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Short walk through alpine meadows to the iconic Kyanjin Gompa.",
+              "As the distance is shorter but the elevation increases, the day starts slowly. Wake up at 7:00 AM, enjoy breakfast at 7:30 AM, and begin the trek by 8:00 AM. Take a scenic detour through Mundu Village, the only village in Langtang Valley where traditional architecture is still preserved. This route offers a unique glimpse into the authentic lifestyle and rich culture of the Langtangpa people",
           },
           {
-            label: "Arrival",
-            content: "Visit the monastery and the local yak cheese factory.",
-          },
-          {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Explore the gompa and rest before the acclimatization push.",
+              "Continue to Kyanjin Gompa and have lunch. In the afternoon, a short hike to the nearby glacier lake helps with acclimatization.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Settle at the tea house and join the 45-minute team session to review the day and prepare for the next.",
           },
         ],
       },
       {
         day: "Day 6",
-        title: "Acclimatization at Kyanjin",
-        badge: "Rest",
-        altitude: "3,870m",
+        title: "Kyanjin",
+        badge: "Acclimatization",
+        altitude: "3855M",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Rest day for acclimatization. No rushing — let your body adapt to 3,870m.",
+              "Wake up and breakfast as usual. Begin expedition preparation with hands-on gear familiarization, learning how to properly use climbing equipment under the guidance of a professional mountain guide.",
           },
           {
-            label: "Activity",
+            label: "Noon",
             content:
-              "Optional short hike to nearby viewpoints to aid acclimatization without overexertion.",
+              "Short local hikes around Kyanjin Gompa for acclimatization, while practicing technical skills learned during the morning session.",
           },
           {
             label: "Evening",
             content:
-              "Prepare equipment and review plans for the base camp push tomorrow.",
+              "Return to the tea house and participate in the 45-minute team session to review training progress, discuss experiences, and prepare for the Base camp.",
           },
         ],
       },
       {
         day: "Day 7",
-        title: "Trek to Tserko Ri Base Camp",
+        title: "Kyanjin-Gompa to Scout Base Camp",
         badge: "Trek",
-        altitude: "4,200m",
-        distance: "~5 km",
-        duration: "3–4 hrs",
+        altitude: "4620M",
+        distance: "5.2KM",
+        duration: "6-7hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Ascend steeply from Kyanjin Gompa toward the base of Tserko Ri.",
+              "With increasing elevation, we move slowly and steadily. Wake up at 7:00 AM, followed by breakfast, packing, and a short stretching session. Begin the trek around 9:00 AM, heading toward the less-traveled side of Kyanjin.",
           },
           {
-            label: "Terrain",
+            label: "Noon",
             content:
-              "The landscape becomes more rugged and exposed with dramatic ridge views in all directions.",
+              "Cross an iron bridge and continue through alpine forests, gradually ascending toward base camp. Packed lunch will be taken along the trail while enjoying the changing landscapes.",
           },
           {
-            label: "Camp",
+            label: "Evening",
             content:
-              "Set up camp at 4,200m. Rest and hydrate ahead of summit day.",
+              "Arrive at Scout Peak Base Camp, set up tents, and settle in. Participate in the usual team briefing to review the day, check on everyone’s condition, and prepare for the next stage of the expedition",
           },
         ],
       },
       {
         day: "Day 8",
-        title: "Summit Day — Tserko Ri",
-        badge: "Summit",
-        altitude: "4,984m",
-        duration: "7–9 hrs",
+        title: "Scout Base Camp to Scout High Camp",
+        badge: "Trek",
+        altitude: "4995M",
+        distance: "3.4KM",
+        duration: "3-4hrs",
+        stay: "Tent",
         sections: [
           {
-            label: "Start",
+            label: "Morning",
             content:
-              "Early morning summit push before the mountain clouds move in.",
+              "With the gain in elevation, the day starts slowly to allow proper acclimatization. Wake up at 7:00 AM, have breakfast, and begin trekking by 9:00 AM through rocky terrain, maintaining a steady pace.",
           },
           {
-            label: "The Climb",
+            label: "Noon",
             content:
-              "Steep and demanding terrain at altitude but non-technical. Stay steady and pace yourself.",
+              "Reach High Camp in approximately 3–4 hours. The rest of the day is kept light with stretching and rest to help the body adapt to the altitude.",
           },
           {
-            label: "Summit",
+            label: "Evening",
             content:
-              "Incredible 360° views of Langtang Lirung, Ganesh Himal, Dorje Lakpa, and the Tibetan plateau.",
-          },
-          {
-            label: "Descent",
-            content: "Descend back to Kyanjin Gompa for the night.",
+              "Settle into camp and join the usual team briefing to check everyone’s condition, share experiences, and prepare for the next day",
           },
         ],
       },
       {
         day: "Day 9",
-        title: "Rest at Kyanjin Monastery",
-        badge: "Rest",
-        altitude: "3,870m",
+        title: "Scout High Camp",
+        badge: "Training",
+        altitude: "4995M",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Recovery day after the summit. Full rest — body and mind.",
+              "Wake up at 7:00 AM and have breakfast at 7:30 AM. Be ready by 8:00 AM and head to the nearby training area. Under the guidance of professional mountaineers, learn essential skills such as rope handling, use of climbing equipment, and basic safety techniques.",
           },
           {
-            label: "Activity",
+            label: "Noon",
             content:
-              "Explore Kyanjin Monastery at a leisurely pace. Chat with local monks.",
+              "Practical glacier and snow training led by professional mountaineering guides. Skills include using crampons, ice-axe techniques, self-arrest, rope handling, and walking safely on snow and glacier terrain. This hands-on session is conducted in real alpine conditions to build confidence and mountaineering competence.",
           },
           {
             label: "Evening",
             content:
-              "Enjoy the peaceful high-altitude setting before the long descent begins.",
+              "With an early finish, the rest of the day is dedicated to rest and recovery to prepare for the summit push. Join the usual team briefing to review the day, check team condition, and plan for the next day.",
           },
         ],
       },
       {
         day: "Day 10",
-        title: "Trek Back to Langtang Village",
-        badge: "Trek",
-        altitude: "3,430m",
-        distance: "~6 km",
-        duration: "2–3 hrs",
+        title: "Summit Day",
+        badge: "Summit",
+        altitude: "5721M",
+        distance: "7.6KM",
+        duration: "8-9hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Begin the descent back down the valley, retracing the route through yak pastures.",
+              "Start early with wake-up around 3:00 AM, followed by a quick breakfast. Begin the summit push by 4:30 AM, moving steadily in the early light with headlamps.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Pass back through the familiar meadows with a very different feeling — summit done.",
+              "Packed lunch during the climb. The ascent takes approximately 6–7 hours through a mix of rocky terrain, snow, ice, and glacier sections, including steep ridges, with mesmerizing Himalayan views throughout.",
           },
           {
             label: "Evening",
-            content: "Arrive at Langtang Village. Warm meal and early night.",
+            content:
+              "Descend back to High Camp. Enjoy warm food and hot drinks to recover, followed by the usual team session to share experiences and check on the team’s condition",
           },
         ],
       },
       {
         day: "Day 11",
-        title: "Trek to Lama Hotel",
-        badge: "Trek",
-        altitude: "2,380m",
-        distance: "~14 km",
-        duration: "5–6 hrs",
+        title: "Scout High Camp to Kyanjin-Gompa",
+        badge: "Descent",
+        altitude: "3855M",
+        distance: "8.6KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Continue descending through the valley and back into the denser forest zone.",
+              "Start the day with breakfast and begin the descent from High Camp, moving carefully through rocky and alpine terrain. With decreasing elevation, the body starts to feel more comfortable.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Legs will feel the downhill but spirits are high. Lunch on the trail.",
+              "Packed lunch along the trail while retracing the route back toward Kyanjin Gompa, enjoying the open views of the valley and surrounding peaks.",
           },
           {
             label: "Evening",
             content:
-              "Arrive at Lama Hotel. Familiar teahouse, well-earned rest.",
+              "Arrive at Kyanjin Gompa, check into the lodge, and join the usual team session to share experiences, reflect on the summit, and relax after the expedition.",
           },
         ],
       },
       {
         day: "Day 12",
-        title: "Trek to Syabrubesi",
+        title: "Kyanjinn Gompa to Lama Hotel",
         badge: "Trek",
-        altitude: "1,550m",
-        distance: "~11 km",
-        duration: "4–5 hrs",
+        altitude: "2470M",
+        distance: "18KM",
+        duration: "7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Final day of trekking. Descend to Syabrubesi through river valleys and forest.",
+              "Wake up and have breakfast as usual, then begin the trek following the same scenic valley trail, retracing your steps while enjoying the landscapes you’ve grown familiar with.",
           },
           {
-            label: "Afternoon",
-            content: "Celebrate the end of the trek with a hot meal.",
+            label: "Noon",
+            content:
+              "Stop for lunch along the way, taking in the rivers, forests, and mountain views, reflecting on the journey so far.",
           },
           {
             label: "Evening",
-            content: "Rest and relax at the riverside hotel.",
+            content:
+              "Arrive at Lama Hotel, check into your tea house, and join the 45-minute team session to share experiences, memories, and highlights of the trek.",
           },
         ],
       },
       {
         day: "Day 13",
-        title: "Drive to Kathmandu",
-        badge: "Transfer",
-        altitude: "1,400m",
-        duration: "6–8 hrs",
+        title: "Lama Hotel to Shyabru-Besi",
+        badge: "Trek",
+        altitude: "1550M",
+        distance: "11KM",
+        duration: "6hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
-            content: "Early morning drive back to Kathmandu.",
+            content:
+              "Wake up and have breakfast, then begin the final trekking leg through the forested trails of Langtang Valley, retracing the path toward Syabrubesi.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Check into hotel. Relax, shower, and enjoy the city after days on the trail.",
+              "Stop for lunch en route and enjoy the river views and village life along the way.",
           },
-          { label: "Evening", content: "Farewell dinner with the team." },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Syabrubesi, check into lodge, and join the usual 45-minute team session to reflect on the journey and share final memories before the drive back to Kathmandu.",
+          },
         ],
       },
       {
         day: "Day 14",
-        title: "Departure Day",
-        badge: "Departure",
-        altitude: "1,400m",
+        title: "Shyabru-Besi to Kathmandu",
+        badge: "Drive",
+        altitude: "1300M",
+        distance: "122KM",
+        duration: "6-7hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
-            content: "Final breakfast in Kathmandu together.",
+            content:
+              "After breakfast, depart Syabrubesi by jeep and enjoy the scenic drive back to Kathmandu, passing rivers, terraced hills, and local villages along the way.",
           },
           {
-            label: "Departure",
+            label: "Noon",
             content:
-              "Transfer to Tribhuvan International Airport. Congratulations on your summit — safe travels.",
+              "Stop for lunch at a local restaurant en route, soaking in the last views of the Langtang Valley.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive in Kathmandu, check into hotel, and join a farewell program with a group dinner to celebrate the expedition and share memories with team and guides.",
+          },
+        ],
+      },
+      {
+        day: "Day 15",
+        title: "Kathmandu",
+        badge: "Departure",
+        altitude: "1300M",
+        sections: [
+          {
+            label: "Details",
+            content:
+              "After breakfast, enjoy your final moments in Kathmandu before being transferred from the hotel to Tribhuvan International Airport. Depart with unforgettable memories of your Yala Peak expedition, carrying the joy of the journey and the hope of returning for future adventures",
           },
         ],
       },
@@ -711,368 +745,389 @@ export const expeditions: Expedition[] = [
     itinerary: [
       {
         day: "Day 1",
-        title: "Arrival in Kathmandu",
+        title: "Kathmandu",
         badge: "Arrival",
-        altitude: "1,400m",
+        altitude: "1300M",
+        stay: "Hotel",
         sections: [
           {
-            label: "Arrival",
+            label: "Details",
             content:
-              "Arrive in Kathmandu. Meet the team and transfer to hotel.",
-          },
-          {
-            label: "Briefing",
-            content:
-              "Full expedition briefing covering technical gear, permits, and acclimatization strategy.",
-          },
-          {
-            label: "Evening",
-            content: "Team welcome dinner and introductions.",
+              "Upon your arrival at Tribhuvan International Airport, our team will warmly welcome you and transfer you to your hotel in Kathmandu. After check-in and some time to relax, you will meet your expedition team for a detailed briefing about the Naya-ganga climb. A thorough gear check will be conducted, followed by an opportunity to shop for any missing equipment in the local stores. In the evening, enjoy a welcome dinner with the team, get to know your guides and fellow climbers, and prepare for the adventure ahead",
           },
         ],
       },
       {
         day: "Day 2",
-        title: "Drive to Syabrubesi",
-        badge: "Transfer",
-        altitude: "1,550m",
-        distance: "~120 km",
-        duration: "6–8 hrs",
+        title: "Kathmandu to Shyabru-Besi",
+        badge: "Drive",
+        altitude: "1550M",
+        distance: "122KM",
+        duration: "6-7 hrs",
+        stay: "Hotel",
         sections: [
           {
-            label: "Departure",
+            label: "Morning",
             content:
-              "Early morning drive northwest to Syabrubesi, the gateway to Langtang Valley.",
+              "After an early breakfast at 6:30 AM, depart Kathmandu by jeep. Drive along the Trishuli River and through Dhunche, enjoying the winding roads and scenic hillsides.",
           },
           {
-            label: "The Drive",
+            label: "Noon",
             content:
-              "Winding mountain roads through Tamang villages and terraced hillside farmland.",
+              "Stop for lunch and refreshments at Trishuli while taking in the spectacular views of terraced hills, forests, and local villages.",
           },
           {
-            label: "Overnight",
+            label: "Evening",
             content:
-              "Arrive in Syabrubesi. Settle in and prepare for the trek.",
+              "Arrive at Syabrubesi, check in at your lodge, relax, and enjoy a short walk to explore the local village and its lifestyle.",
           },
         ],
       },
       {
         day: "Day 3",
-        title: "Trek to Lama Hotel",
+        title: "Shyabru-Besi to Lama Hotel",
         badge: "Trek",
-        altitude: "2,380m",
-        distance: "~11 km",
-        duration: "5–6 hrs",
+        altitude: "2470M",
+        distance: "11KM",
+        duration: "7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Enter Langtang National Park through the dramatic river gorge.",
+              "Wake up at 6:30 AM, followed by breakfast at 7:00 AM. At 7:30 AM, enjoy a short stretching session on the trail before starting the hike at 8:00 AM. The trek passes through lush subtropical and alpine forests, following the scenic Langtang River.",
           },
           {
-            label: "Trail",
+            label: "Noon",
             content:
-              "Dense forest, waterfalls, and first views of the high peaks ahead.",
+              "Stop at Bamboo for lunch and rest. Continue the hike along a steep but rewarding trail, taking in panoramic views of the river valleys and surrounding forests.",
           },
-          { label: "Evening", content: "Overnight at Lama Hotel teahouse." },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Lama Hotel and check into your tea house accommodation. After settling in, participate in a 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect on the following day",
+          },
         ],
       },
       {
         day: "Day 4",
-        title: "Trek to Langtang Village",
+        title: "Lama Hotel to Langtang",
         badge: "Trek",
-        altitude: "3,430m",
-        distance: "~14 km",
-        duration: "5–6 hrs",
+        altitude: "3450M",
+        distance: "12KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Valley opens into wide alpine meadows. Pass yak pastures and traditional stone villages.",
+              "Wake up at 6:30 AM, enjoy breakfast at 7:00 AM, and a stretching session at 7:45 AM. Begin trekking by 8:00 AM through beautiful alpine forests with the Langtang River flowing alongside.",
           },
           {
-            label: "Views",
+            label: "Noon",
             content:
-              "Langtang Lirung (7,227m) dominates the skyline as you gain altitude.",
+              "Stop at Ghoda Tabela for lunch. Here, the landscape begins to open up, transitioning from dense forest gorges to wider valleys with lighter vegetation, offering expansive views of the surrounding mountains.",
           },
           {
             label: "Evening",
-            content: "Arrive at Langtang Village for the night.",
+            content:
+              "Arrive at Langtang Village and check into tea house. Participate in the usual 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect for the next day.",
           },
         ],
       },
       {
         day: "Day 5",
-        title: "Trek to Kyanjin Gompa",
+        title: "Langtang to Kyanjin",
         badge: "Trek",
-        altitude: "3,870m",
-        distance: "~6 km",
-        duration: "2–3 hrs",
+        altitude: "3855M",
+        distance: "6.5KM",
+        duration: "2-3hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Arrive at Kyanjin Gompa — the expedition hub for the next phase.",
+              "As the distance is shorter but the elevation increases, the day starts slowly. Wake up at 7:00 AM, enjoy breakfast at 7:30 AM, and begin the trek by 8:00 AM. Take a scenic detour through Mundu Village, the only village in Langtang Valley where traditional architecture is still preserved. This route offers a unique glimpse into the authentic lifestyle and rich culture of the Langtangpa people",
           },
           {
-            label: "Activity",
+            label: "Noon",
             content:
-              "Visit the monastery and yak cheese factory. Rest and prepare for higher altitude days.",
+              "Continue to Kyanjin Gompa and have lunch. In the afternoon, a short hike to the nearby glacier lake helps with acclimatization.",
           },
           {
             label: "Evening",
-            content: "Early night ahead of the acclimatization hike tomorrow.",
+            content:
+              "Settle at the tea house and join the 45-minute team session to review the day and prepare for the next.",
           },
         ],
       },
       {
         day: "Day 6",
-        title: "Acclimatization — Kyanjin Ri Hike",
-        badge: "Rest",
-        altitude: "4,773m",
-        duration: "4–5 hrs",
+        title: "Kyanjin",
+        badge: "Acclimatization",
+        altitude: "3855M",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Acclimatization hike to Kyanjin Ri (4,773m) — vital before the glacier approach.",
+              "Wake up and breakfast as usual. Begin expedition preparation with hands-on gear familiarization, learning how to properly use climbing equipment under the guidance of a professional mountain guide.",
           },
           {
-            label: "Views",
+            label: "Noon",
             content:
-              "Panoramic views of the Langtang range, Ganesh Himal, and the Tibetan plateau.",
+              "Short local hikes around Kyanjin Gompa for acclimatization, while practicing technical skills learned during the morning session.",
           },
           {
             label: "Evening",
             content:
-              "Rest and hydrate well. Your body is adapting — do not rush this day.",
+              "Return to the tea house and participate in the 45-minute team session to review training progress, discuss experiences, and prepare for the Base camp.",
           },
         ],
       },
       {
         day: "Day 7",
-        title: "Trek Toward Ganja La Base",
+        title: "Kyanjin- Gompa to Naya-Ganga Lower Base Camp",
         badge: "Trek",
-        altitude: "4,400m",
-        distance: "~8 km",
-        duration: "5–6 hrs",
+        altitude: "4325M",
+        distance: "3.9KM",
+        duration: "4-5 hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Leave the main Langtang trail and head north toward the Ganja La approach.",
+              "With increasing elevation, the day is kept shorter for proper acclimatization. After breakfast and a short stretching session, begin the trek by crossing the iron bridge toward the other side of the valley.",
           },
           {
-            label: "Terrain",
+            label: "Noon",
             content:
-              "The landscape becomes wilder and more remote with every step.",
+              "Continue through light alpine forest for about an hour, followed by hilly and rocky terrain. Packed lunch will be taken along the trail while enjoying the changing landscapes.",
           },
           {
-            label: "Camp",
+            label: "Evening",
             content:
-              "Establish camp at 4,400m. Review technical systems before the pass crossing.",
+              "Arrive at Lower Base Camp, set up tents, and settle in. Join the usual team briefing to review the day, check on everyone’s condition, and prepare for the next stage of the climb.",
           },
         ],
       },
       {
         day: "Day 8",
-        title: "Cross Ganja La Pass",
+        title: "Naya-Ganga Lower Base Camp to Base Camp",
         badge: "Trek",
-        altitude: "5,130m",
-        duration: "7–8 hrs",
+        altitude: "5515M",
+        distance: "2.6KM",
+        duration: "5 hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Early start for the Ganja La crossing (5,130m) — high, snow-covered, and spectacular.",
+              "Following the usual morning routine, begin the trek by climbing the steep hill just above the camp. Move steadily as the trail gains elevation quickly.",
           },
           {
-            label: "The Pass",
+            label: "Noon",
             content:
-              "Dramatic views from the top. Stay roped and move carefully on the snow.",
+              "Packed lunch along the trail. The route varies depending on the season and can be slightly technical, so extra caution is required. Follow the mountain guide’s instructions and remain alert in exposed sections.",
           },
           {
-            label: "Descent",
+            label: "Evening",
             content:
-              "Descend to camp on the far side near the Naya Kanga glacier approach.",
+              "Arrive at Base Camp, set up tents, and settle in. Participate in the usual team briefing to review the day, check conditions, and prepare for the next stage of the expedition.",
           },
         ],
       },
       {
         day: "Day 9",
-        title: "Establish High Camp",
+        title: "Base Camp to High Camp",
         badge: "Trek",
-        altitude: "5,400m",
-        distance: "~4 km",
-        duration: "4–5 hrs",
+        altitude: "5230M",
+        distance: "1.2KM",
+        duration: "2 hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Trek up onto the glacier. Rope up and move as a team through crevassed terrain.",
+              "Start with the usual morning routine and breakfast. Begin the short but steep hike toward High Camp, moving carefully through rocky terrain. Some fragile sections may have potential rockfall, so stay alert and follow mountain guide instructions.",
           },
           {
-            label: "Camp",
+            label: "Noon",
             content:
-              "Establish high camp at 5,400m below the final summit slopes.",
+              "Packed lunch on the trail. Half of the day will be dedicated to rest, stretching, and recovery to prepare the body for the training and summit push.",
           },
           {
             label: "Evening",
-            content: "Review summit systems, eat a full meal, and sleep early.",
+            content:
+              "Participate in the usual evening briefing to review the day, check team condition, and plan for the summit.",
           },
         ],
       },
       {
         day: "Day 10",
-        title: "Summit Day — Naya Kanga",
-        badge: "Summit",
-        altitude: "5,846m",
-        duration: "8–10 hrs",
+        title: "High Camp",
+        badge: "Training",
+        altitude: "5230M",
+        stay: "Tent",
         sections: [
           {
-            label: "Start",
+            label: "Morning",
             content:
-              "Pre-dawn start. Crampons and ice axe from the first step.",
+              "Wake up, have breakfast as usual, then stretch and prepare for the day.",
           },
           {
-            label: "The Climb",
+            label: "Noon",
             content:
-              "Steep snow and mixed terrain to the summit ridge. The final push is exposed — demanding full focus.",
+              "Practical glacier and snow training led by professional mountaineering guides. Skills include using crampons, ice-axe techniques, self-arrest, rope handling, and walking safely on snow and glacier terrain. This hands-on session is conducted in real alpine conditions to build confidence and mountaineering competence.",
           },
           {
-            label: "Summit",
+            label: "Evening",
             content:
-              "Sweeping panorama of the entire Langtang-Jugal-Tibet landscape. One of the finest views in the range.",
-          },
-          {
-            label: "Descent",
-            content:
-              "Return to high camp. Celebrate carefully — the descent still demands attention.",
+              "Return to camp, and join the usual evening session to review team conditions, experiences, and plan for the summit preparations.",
           },
         ],
       },
       {
         day: "Day 11",
-        title: "Buffer Day",
-        badge: "Reserve",
-        altitude: "5,400m",
+        title: "Summit Day",
+        badge: "Summit",
+        altitude: "5864M",
+        distance: "5.2KM",
+        duration: "8-9 hrs",
+        stay: "Tent",
         sections: [
           {
-            label: "Purpose",
+            label: "Morning",
             content:
-              "Weather or condition reserve day for a second summit attempt if needed.",
+              "Wake up early at 3:00 AM, followed by a quick breakfast. Begin the summit climb by 4:00 AM, moving steadily and carefully through rocky, icy, and glacier sections.",
           },
           {
-            label: "Alternative",
+            label: "Noon",
             content:
-              "If summit was reached, use as a recovery day before the long descent.",
+              "The climb will take approximately 5–6 hours. Packed lunch will be taken along the trail. Enjoy breathtaking views of the Langtang Himalayan range and the valley below while applying all the skills learned during training.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Descend back to High Camp. Warm food and drinks will be served to recover from the climb.",
           },
         ],
       },
       {
         day: "Day 12",
-        title: "Descend to Kyanjin Gompa",
-        badge: "Trek",
-        altitude: "3,870m",
-        duration: "6–7 hrs",
+        title: "High Camp to Kyanjin Gompa",
+        badge: "Descent",
+        altitude: "3855M",
+        distance: "7.7KM",
+        duration: "6-7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Retrace the glacier and pass route back toward Kyanjin Gompa.",
+              "Start the day with the usual morning routine and breakfast. Begin the descent from High Camp, moving carefully through rocky and alpine terrain. The descent is gradual, allowing the body to recover after the summit push.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "A long but deeply satisfying descent. The hard work is done.",
+              "Packed lunch on the trail while enjoying the alpine views and surrounding peaks. The hike is longer but less strenuous due to the decreasing elevation.",
           },
           {
             label: "Evening",
-            content: "Arrive at Kyanjin Gompa. Warm meal and well-earned rest.",
+            content:
+              "Arrive at Kyanjin Gompa, check into the lodge, and join the usual evening session to review the expedition, share experiences, and relax after the climb.",
           },
         ],
       },
       {
         day: "Day 13",
-        title: "Trek to Langtang Village",
+        title: "Kyanjin Gompa to Lama Hotel",
         badge: "Trek",
-        altitude: "3,430m",
-        distance: "~6 km",
-        duration: "2–3 hrs",
+        altitude: "2470M",
+        distance: "18KM",
+        duration: "7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Easy descent through the valley back to Langtang Village.",
+              "Wake up and have breakfast as usual, then begin the trek following the same scenic valley trail, retracing your steps while enjoying the landscapes you’ve grown familiar with.",
           },
           {
-            label: "Afternoon",
-            content: "Reflect on the climb over a warm teahouse meal.",
+            label: "Noon",
+            content:
+              "Stop for lunch along the way, taking in the rivers, forests, and mountain views, reflecting on the journey so far.",
           },
           {
             label: "Evening",
-            content: "Rest and relax before the long valley exit tomorrow.",
+            content:
+              "Arrive at Lama Hotel, check into your tea house, and join the 45-minute team session to share experiences, memories, and highlights of the trek.",
           },
         ],
       },
       {
         day: "Day 14",
-        title: "Trek to Syabrubesi",
+        title: "Lama Hotel to Shyabru-Besi",
         badge: "Trek",
-        altitude: "1,550m",
-        distance: "~25 km",
-        duration: "7–8 hrs",
+        altitude: "1550M",
+        distance: "11KM",
+        duration: "6 hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
-            content: "Long descent back through forest and river crossings.",
+            content:
+              "Wake up and have breakfast, then begin the final trekking leg through the forested trails of Langtang Valley, retracing the path toward Syabrubesi.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Re-enter the lush lower valley. Final night on the trail.",
+              "Stop for lunch en route and enjoy the river views and village life along the way.",
           },
           {
             label: "Evening",
-            content: "Arrive in Syabrubesi. Celebratory End of Trail dinner.",
+            content:
+              "Arrive at Syabrubesi, check into lodge, and join the usual 45-minute team session to reflect on the journey and share final memories before the drive back to Kathmandu.",
           },
         ],
       },
       {
         day: "Day 15",
-        title: "Drive to Kathmandu",
-        badge: "Transfer",
-        altitude: "1,400m",
-        duration: "6–8 hrs",
+        title: "Shyabru-Besi to Kathmandu",
+        badge: "Drive",
+        altitude: "1300M",
+        distance: "122KM",
+        duration: "6-7 hrs",
+        stay: "Hotel",
         sections: [
           {
             label: "Morning",
-            content: "Return drive to Kathmandu through the mountain roads.",
+            content:
+              "After breakfast, depart Syabrubesi by jeep and enjoy the scenic drive back to Kathmandu, passing rivers, terraced hills, and local villages along the way.",
           },
           {
-            label: "Afternoon",
-            content: "Hot shower, city comforts, and a well-earned rest.",
+            label: "Noon",
+            content:
+              "Stop for lunch at a local restaurant en route, soaking in the last views of the Langtang Valley.",
           },
           {
             label: "Evening",
-            content: "Farewell dinner and souvenir shopping in Thamel.",
+            content:
+              "Arrive in Kathmandu, check into hotel, and join a farewell program with a group dinner to celebrate the expedition and share memories with team and guides.",
           },
         ],
       },
       {
         day: "Day 16",
-        title: "Farewell & Departure",
+        title: "Kathmandu",
         badge: "Departure",
-        altitude: "1,400m",
+        altitude: "1300M",
+        stay: "-",
         sections: [
           {
-            label: "Morning",
-            content: "Farewell breakfast with the full team.",
-          },
-          {
-            label: "Departure",
+            label: "Details",
             content:
-              "Transfer to airport for onward travel. Summit certificate presented. Safe travels.",
+              "After breakfast, enjoy your final moments in Kathmandu before being transferred from the hotel to Tribhuvan International Airport. Depart with unforgettable memories of your Yala Peak expedition, carrying the joy of the journey and the hope of returning for future adventures",
           },
         ],
       },
@@ -1085,7 +1140,7 @@ export const expeditions: Expedition[] = [
     title: "Scout Peak",
     slug: "scout-peak",
     imageSrc: "/scout_01.jpg",
-    duration: "10 Days",
+    duration: "15 Days",
     altitude: "5,600 M",
     region: "Langtang, Nepal",
     price: "$950",
@@ -1105,198 +1160,363 @@ export const expeditions: Expedition[] = [
     itinerary: [
       {
         day: "Day 1",
-        title: "Arrival in Kathmandu",
+        title: "Kathmandu",
         badge: "Arrival",
-        altitude: "1,400m",
+        altitude: "1300M",
+        stay: "Hotel",
         sections: [
           {
-            label: "Arrival",
-            content: "Arrive in Kathmandu. Team briefing and gear check.",
+            label: "Details",
+            content:
+              "Upon your arrival at Tribhuvan International Airport, our team will warmly welcome you and transfer you to your hotel in Kathmandu. After check-in and some time to relax, you will meet your expedition team for a detailed briefing about the Scout Peak climb. A thorough gear check will be conducted, followed by an opportunity to shop for any missing equipment in the local stores. In the evening, enjoy a welcome dinner with the team, get to know your guides and fellow climbers, and prepare for the adventure ahead",
           },
-          {
-            label: "Permits",
-            content: "Permit processing and final equipment review.",
-          },
-          { label: "Evening", content: "Welcome dinner with the team." },
         ],
       },
       {
         day: "Day 2",
-        title: "Drive to Syabrubesi",
-        badge: "Transfer",
-        altitude: "1,550m",
-        distance: "~120 km",
-        duration: "6–8 hrs",
+        title: "Kathmandu to Shyabru-Besi",
+        badge: "Drive",
+        altitude: "1550M",
+        distance: "122KM",
+        duration: "6-7 hrs",
+        stay: "Hotel",
         sections: [
           {
-            label: "Departure",
+            label: "Morning",
             content:
-              "Drive to the trailhead at Syabrubesi through scenic hill country.",
+              "After an early breakfast at 6:30 AM, depart Kathmandu by jeep. Drive along the Trishuli River and through Dhunche, enjoying the winding roads and scenic hillsides.",
           },
           {
-            label: "Overnight",
-            content: "Arrive and settle in for the night ahead of the trek.",
+            label: "Noon",
+            content:
+              "Stop for lunch and refreshments at Trishuli while taking in the spectacular views of terraced hills, forests, and local villages.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Syabrubesi, check in at your lodge, relax, and enjoy a short walk to explore the local village and its lifestyle.",
           },
         ],
       },
       {
         day: "Day 3",
-        title: "Trek to Lama Hotel",
+        title: "Shyabru-Besi to Lama Hotel",
         badge: "Trek",
-        altitude: "2,380m",
-        distance: "~11 km",
-        duration: "5–6 hrs",
+        altitude: "2470M",
+        distance: "11KM",
+        duration: "7 hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Trek into Langtang National Park along the river gorge trail.",
+              "Wake up at 6:30 AM, followed by breakfast at 7:00 AM. At 7:30 AM, enjoy a short stretching session on the trail before starting the hike at 8:00 AM. The trek passes through lush subtropical and alpine forests, following the scenic Langtang River.",
           },
-          { label: "Evening", content: "First night at Lama Hotel teahouse." },
+          {
+            label: "Noon",
+            content:
+              "Stop at Bamboo for lunch and rest. Continue the hike along a steep but rewarding trail, taking in panoramic views of the river valleys and surrounding forests.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Lama Hotel and check into your tea house accommodation. After settling in, participate in a 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect on the following day",
+          },
         ],
       },
       {
         day: "Day 4",
-        title: "Trek to Kyanjin Gompa",
+        title: "Lama Hotel to Langtang",
         badge: "Trek",
-        altitude: "3,870m",
-        distance: "~20 km",
-        duration: "7–8 hrs",
+        altitude: "3450M",
+        distance: "12KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
             content:
-              "Push through Langtang Village and continue directly to Kyanjin Gompa in one strong day.",
+              "Wake up at 6:30 AM, enjoy breakfast at 7:00 AM, and a stretching session at 7:45 AM. Begin trekking by 8:00 AM through beautiful alpine forests with the Langtang River flowing alongside.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
-              "Arrive at Kyanjin. Visit the monastery and yak cheese factory.",
+              "Stop at Ghoda Tabela for lunch. Here, the landscape begins to open up, transitioning from dense forest gorges to wider valleys with lighter vegetation, offering expansive views of the surrounding mountains.",
           },
           {
             label: "Evening",
-            content: "Rest well — a big day of altitude gain behind you.",
+            content:
+              "Arrive at Langtang Village and check into tea house. Participate in the usual 45-minute team session to discuss the day’s experiences, check on everyone’s condition, and preview what to expect for the next day.",
           },
         ],
       },
       {
         day: "Day 5",
-        title: "Acclimatization Day",
-        badge: "Rest",
-        altitude: "3,870m",
+        title: "Langtang to Kyanjin",
+        badge: "Trek",
+        altitude: "3855M",
+        distance: "6.5KM",
+        duration: "2-3hrs",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
-            content: "Rest and acclimatize at Kyanjin. No rushing today.",
+            content:
+              "As the distance is shorter but the elevation increases, the day starts slowly. Wake up at 7:00 AM, enjoy breakfast at 7:30 AM, and begin the trek by 8:00 AM. Take a scenic detour through Mundu Village, the only village in Langtang Valley where traditional architecture is still preserved. This route offers a unique glimpse into the authentic lifestyle and rich culture of the Langtangpa people",
           },
           {
-            label: "Activity",
+            label: "Noon",
             content:
-              "Optional short hike to a nearby viewpoint to aid adaptation.",
+              "Continue to Kyanjin Gompa and have lunch. In the afternoon, a short hike to the nearby glacier lake helps with acclimatization.",
           },
           {
             label: "Evening",
-            content: "Prepare all equipment for the summit push.",
+            content:
+              "Settle at the tea house and join the 45-minute team session to review the day and prepare for the next.",
           },
         ],
       },
       {
         day: "Day 6",
-        title: "Trek to Scout Peak Base Camp",
-        badge: "Trek",
-        altitude: "4,800m",
-        distance: "~7 km",
-        duration: "5–6 hrs",
+        title: "Kyanjin",
+        badge: "Acclimatization",
+        altitude: "3855M",
+        stay: "Tea-House",
         sections: [
           {
             label: "Morning",
-            content: "Move off the main trail toward the Scout Peak approach.",
+            content:
+              "Wake up and breakfast as usual. Begin expedition preparation with hands-on gear familiarization, learning how to properly use climbing equipment under the guidance of a professional mountain guide.",
           },
           {
-            label: "Terrain",
+            label: "Noon",
             content:
-              "The landscape becomes remote and rugged above the treeline.",
+              "Short local hikes around Kyanjin Gompa for acclimatization, while practicing technical skills learned during the morning session.",
           },
           {
-            label: "Camp",
+            label: "Evening",
             content:
-              "Set up base camp at 4,800m. Rest and prepare for summit day.",
+              "Return to the tea house and participate in the 45-minute team session to review training progress, discuss experiences, and prepare for the Base camp.",
           },
         ],
       },
       {
         day: "Day 7",
-        title: "Summit Day — Scout Peak",
-        badge: "Summit",
-        altitude: "5,600m",
-        duration: "7–9 hrs",
-        sections: [
-          {
-            label: "Start",
-            content:
-              "Early morning ascent to the summit. Steep and demanding at altitude.",
-          },
-          {
-            label: "The Climb",
-            content:
-              "Non-technical but relentless gradient. Pace yourself carefully.",
-          },
-          {
-            label: "Summit",
-            content:
-              "Panoramic views of the Langtang Lirung glacier face up close — raw and immediate.",
-          },
-          { label: "Descent", content: "Return to base camp by afternoon." },
-        ],
-      },
-      {
-        day: "Day 8",
-        title: "Descend to Langtang Village",
+        title: "Kyanjin-Gompa to Scout Base Camp",
         badge: "Trek",
-        altitude: "3,430m",
-        duration: "5–6 hrs",
+        altitude: "4620M",
+        distance: "5.2KM",
+        duration: "6-7hrs",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Descend from base camp back through Kyanjin and down the valley.",
+              "With increasing elevation, we move slowly and steadily. Wake up at 7:00 AM, followed by breakfast, packing, and a short stretching session. Begin the trek around 9:00 AM, heading toward the less-traveled side of Kyanjin.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Cross an iron bridge and continue through alpine forests, gradually ascending toward base camp. Packed lunch will be taken along the trail while enjoying the changing landscapes.",
           },
           {
             label: "Evening",
-            content: "Arrive at Langtang Village. Warm teahouse dinner.",
+            content:
+              "Arrive at Scout Peak Base Camp, set up tents, and settle in. Participate in the usual team briefing to review the day, check on everyone’s condition, and prepare for the next stage of the expedition",
+          },
+        ],
+      },
+      {
+        day: "Day 8",
+        title: "Scout Base Camp to Scout High Camp",
+        badge: "Trek",
+        altitude: "4995M",
+        distance: "3.4KM",
+        duration: "3-4hrs",
+        stay: "Tent",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "With the gain in elevation, the day starts slowly to allow proper acclimatization. Wake up at 7:00 AM, have breakfast, and begin trekking by 9:00 AM through rocky terrain, maintaining a steady pace.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Reach High Camp in approximately 3–4 hours. The rest of the day is kept light with stretching and rest to help the body adapt to the altitude.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Settle into camp and join the usual team briefing to check everyone’s condition, share experiences, and prepare for the next day",
           },
         ],
       },
       {
         day: "Day 9",
-        title: "Trek to Syabrubesi",
-        badge: "Trek",
-        altitude: "1,550m",
-        distance: "~25 km",
-        duration: "7–8 hrs",
+        title: "Scout High Camp",
+        badge: "Training",
+        altitude: "4995M",
+        stay: "Tent",
         sections: [
           {
             label: "Morning",
             content:
-              "Long final day of trekking through forest back to Syabrubesi.",
+              "Wake up at 7:00 AM and have breakfast at 7:30 AM. Be ready by 8:00 AM and head to the nearby training area. Under the guidance of professional mountaineers, learn essential skills such as rope handling, use of climbing equipment, and basic safety techniques.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Practical glacier and snow training led by professional mountaineering guides. Skills include using crampons, ice-axe techniques, self-arrest, rope handling, and walking safely on snow and glacier terrain. This hands-on session is conducted in real alpine conditions to build confidence and mountaineering competence.",
           },
           {
             label: "Evening",
-            content: "Arrive in Syabrubesi. End of Trail celebration dinner.",
+            content:
+              "With an early finish, the rest of the day is dedicated to rest and recovery to prepare for the summit push. Join the usual team briefing to review the day, check team condition, and plan for the next day.",
           },
         ],
       },
       {
         day: "Day 10",
-        title: "Drive to Kathmandu — Departure",
-        badge: "Departure",
-        altitude: "1,400m",
-        duration: "6–8 hrs",
+        title: "Summit Day",
+        badge: "Summit",
+        altitude: "5721M",
+        distance: "7.6KM",
+        duration: "8-9hrs",
+        stay: "Tent",
         sections: [
-          { label: "Morning", content: "Drive back to Kathmandu." },
+          {
+            label: "Morning",
+            content:
+              "Start early with wake-up around 3:00 AM, followed by a quick breakfast. Begin the summit push by 4:30 AM, moving steadily in the early light with headlamps.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Packed lunch during the climb. The ascent takes approximately 6–7 hours through a mix of rocky terrain, snow, ice, and glacier sections, including steep ridges, with mesmerizing Himalayan views throughout.",
+          },
           {
             label: "Evening",
-            content: "Farewell dinner and transfer to airport. Safe travels.",
+            content:
+              "Descend back to High Camp. Enjoy warm food and hot drinks to recover, followed by the usual team session to share experiences and check on the team’s condition",
+          },
+        ],
+      },
+      {
+        day: "Day 11",
+        title: "Scout High Camp to Kyanjin-Gompa",
+        badge: "Descent",
+        altitude: "3855M",
+        distance: "8.6KM",
+        duration: "6-7hrs",
+        stay: "Tea-House",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Start the day with breakfast and begin the descent from High Camp, moving carefully through rocky and alpine terrain. With decreasing elevation, the body starts to feel more comfortable.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Packed lunch along the trail while retracing the route back toward Kyanjin Gompa, enjoying the open views of the valley and surrounding peaks.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Kyanjin Gompa, check into the lodge, and join the usual team session to share experiences, reflect on the summit, and relax after the expedition.",
+          },
+        ],
+      },
+      {
+        day: "Day 12",
+        title: "Kyanjinn Gompa to Lama Hotel",
+        badge: "Trek",
+        altitude: "2470M",
+        distance: "18KM",
+        duration: "7hrs",
+        stay: "Tea-House",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Wake up and have breakfast as usual, then begin the trek following the same scenic valley trail, retracing your steps while enjoying the landscapes you’ve grown familiar with.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Stop for lunch along the way, taking in the rivers, forests, and mountain views, reflecting on the journey so far.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Lama Hotel, check into your tea house, and join the 45-minute team session to share experiences, memories, and highlights of the trek.",
+          },
+        ],
+      },
+      {
+        day: "Day 13",
+        title: "Lama Hotel to Shyabru-Besi",
+        badge: "Trek",
+        altitude: "1550M",
+        distance: "11KM",
+        duration: "6hrs",
+        stay: "Hotel",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "Wake up and have breakfast, then begin the final trekking leg through the forested trails of Langtang Valley, retracing the path toward Syabrubesi.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Stop for lunch en route and enjoy the river views and village life along the way.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive at Syabrubesi, check into lodge, and join the usual 45-minute team session to reflect on the journey and share final memories before the drive back to Kathmandu.",
+          },
+        ],
+      },
+      {
+        day: "Day 14",
+        title: "Shyabru-Besi to Kathmandu",
+        badge: "Drive",
+        altitude: "1300M",
+        distance: "122KM",
+        duration: "6-7hrs",
+        stay: "Hotel",
+        sections: [
+          {
+            label: "Morning",
+            content:
+              "After breakfast, depart Syabrubesi by jeep and enjoy the scenic drive back to Kathmandu, passing rivers, terraced hills, and local villages along the way.",
+          },
+          {
+            label: "Noon",
+            content:
+              "Stop for lunch at a local restaurant en route, soaking in the last views of the Langtang Valley.",
+          },
+          {
+            label: "Evening",
+            content:
+              "Arrive in Kathmandu, check into hotel, and join a farewell program with a group dinner to celebrate the expedition and share memories with team and guides.",
+          },
+        ],
+      },
+      {
+        day: "Day 15",
+        title: "Kathmandu",
+        badge: "Departure",
+        altitude: "1300M",
+        stay: "Hotel",
+        sections: [
+          {
+            label: "Details",
+            content:
+              "After breakfast, enjoy your final moments in Kathmandu before being transferred from the hotel to Tribhuvan International Airport. Depart with unforgettable memories of your Yala Peak expedition, carrying the joy of the journey and the hope of returning for future adventures",
           },
         ],
       },

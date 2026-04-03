@@ -14,7 +14,7 @@ export default function Hero({ adventure }: { adventure: Adventure }) {
         alt={adventure.title}
         fill
         priority
-        className="object-cover object-[center_80%]"
+        className="object-cover object-[center_70%]"
       />
 
       {/* bottom fade */}
@@ -26,7 +26,7 @@ export default function Hero({ adventure }: { adventure: Adventure }) {
       <div className="absolute inset-0 flex flex-col justify-end px-10 pb-20">
         <h1
           className="font-display text-white leading-[0.92]"
-          style={{ fontSize: "clamp(3.2rem, 8vw, 6.5rem)", fontWeight: 300 }}
+          style={{ fontSize: "clamp(3.2rem, 8vw, 4.5rem)", fontWeight: 300 }}
         >
           {adventure.title}
         </h1>

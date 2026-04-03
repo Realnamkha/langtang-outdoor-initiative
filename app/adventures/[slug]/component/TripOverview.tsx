@@ -14,7 +14,7 @@ export default function TripOverview({ adventure }: { adventure: Adventure }) {
   return (
     <section className="max-w-4xl mx-auto px-6 pt-20 pb-8">
       <SectionHeading>
-        Trip <em className="text-[#01baf0]">Overview</em>
+        {adventure.title} <em className="text-[#01baf0]">Overview</em>
       </SectionHeading>
 
       <div

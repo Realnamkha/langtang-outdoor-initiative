@@ -2,18 +2,61 @@
 
 import { useState } from "react";
 import {
+  Car,
+  UtensilsCrossed,
+  Users,
+  ShieldCheck,
+  Package,
+  FileCheck,
+  PartyPopper,
+  Plane,
+  Fingerprint,
+  AlertTriangle,
+  Receipt,
+  HandCoins,
+  Hotel,
+  Video,
+  Shield,
+  BookOpen,
+  Heart,
+  Droplets,
+  Footprints,
+  Wrench,
+  Truck,
+  ShieldAlert,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import {
   includes as defaultIncludes,
   excludes as defaultExcludes,
+  type Item,
+  type TabKey,
 } from "@/lib/include_exclude";
-import type { LucideIcon } from "lucide-react";
 
-export type Item = {
-  icon: LucideIcon;
-  title: string;
-  desc: string;
+const iconMap: Record<string, LucideIcon> = {
+  Car,
+  UtensilsCrossed,
+  Users,
+  ShieldCheck,
+  Package,
+  FileCheck,
+  PartyPopper,
+  Plane,
+  Fingerprint,
+  AlertTriangle,
+  Receipt,
+  HandCoins,
+  Hotel,
+  Video,
+  Shield,
+  BookOpen,
+  Heart,
+  Droplets,
+  Footprints,
+  Wrench,
+  Truck,
+  ShieldAlert,
 };
-
-export type TabKey = "inc" | "exc";
 
 interface InclusionsExclusionsProps {
   includes?: Item[];
@@ -22,7 +65,9 @@ interface InclusionsExclusionsProps {
 
 function ItemCard({ item, type }: { item: Item; type: TabKey }) {
   const isInc = type === "inc";
-  const Icon = item.icon;
+  const Icon = iconMap[item.icon];
+
+  if (!Icon) return null;
 
   return (
     <div
@@ -67,12 +112,15 @@ function ItemCard({ item, type }: { item: Item; type: TabKey }) {
 }
 
 export default function InclusionsExclusions({
-  includes = defaultIncludes,
-  excludes = defaultExcludes,
+  includes: includesProp,
+  excludes: excludesProp,
 }: InclusionsExclusionsProps = {}) {
   const [tab, setTab] = useState<TabKey>("inc");
 
-  const activeItems = tab === "inc" ? includes : excludes;
+  const activeItems =
+    tab === "inc"
+      ? includesProp ?? defaultIncludes
+      : excludesProp ?? defaultExcludes;
 
   return (
     <section className="bg-gray-50 py-20 px-4 sm:px-6">
@@ -116,7 +164,7 @@ export default function InclusionsExclusions({
             : "Not covered — plan ahead"}
         </p>
 
-        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
           {activeItems.map((item) => (
             <ItemCard key={item.title} item={item} type={tab} />
           ))}
