@@ -8,6 +8,7 @@ export type CulturalTour = {
   difficulty: string;
   region?: string;
   price?: string;
+  punchline: string;
   description: string;
   highlights: string[];
   whatsIncluded: string[];
@@ -18,14 +19,17 @@ export type CulturalTour = {
 
 export const culturalTours: CulturalTour[] = [
   {
-    title: "Festive Pack",
+    title: "Langtang Culture Immersion",
     slug: "festive-pack",
     imageSrc: "/buddhist_03.jpg",
     duration: "7 Days",
     difficulty: "Easy",
     region: "Langtang, Nepal",
     price: "$590",
-    description: `Nepal's festivals are not performances staged for tourists — they are living, breathing expressions of faith, community, and identity that have shaped Himalayan culture for centuries. The Festive Pack immerses you in the heart of Nepal's ritual calendar, timing your journey to coincide with the valley's most vibrant celebrations. From the thundering drums of Indra Jatra in Kathmandu's ancient squares to the butter lamp festivals of Tamang monasteries in the hills, each day brings colour, sound, and ceremony that cannot be replicated anywhere else on earth. You will eat, observe, and participate alongside local families — not as a spectator, but as a welcomed guest. Dates vary seasonally to align with Nepal's lunar festival calendar; your guide will brief you on the specific celebrations during your travel window.`,
+    punchline:
+      "Experience Langtang beyond the trails where culture comes alive and you become part of it.",
+    description: `
+ 	Langtang is often seen as a trekking destination, but its true essence lies beyond the trails. It is home to the Langtangpa community, where Tibetan-influenced Buddhism, tradition, and a deep connection to the land shape everyday life. Here, festivals are open and inclusive, welcoming everyone to witness and be part of something real.Guided by the lunar calendar, these celebrations don’t follow fixed travel seasons, so our Langtang Cultural Immersion is designed around them. This is not a staged experience, but a living culture of music, rituals, and community. It’s more than a trek, it’s a chance to connect, participate, and experience Langtang in its purest form.`,
     highlights: [
       "Time your visit to Nepal's most significant festivals on the lunar calendar",
       "Front-row access to Indra Jatra, Dashain, Tihar, or Losar depending on season",
@@ -119,7 +123,9 @@ export const culturalTours: CulturalTour[] = [
     difficulty: "Moderate",
     region: "Langtang,Nepal",
     price: "$1,150",
-    description: `For centuries, horse caravans were the lifeblood of the Himalayan trade routes — carrying salt, grain, wool, and goods between Tibet and the plains of Nepal. The Horse Backpacking tour revives this ancient tradition, placing you in the saddle on the same high-altitude trails that Tibetan traders have used for a thousand years. The route traverses the Kali Gandaki Gorge — the world's deepest valley — and climbs into the rain-shadow desert landscapes of Upper Mustang, a region of ochre cliffs, whitewashed villages, and sky-blue monasteries that remained closed to outsiders until 1992. Horses are sourced from local Mustangi families and handled by experienced horsemen who have worked these trails their entire lives. No prior horse-riding experience is required — your pace is set by the terrain and the animal, not a schedule.`,
+    punchline:
+      "Ride the old trails of Langtang: raw, real, and rooted in tradition.",
+    description: `Explore Langtang the old way, on horseback, just like our forefathers. This is for travelers who want more than a trek. It’s a raw, immersive journey into the heart of the valley, moving with your own logistics and the rhythm of the mountains.No luxury, just pure, untamed exploration. Cross rivers, ride ancient trails, and live a story that feels straight out of legend. Horseback packing in Langtang isn’t just travel. It’s real adventure, stripped to its culture and traditions. It is part of the life that Langtangpa used to live.`,
     highlights: [
       "Ride traditional Tibetan-stock horses on ancient Himalayan trade routes",
       "Traverse the Kali Gandaki Gorge — the world's deepest valley",
@@ -214,14 +220,19 @@ export const culturalTours: CulturalTour[] = [
     ],
   },
   {
-    title: "Herding Tourism",
+    title: "Yak Herding",
     slug: "herding-tourism",
     imageSrc: "/pic4.jpg",
     duration: "6 Days",
     difficulty: "Easy – Moderate",
     region: "Langtang,Nepal",
     price: "$420",
-    description: `High above the treeline in the Langtang and Helambu highlands, Tamang and Sherpa herding families follow seasonal transhumance routes that have remained unchanged for generations — moving yak, nak, and chauri herds between winter valleys and summer alpine pastures as the snows recede and return. Herding Tourism offers a rare window into this disappearing way of life, placing you directly within a working herding family for several days as a participant, not an observer. You will help move the herd at dawn, learn to read the weather and terrain the way herders do, assist with milk collection and churning butter, and sleep in stone shelters at altitude alongside the family and their animals. This is slow travel at its most honest — deeply physical, culturally intimate, and genuinely unlike any packaged experience on the market.`,
+    punchline:
+      "Experience Langtang beyond the trails where culture comes alive and you become part of it.",
+    description: `
+ 	
+Langtang is more than mountains; it is a living tradition of movement, memory, and harmony with nature. For generations, the Langtangpa people have practiced transhumant herding, moving with their animals across the highlands in rhythm with the seasons. Today, this sustainable way of life is fading, and as local youth, we are working to revive it through Herding Tourism.This is not just a journey, but a way of life you step into. Move from one kharka to another, learn the skills of a “yak boy,” and experience raw Himalayan living. By joining, you don’t just travel, you help keep a culture alive.
+`,
     highlights: [
       "Live and work alongside a Tamang or Sherpa herding family for multiple days",
       "Participate in the daily ritual of yak herding across high alpine pastures",

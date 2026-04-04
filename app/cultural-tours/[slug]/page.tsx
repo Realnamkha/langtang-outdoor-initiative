@@ -74,8 +74,8 @@ export default async function CulturalPage({
 
               <div className="w-14 h-[3px] rounded-full bg-gradient-to-r from-[#01baf0] to-[#0191c8]" />
 
-              <p className="text-[14px] md:text-[15px] text-[#4a6070] leading-[1.85] max-w-lg">
-                {tour.description.slice(0, 220)}…
+              <p className="text-[14px] md:text-[20px] text-[#4a6070] leading-[1.85] max-w-lg">
+                {tour.punchline}
               </p>
 
               {/* Badges */}

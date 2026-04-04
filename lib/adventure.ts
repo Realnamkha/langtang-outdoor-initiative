@@ -681,14 +681,7 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
     difficulty: "Easy – Moderate",
     region: "Langtang, Nepal",
     price: "$550",
-    description: `Langtang Valley is emerging as a unique destination for highlining, offering both adrenaline and breathtaking Himalayan scenery.  There are already few established highlines in the region, each providing a distinct experience.
-
-Two of these lines are located at Nespali (Hard Rock Café), stretching 55m and 65m across the dramatic gorge of the Langtang River. Suspended above the rushing water, these lines offer an exhilarating combination of exposure and the calming beauty of alpine forests.
-Further up the valley, near Kyanjin Gompa, three more highlines have been established, measuring 160m, 95m, and 60m. These longer lines sit at higher elevations and deliver a completely different atmosphere, surrounded by raw mountain landscapes and panoramic views of the Himalayas.
-
-Each highline varies not only in length but also in elevation and scenery, from thin green forests and flowing rivers to rugged alpine terrain with towering peaks in the background. This diversity makes Langtang a truly special destination for both beginner and experienced highliners. For those new to the sport, Langtang Valley also features slacklines that are beginner-friendly. These lines provide a safe and supportive environment to learn the fundamentals before progressing to highlining.
-
-We have been organizing highlining and slacklining as day activities, and with growing interest from trekkers, these experiences are now being integrated into standard trekking itineraries. This addition transforms a traditional trek into a more adventurous and unforgettable journey.`,
+    description: `Langtang Valley is emerging as a premier destination for highlining, combining adrenaline with breathtaking Himalayan scenery. Established lines at Nespali (Hard Rock Café) stretch 55m and 65m across the Langtang River gorge, offering an exhilarating mix of exposure and alpine beauty.Further up, near Kyanjin Gompa, three more lines: 160m, 95m, and 60m  sit at higher elevations, surrounded by rugged peaks and panoramic views. Each line offers a unique experience, from green forests and flowing rivers to raw alpine landscapes. Beginner-friendly slacklines are also available, providing a safe way to learn before stepping onto highlines. Now integrated into trekking itineraries, highlining and slacklining turn a traditional trek into a thrilling, unforgettable adventure for both newcomers and experienced enthusiasts`,
     highlights: [
       "Full valley traverse from subtropical forest to high alpine meadow",
       "Summit Tserko Ri (5,000m) for a 360° panorama of the Langtang and Jugal Himalayan ranges",

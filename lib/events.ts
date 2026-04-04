@@ -47,8 +47,7 @@ export const events: FestivalEvent[] = [
     title: "Langtang Boulder Hunt",
     date: "June 1 – June 15, 2026",
     location: "Langtang Valley",
-    description:
-      "Three days of live music, open-air cinema, local food vendors, and sunset gatherings along the riverside.",
+    description: "The Wolrd's Highest Outdoor Festival",
     icon: "☀️",
     accentHex: "#38bdf8",
     accentFrom: "from-sky-400",
@@ -61,14 +60,14 @@ export const events: FestivalEvent[] = [
       groupSize: "8–14",
       price: "$1,850",
       about:
-        "Nestled deep in the Langtang National Park, the Boulder Hunt is curated for adventurers who crave authenticity over comfort. Our expert local guides lead you through high-alpine terrain, secret boulder fields, and ancient forests — every permit, meal, and camp handled so you can focus entirely on the climb.",
+        "Langtang Outdoor Initiative The Langtang Boulder Hunt is a premier mountain festival situated in the heart of Nepal’s Langtang Valley. Operating at an elevation between 3,200m and 4,000m, it holds the distinction of being the world’s highest outdoor festival, a high-altitude celebration of adventure, community, and the Himalayan spirit. This multidisciplinary gathering is designed by the community, for the community, bringing together like-minded enthusiasts to celebrate a shared love for the mountains.",
       highlights: [
-        "Bouldering at Kyanjin Gompa base",
-        "Alpine scrambling on Tserko Ri flanks",
-        "Sunset sessions above the glacier",
-        "Expert guides from the local climbing community",
-        "Campfire storytelling under Himalayan skies",
-        "Cultural visit to ancient Langtang monasteries",
+        "High-Altitude Bouldering: Discover and climb pristine granite boulders scattered across the glacial valley.",
+        "Trekking: Journey through the iconic Langtang National Park, experiencing its unique flora, fauna, and panoramic views.",
+        "High line/Slack line: Engage in High-lining and Slack-lining against a backdrop of 7,000-meter peaks.",
+        "Via Ferrata: Experience the thrill of protected climbing routes in a high-alpine setting.",
+        "Calisthenics: Develop bodyweight mastery and physical discipline in a unique, thin-air environment.",
+        "Camping: Immerse yourself in the elements with organized community camping under the Himalayan stars.",
       ],
       includes: [
         "All trekking permits & entry fees",

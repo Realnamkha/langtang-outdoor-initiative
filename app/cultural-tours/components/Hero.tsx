@@ -49,17 +49,16 @@ const CulturalHero = () => {
             </span>
           </h1>
 
-          {/* Accent line */}
-          <div className="w-16 h-[3px] rounded-full bg-gradient-to-r from-[#01baf0] to-[#0191c8]" />
-
           {/* Description */}
           <p className="text-[15px] sm:text-[15px] text-[#4a6070] leading-relaxed max-w-md">
-            Nestled among the high Himalayas, Langtang Valley is home to the
-            Tamang people — a community whose life, language, and spirit are
-            deeply rooted in Tibetan Buddhism. Ancient monasteries cling to
-            cliffsides, prayer flags flutter above stone villages, and the
-            rhythm of daily life follows the turning of prayer wheels and the
-            chanting of sacred mantras.
+            Cultural Tours in Langtang are created with a purpose to revive the
+            vanishing traditions of the valley by respectfully weaving local
+            life into travel. Here, culture is not a display; it is identity,
+            shaped by daily practices, beliefs, and generations of lived
+            experience. This is more than a visit, it’s a responsibility. Travel
+            not as a stranger passing through, but as someone who contributes to
+            preserving a living heritage. Be part of Langtang’s story, and help
+            keep its culture alive through your journey.
           </p>
         </div>
       </div>
