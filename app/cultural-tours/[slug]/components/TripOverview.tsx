@@ -14,14 +14,14 @@ import {
 } from "lucide-react";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
-  mapPin: <MapPin size={15} />,
-  calendar: <Calendar size={15} />,
-  activity: <Activity size={15} />,
-  fileText: <FileText size={15} />,
-  user: <User size={15} />,
-  star: <Star size={15} />,
-  mountain: <Mountain size={15} />,
-  tent: <Tent size={15} />,
+  mapPin: <MapPin size={14} />,
+  calendar: <Calendar size={14} />,
+  activity: <Activity size={14} />,
+  fileText: <FileText size={14} />,
+  user: <User size={14} />,
+  star: <Star size={14} />,
+  mountain: <Mountain size={14} />,
+  tent: <Tent size={14} />,
 };
 
 export default function TripOverview({ tour }: { tour: CulturalTour }) {
@@ -31,37 +31,40 @@ export default function TripOverview({ tour }: { tour: CulturalTour }) {
         Trip <em className="text-[#01baf0]">Overview</em>
       </SectionHeading>
 
-      <div
-        className="flex flex-col lg:grid lg:gap-12 gap-10"
-        style={{ gridTemplateColumns: "2fr 1px 1fr" }}
-      >
-        {/* description */}
-        <p className="text-gray-600 text-[15px] leading-[1.9]">
-          {tour.description}
-        </p>
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 lg:gap-12 mt-8">
+        {/* Left — description */}
+        <div className="flex flex-col gap-6">
+          <p className="text-gray-500 text-[15px] leading-[1.9] font-light">
+            {tour.description}
+          </p>
+        </div>
 
-        {/* divider — hidden on mobile, visible on desktop */}
-        <div className="hidden lg:block self-stretch bg-gradient-to-b from-transparent via-gray-200 to-transparent" />
-
-        {/* quick facts */}
-        <div className="flex flex-col">
-          <div className="bg-white rounded-3xl shadow-[0_4px_30px_rgba(1,186,240,0.1)] border border-[#e8f3f9] overflow-hidden">
-            <div className="bg-gradient-to-r from-[#01baf0] to-[#0191c8] px-6 py-4">
-              <p className="text-white font-bold text-[13px] tracking-widest uppercase">
+        {/* Right — Quick Facts card */}
+        <div className="w-full">
+          <div className="rounded-2xl border border-gray-100 overflow-hidden bg-white shadow-sm">
+            {/* Card header */}
+            <div className="px-5 py-3.5 border-b border-gray-100 flex items-center gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-[#01baf0]" />
+              <p className="text-[10px] font-black tracking-[0.22em] uppercase text-gray-400">
                 Quick Facts
               </p>
             </div>
-            <div className="px-6 py-5 divide-y divide-[#f0f7fc]">
+
+            {/* Facts list */}
+            <div className="divide-y divide-gray-50">
               {tour.quickFacts.map((fact, i) => (
-                <div key={i} className="flex items-center gap-2 py-2">
-                  <span className="text-[#01baf0] shrink-0">
-                    {ICON_MAP[fact.icon] ?? <Activity size={15} />}
+                <div
+                  key={i}
+                  className="flex items-center gap-3.5 px-5 py-3.5 hover:bg-gray-50/60 transition-colors group"
+                >
+                  <span className="text-[#01baf0] shrink-0 opacity-80 group-hover:opacity-100 transition-opacity">
+                    {ICON_MAP[fact.icon] ?? <Activity size={14} />}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-semibold tracking-widest uppercase text-[#9ab4c4]">
+                  <div className="flex flex-col min-w-0">
+                    <span className="text-[9px] font-bold tracking-[0.2em] uppercase text-gray-300 mb-0.5">
                       {fact.label}
                     </span>
-                    <span className="text-[13.5px] font-semibold text-[#0D1B2A]">
+                    <span className="text-[13px] font-semibold text-gray-800 truncate">
                       {fact.val}
                     </span>
                   </div>

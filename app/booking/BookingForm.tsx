@@ -161,7 +161,7 @@ export default function BookingForm() {
         ) : (
           <>
             {/* Header */}
-            <div className="text-center mb-8 mt-2">
+            <div className="text-center mb-4 mt-12">
               <h1 className="text-3xl font-extrabold tracking-tight text-white mb-2">
                 Book Your Adventure
               </h1>

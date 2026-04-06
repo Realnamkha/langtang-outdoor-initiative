@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { X } from "lucide-react";
 
 export default function Hero() {
   const [show, setShow] = useState(false);
@@ -10,21 +11,7 @@ export default function Hero() {
 
   useEffect(() => {
     const timer = setTimeout(() => setShow(true), 1200);
-    const hideTimer = setTimeout(() => setVisible(false), 6000);
-
-    const handleScroll = () => {
-      if (window.scrollY > 80) {
-        setVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      clearTimeout(timer);
-      clearTimeout(hideTimer);
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -55,7 +42,6 @@ export default function Hero() {
           the Langtang Valley
         </p>
 
-        {/* CTA */}
         <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
           <Link
             href="/langtang"
@@ -79,7 +65,6 @@ export default function Hero() {
             }
           `}
         >
-          {/* Card */}
           <div
             className="relative rounded-2xl border border-white/20 overflow-hidden"
             style={{
@@ -94,9 +79,16 @@ export default function Hero() {
             {/* Top shimmer */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
-            {/* Animated left accent bar */}
+            {/* Dismiss — top right */}
+            <button
+              onClick={() => setVisible(false)}
+              className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-white/10 transition-all duration-200"
+              aria-label="Dismiss"
+            >
+              <X className="w-3 h-3" />
+            </button>
 
-            <div className="px-5 py-4 pl-6">
+            <div className="px-5 py-4 pr-8">
               {/* Eyebrow */}
               <div
                 className={`
@@ -109,7 +101,6 @@ export default function Hero() {
                   }
                 `}
               >
-                {/* Ping dot */}
                 <span className="relative flex h-2 w-2 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#01baf0] opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[#01baf0]" />
@@ -149,18 +140,6 @@ export default function Hero() {
               >
                 Deep local knowledge. One valley. Done right.
               </p>
-
-              {/* Dismiss */}
-              <button
-                onClick={() => setVisible(false)}
-                className={`
-                  mt-3 text-[10px] font-medium text-white/30 hover:text-white/60
-                  transition-all duration-300 delay-700
-                  ${show ? "opacity-100" : "opacity-0"}
-                `}
-              >
-                Dismiss ✕
-              </button>
             </div>
           </div>
         </div>

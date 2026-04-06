@@ -33,10 +33,6 @@ export default async function CulturalPage({
             {/* ── Image — stacks on top on mobile ── */}
             <div className="w-full md:w-[48%] flex justify-center">
               <div className="relative group">
-                {/* Decorative offset frames — hidden on mobile to avoid overflow */}
-                <div className="hidden md:block absolute -bottom-4 -right-4 w-full h-full rounded-3xl border-2 border-[#01baf0]/20 z-0" />
-                <div className="hidden md:block absolute -bottom-8 -right-8 w-[85%] h-[85%] rounded-3xl bg-[#01baf0]/8 z-0" />
-
                 {/* Main image — shorter on mobile */}
                 <div className="relative w-full max-w-[320px] h-[260px] sm:h-[340px] md:w-[380px] md:h-[520px] rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.18),0_8px_24px_rgba(0,0,0,0.12)] z-10 mx-auto">
                   <Image
@@ -47,14 +43,6 @@ export default async function CulturalPage({
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050f1a]/60 via-transparent to-transparent" />
-                </div>
-
-                {/* Duration badge */}
-                <div className="absolute -top-3 right-2 md:-top-4 md:-right-4 z-20 bg-white rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.1)] border border-[#e8f3f9] px-3 py-2 md:px-4 md:py-2.5 flex items-center gap-2">
-                  <Clock size={12} className="text-[#01baf0]" />
-                  <span className="text-[11px] md:text-[12px] font-semibold text-[#0D1B2A]">
-                    {tour.duration}
-                  </span>
                 </div>
               </div>
             </div>
@@ -78,30 +66,10 @@ export default async function CulturalPage({
                 {tour.punchline}
               </p>
 
-              {/* Badges */}
-              <div className="flex flex-wrap gap-2 md:gap-3 justify-center md:justify-start">
-                {[
-                  { icon: <Clock size={12} />, val: tour.duration },
-                  { icon: <Activity size={12} />, val: tour.difficulty },
-                  { icon: <MapPin size={12} />, val: tour.region },
-                ].map((item, i) => (
-                  <span
-                    key={i}
-                    className="flex items-center gap-2 text-[11px] md:text-[12px] font-medium text-[#0D1B2A] bg-white border border-[#e0f0f9] rounded-full px-3 py-1.5 md:px-4 md:py-2 shadow-sm"
-                  >
-                    <span className="text-[#01baf0]">{item.icon}</span>
-                    {item.val}
-                  </span>
-                ))}
-              </div>
-
               {/* CTAs — full width on mobile */}
               <div className="flex flex-col sm:flex-row items-center gap-3 pt-1 w-full md:w-auto">
                 <button className="w-full sm:w-auto bg-[#01baf0] hover:bg-[#0191c8] text-white font-semibold text-[14px] px-8 py-4 rounded-full transition-all duration-300 hover:shadow-[0_8px_30px_rgba(1,186,240,0.4)] hover:-translate-y-0.5">
                   Book This Tour
-                </button>
-                <button className="w-full sm:w-auto border border-[#cce8f4] text-[#0191c8] font-semibold text-[13px] px-6 py-4 rounded-full hover:bg-[#e8f6fd] transition-colors duration-200">
-                  Ask a Question
                 </button>
               </div>
             </div>
