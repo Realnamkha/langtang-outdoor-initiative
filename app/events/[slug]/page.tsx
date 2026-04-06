@@ -6,6 +6,8 @@ import type { Metadata } from "next";
 
 import { getEventBySlug, events } from "@/lib/events";
 import EventDetailTabs from "./components/Eventstabsdetail";
+import { AdventureStatsBar } from "@/app/adventures/[slug]/component/AdventureStatsbar";
+import { EventStatsBar } from "./components/Event_Stats";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -66,49 +68,103 @@ export default async function EventDetailPage({
             className="object-cover"
             sizes="100vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/90" />
-          <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-black/60 to-transparent" />
+          {/* Richer gradient layering */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-transparent to-transparent" />
         </div>
-        {/* Hero content */}
-        <div className="relative z-20 flex-1 flex items-center justify-center px-8 md:px-14 pb-12">
+
+        {/* Hero content — bottom-left anchored */}
+        <div className="relative z-20 flex-1 flex items-end px-8 md:px-14 pb-14">
           <div
-            className="max-w-2xl"
+            className="max-w-2xl w-full"
             style={{
               animation: "heroIn 0.7s 0.1s cubic-bezier(0.22,1,0.36,1) both",
             }}
           >
             {/* Season tag */}
-            <div className="flex items-center gap-2 flex-wrap mb-5">
-              <span className="text-2xl">{event.icon}</span>
-              <span className="text-[10px] font-black tracking-[0.25em] uppercase text-white/40 bg-white/8 border border-white/12 px-3 py-1.5 rounded-full backdrop-blur-sm">
-                {event.season}
-              </span>
-            </div>
+            <span className="inline-flex items-center gap-1.5 text-[10px] font-black tracking-[0.25em] uppercase text-white/50 mb-5">
+              <span
+                className="w-1.5 h-1.5 rounded-full"
+                style={{ background: event.accentHex }}
+              />
+              {event.season}
+            </span>
 
             {/* Title */}
-            <h1 className="font-display font-black text-white leading-[0.92] tracking-tight mb-6 text-3xl md:text-4xl lg:text-5xl">
+            <h1 className="font-display font-black text-white leading-[0.92] tracking-tight mb-4 text-3xl md:text-4xl lg:text-5xl">
               {event.title}
             </h1>
 
+            {/* Accent rule */}
+            <div
+              className="w-10 h-[3px] rounded-full mb-5"
+              style={{ background: event.accentHex }}
+            />
+
             {/* Meta pills */}
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap gap-2.5 mb-6">
               {[
-                { icon: "📅", text: event.date },
-                { icon: "📍", text: event.location },
+                {
+                  icon: (
+                    <svg
+                      className="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      />
+                    </svg>
+                  ),
+                  text: event.date,
+                },
+                {
+                  icon: (
+                    <svg
+                      className="w-3 h-3"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      />
+                    </svg>
+                  ),
+                  text: event.location,
+                },
               ].map((m) => (
                 <span
                   key={m.text}
-                  className="flex items-center gap-2 text-sm text-white/60 bg-black/30 border border-white/10 backdrop-blur-sm px-3.5 py-1.5 rounded-full"
+                  className="flex items-center gap-2 text-[12px] font-medium text-white/55 px-3 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm"
                 >
-                  <span className="text-xs">{m.icon}</span>
+                  {m.icon}
                   {m.text}
                 </span>
               ))}
             </div>
 
-            <p className="text-white/50 text-base leading-relaxed max-w-lg">
-              {event.description}
-            </p>
+            {/* Description — styled as a pull quote */}
+            <div
+              className="border-l-2 pl-4"
+              style={{ borderColor: event.accentHex }}
+            >
+              <p className="text-white/90 text-[15px] leading-[1.75] font-light max-w-lg">
+                {event.description}
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -117,57 +173,54 @@ export default async function EventDetailPage({
       <div className="bg-white flex-1">
         <div className="max-w-4xl mx-auto px-6 md:px-10 py-16">
           <div className="flex flex-col gap-14">
-            {/* Quick stats */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {[
-                { label: "Duration", val: event.details.duration },
-                { label: "Difficulty", val: event.details.difficulty },
-                { label: "Max Altitude", val: event.details.maxAltitude },
-                { label: "Group Size", val: event.details.groupSize },
-              ].map((s) => (
-                <div
-                  key={s.label}
-                  className="p-4 rounded-2xl border border-gray-100 bg-gray-50 text-center"
-                >
-                  <p className="text-[10px] uppercase tracking-widest text-gray-400 font-semibold mb-1">
-                    {s.label}
-                  </p>
-                  <p className="text-sm font-bold text-gray-800">{s.val}</p>
-                </div>
-              ))}
+            {/* Quick stats using AdventureStatsBar */}
+            <div className="flex flex-col gap-14">
+              <EventStatsBar event={event} />
             </div>
 
             {/* About */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-3">
+              <h2 className="text-xs font-black uppercase tracking-widest text-primary mb-3">
                 About
               </h2>
               <p className="text-gray-600 leading-relaxed text-[15px]">
                 {event.details.about}
               </p>
             </div>
-
+            {/* Highlights */}
             {/* Highlights */}
             <div>
-              <h2 className="text-xs font-black uppercase tracking-widest text-gray-400 mb-4">
-                Highlights
-              </h2>
-              <div className="grid sm:grid-cols-2 gap-3">
+              <div className="flex items-center gap-3 mb-8">
+                <h2 className="text-[10px] font-black uppercase tracking-[0.22em] text-primary">
+                  Highlights
+                </h2>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {event.details.highlights.map((h, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-2xl bg-gray-50 border border-gray-100 p-4 hover:border-gray-200 transition-colors"
+                    className="group relative flex flex-col gap-3 rounded-2xl border border-gray-100 bg-white p-5 hover:shadow-md hover:border-gray-200 transition-all duration-200 overflow-hidden"
                   >
-                    <span
-                      className="w-1.5 h-1.5 rounded-full mt-2 shrink-0"
-                      style={{ background: event.accentHex }}
+                    {/* Title */}
+                    <h3 className="font-display font-bold text-gray-900 text-[15px] leading-snug tracking-tight">
+                      {h.title}
+                    </h3>
+
+                    {/* Divider */}
+                    <div
+                      className="w-6 h-px"
+                      style={{ background: `${event.accentHex}60` }}
                     />
-                    <p className="text-sm text-gray-600">{h}</p>
+
+                    {/* Description */}
+                    <p className="text-[13px] text-gray-500 leading-relaxed font-light flex-1">
+                      {h.description}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
-
             {/* Tabs — client component */}
             <EventDetailTabs event={event} />
           </div>

@@ -5,21 +5,6 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import Navbar from "../components/navbar";
 import FeatureCard from "@/components/ui/Feature_Card";
-import LogoStrip from "@/components/ui/LogoStrip";
-
-const fadeUp = {
-  hidden: { opacity: 0, y: 28 },
-  show: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.65, ease: "easeOut" as const },
-  },
-};
-
-const stagger = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.12 } },
-};
 
 const BRAND = "linear-gradient(135deg, #01baf0, #0191c8)";
 
@@ -29,36 +14,24 @@ export default function AboutPage() {
       <Navbar transparent={false} />
 
       {/* ── Our Story ── */}
-      <section className="relative h-screen pt-24 px-6 mt-10 overflow-hidden">
+      {/* ── Our Story ── */}
+      <section className="relative pt-20 pb-20 px-6 mt-6 overflow-hidden">
+        {/* Background glow */}
         <div className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full bg-[#01baf0] opacity-[0.05] blur-3xl -translate-x-1/2 -translate-y-1/4 pointer-events-none" />
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
           {/* Image */}
-          <motion.div
-            className="relative w-full"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
-            <div className="relative w-full h-[480px] sm:h-[560px] rounded-3xl overflow-hidden">
-              <Image
-                src="/logo_final.jpg"
-                alt="Our Story"
-                fill
-                className="object-cover transition-transform duration-700 hover:scale-[1.03]"
-              />
-            </div>
-          </motion.div>
+          <div className="relative w-full rounded-3xl overflow-hidden h-[260px] sm:h-[380px] lg:h-[520px]">
+            <Image
+              src="/logo_final.jpg"
+              alt="Our Story"
+              fill
+              className="object-cover transition-transform duration-700 hover:scale-[1.03]"
+            />
+          </div>
 
           {/* Text */}
-          <motion.div
-            className="flex flex-col gap-4"
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            viewport={{ once: true, amount: 0.3 }}
-          >
+          <div className="flex flex-col gap-5">
             <div className="flex items-center gap-3">
               <div className="h-[2px] w-8 bg-[#01baf0] rounded-full" />
               <span className="text-xs uppercase tracking-[0.25em] text-[#01baf0] font-semibold">
@@ -66,7 +39,7 @@ export default function AboutPage() {
               </span>
             </div>
 
-            <p className="text-gray-500 text-[15px] leading-[1.9]">
+            <p className="text-gray-500 text-[14px] sm:text-[15px] leading-[1.85]">
               Established in 2022 by the local youth of the region, Langtang
               Outdoor Initiative (LOI) is more than an adventure company, it is
               a movement. We were founded on a singular, powerful vision: to
@@ -77,7 +50,7 @@ export default function AboutPage() {
               that moves hand-in-hand with our local culture, traditions, and
               environment.
             </p>
-            <p className="text-gray-500 text-[15px] leading-[1.9]">
+            <p className="text-gray-500 text-[14px] sm:text-[15px] leading-[1.85]">
               At LOI, our work goes beyond guiding expeditions. We are deeply
               committed to preserving the identity of Langtang—its stories, its
               people, and its way of life. Through community-driven initiatives,
@@ -90,7 +63,7 @@ export default function AboutPage() {
               about building connections, empowering communities, and ensuring
               that the spirit of Langtang continues to thrive for years to come.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
       <section className="relative bg-[#f8f7f4] py-28 px-6 overflow-hidden">
@@ -246,58 +219,73 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ── */}
-      <div className="mt-14 p-10 md:mt-20">
-        <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative">
-          {/* Mountain image clearly visible */}
+      <div className="px-4 sm:px-6 md:px-10 my-10 md:my-16">
+        <motion.div
+          className="max-w-6xl mx-auto rounded-2xl md:rounded-3xl overflow-hidden relative"
+          initial={{ opacity: 0, y: 28 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.65, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {/* Background Image */}
           <div className="absolute inset-0">
             <Image
               src="/footer.jpg"
               alt=""
               fill
-              className="object-cover object-[center_50%]"
+              className="object-cover object-center md:object-[center_50%] scale-110 md:scale-105"
               aria-hidden="true"
             />
-            {/* Light tint — mountain shows through */}
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#060d14]/80 via-[#060d14]/40 to-[#060d14]/70" />
           </div>
 
-          {/* Dot grid */}
+          {/* Subtle dot grid */}
           <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            className="pointer-events-none absolute inset-0 opacity-[0.04] md:opacity-[0.05]"
             style={{
               backgroundImage:
                 "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
+              backgroundSize: "26px 26px",
             }}
           />
 
-          <div className="relative z-10 py-14 md:py-16 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex flex-col gap-3 max-w-lg">
-              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
-                Ready to Start Your Journey?
+          {/* Content */}
+          <div className="relative z-10 py-10 sm:py-12 md:py-16 px-5 sm:px-8 md:px-16 flex flex-col md:flex-row items-center md:items-center justify-between gap-8 md:gap-10 text-center md:text-left">
+            {/* Text */}
+            <div className="flex flex-col gap-3 md:gap-4 max-w-md">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white leading-snug md:leading-tight">
+                Ready to Start{" "}
+                <span className="text-primary drop-shadow-[0_0_8px_rgba(1,186,240,0.5)]">
+                  Your Journey
+                </span>
               </h2>
-              <p className="text-white/80 text-[15px] leading-relaxed">
-                Whether you are a first-time trekker or a seasoned mountaineer,
-                we have an experience crafted for you.
+
+              <p className="text-white/75 text-sm sm:text-[15px] leading-relaxed">
+                Whether you're a first-time trekker or a seasoned mountaineer,
+                we craft unforgettable experiences in the Himalayas.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full md:w-auto">
               <Link
                 href="/expeditions"
-                className="px-7 py-3.5 rounded-full bg-white text-[#0191c8] font-bold text-sm tracking-wide hover:bg-white/90 hover:-translate-y-0.5 transition-all shadow-lg whitespace-nowrap"
+                className="w-full sm:w-auto text-center px-6 py-3 rounded-full bg-primary text-white font-semibold text-sm tracking-wide 
+          active:scale-[0.98] hover:bg-primary/90 md:hover:-translate-y-0.5 transition-all shadow-[0_4px_20px_rgba(1,186,240,0.4)]"
               >
                 View Expeditions
               </Link>
+
               <Link
                 href="/contact"
-                className="px-7 py-3.5 rounded-full border-2 border-[#01baf0]/60 text-white font-semibold text-sm tracking-wide hover:bg-white/15 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                className="w-full sm:w-auto text-center px-6 py-3 rounded-full border border-primary/50 text-primary font-semibold text-sm tracking-wide 
+          active:scale-[0.98] hover:bg-primary/10 md:hover:-translate-y-0.5 transition-all"
               >
                 Contact Us →
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </main>
   );

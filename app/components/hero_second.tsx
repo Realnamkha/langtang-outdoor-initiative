@@ -66,7 +66,7 @@ export default function Hero_Second() {
       </div>
 
       {/* CTA Banner */}
-      <div className="mt-14 md:mt-20">
+      <div className="mt-16 md:mt-24">
         <motion.div
           className="max-w-6xl mx-auto rounded-3xl overflow-hidden relative"
           initial={{ opacity: 0, y: 28 }}
@@ -74,50 +74,60 @@ export default function Hero_Second() {
           transition={{ duration: 0.65, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.3 }}
         >
-          {/* Mountain image clearly visible */}
+          {/* Background Image */}
           <div className="absolute inset-0">
             <Image
               src="/footer.jpg"
               alt=""
               fill
-              className="object-cover object-[center_50%]"
+              className="object-cover object-[center_50%] scale-105"
               aria-hidden="true"
             />
-            {/* Light tint — mountain shows through */}
-            <div className="absolute inset-0 bg-black/20" />
+            {/* Gradient overlay (better than flat black) */}
+            <div className="absolute inset-0 bg-gradient-to-br f via-[#060d14]/10 to-[#060d14]/40" />
           </div>
 
-          {/* Dot grid */}
+          {/* Subtle dot grid */}
           <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            className="pointer-events-none absolute inset-0 opacity-[0.05]"
             style={{
               backgroundImage:
                 "radial-gradient(circle, white 1px, transparent 1px)",
-              backgroundSize: "28px 28px",
+              backgroundSize: "30px 30px",
             }}
           />
 
-          <div className="relative z-10 py-14 md:py-16 px-8 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
-            <div className="flex flex-col gap-3 max-w-lg">
-              <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight drop-shadow-sm">
-                Ready to Start Your Journey?
+          {/* Content */}
+          <div className="relative z-10 py-14 md:py-18 px-6 sm:px-10 md:px-16 flex flex-col md:flex-row items-center justify-between gap-10">
+            {/* Text */}
+            <div className="flex flex-col gap-4 max-w-lg text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-black text-white leading-tight">
+                Ready to Start{" "}
+                <span className="text-primary drop-shadow-[0_0_10px_rgba(1,186,240,0.5)]">
+                  Your Journey
+                </span>
               </h2>
-              <p className="text-white/80 text-[15px] leading-relaxed">
-                Whether you are a first-time trekker or a seasoned mountaineer,
-                we have an experience crafted for you.
+
+              <p className="text-white/75 text-[15px] leading-relaxed">
+                Whether you're a first-time trekker or a seasoned mountaineer,
+                we craft experiences that feel truly unforgettable .
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
               <Link
                 href="/expeditions"
-                className="px-7 py-3.5 rounded-full bg-primary text-white font-bold text-sm tracking-wide hover:bg-primary/90 hover:-translate-y-0.5 transition-all shadow-lg whitespace-nowrap"
+                className="w-full sm:w-auto text-center px-7 py-3.5 rounded-full bg-primary text-white font-bold text-sm tracking-wide 
+          hover:bg-primary/90 hover:-translate-y-0.5 transition-all shadow-[0_6px_30px_rgba(1,186,240,0.45)]"
               >
                 View Expeditions
               </Link>
+
               <Link
                 href="/contact"
-                className="px-7 py-3.5 rounded-full border-2 border-[#01baf0]/60 text-white font-semibold text-sm tracking-wide hover:bg-white/15 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                className="w-full sm:w-auto text-center px-7 py-3.5 rounded-full border border-primary/50 text-primary font-semibold text-sm tracking-wide 
+          hover:bg-primary/10 hover:-translate-y-0.5 transition-all"
               >
                 Contact Us →
               </Link>

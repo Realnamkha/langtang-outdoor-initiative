@@ -1,7 +1,4 @@
-export type ScheduleItem = {
-  day: string;
-  label: string;
-};
+import { ItineraryDay } from "@/components/ui/Itinerary";
 
 export type FaqItem = {
   q: string;
@@ -15,10 +12,10 @@ export type EventDetails = {
   groupSize: string;
   price: string;
   about: string;
-  highlights: string[];
+  highlights: { title: string; description: string }[];
   includes: string[];
   notIncluded: string[];
-  schedule: ScheduleItem[];
+  itinerary: ItineraryDay[];
   faqs: FaqItem[];
 };
 
@@ -37,6 +34,7 @@ export type FestivalEvent = {
   accentFrom: string;
   accentTo: string;
   details: EventDetails;
+  comingSoon?: boolean;
 };
 
 export const events: FestivalEvent[] = [
@@ -47,12 +45,12 @@ export const events: FestivalEvent[] = [
     title: "Langtang Boulder Hunt",
     date: "June 1 – June 15, 2026",
     location: "Langtang Valley",
-    description: "The Wolrd's Highest Outdoor Festival",
+    description: "The World's Highest Outdoor Festival",
     icon: "☀️",
+    bgImage: "/landscape_02.jpg",
     accentHex: "#38bdf8",
     accentFrom: "from-sky-400",
     accentTo: "to-blue-500",
-    bgImage: "/landscape_02.jpg",
     details: {
       duration: "15 Days",
       difficulty: "Moderate–Hard",
@@ -60,14 +58,38 @@ export const events: FestivalEvent[] = [
       groupSize: "8–14",
       price: "$1,850",
       about:
-        "Langtang Outdoor Initiative The Langtang Boulder Hunt is a premier mountain festival situated in the heart of Nepal’s Langtang Valley. Operating at an elevation between 3,200m and 4,000m, it holds the distinction of being the world’s highest outdoor festival, a high-altitude celebration of adventure, community, and the Himalayan spirit. This multidisciplinary gathering is designed by the community, for the community, bringing together like-minded enthusiasts to celebrate a shared love for the mountains.",
+        "Langtang Outdoor Initiative: The Langtang Boulder Hunt is a premier mountain festival situated in the heart of Nepal’s Langtang Valley. Operating at an elevation between 3,200m and 4,000m, it holds the distinction of being the world’s highest outdoor festival, a high-altitude celebration of adventure, community, and the Himalayan spirit.",
       highlights: [
-        "High-Altitude Bouldering: Discover and climb pristine granite boulders scattered across the glacial valley.",
-        "Trekking: Journey through the iconic Langtang National Park, experiencing its unique flora, fauna, and panoramic views.",
-        "High line/Slack line: Engage in High-lining and Slack-lining against a backdrop of 7,000-meter peaks.",
-        "Via Ferrata: Experience the thrill of protected climbing routes in a high-alpine setting.",
-        "Calisthenics: Develop bodyweight mastery and physical discipline in a unique, thin-air environment.",
-        "Camping: Immerse yourself in the elements with organized community camping under the Himalayan stars.",
+        {
+          title: "High-Altitude Bouldering",
+          description:
+            "Discover and climb pristine granite boulders scattered across the glacial valley.",
+        },
+        {
+          title: "Trekking",
+          description:
+            "Journey through the iconic Langtang National Park, experiencing its unique flora, fauna, and panoramic views.",
+        },
+        {
+          title: "High line/Slack line",
+          description:
+            "Engage in High-lining and Slack-lining against a backdrop of 7,000-meter peaks.",
+        },
+        {
+          title: "Via Ferrata",
+          description:
+            "Experience the thrill of protected climbing routes in a high-alpine setting.",
+        },
+        {
+          title: "Calisthenics",
+          description:
+            "Develop bodyweight mastery and physical discipline in a unique, thin-air environment.",
+        },
+        {
+          title: "Camping",
+          description:
+            "Immerse yourself in the elements with organized community camping under the Himalayan stars.",
+        },
       ],
       includes: [
         "All trekking permits & entry fees",
@@ -83,21 +105,294 @@ export const events: FestivalEvent[] = [
         "Personal gear",
         "Tips & gratuities",
       ],
-      schedule: [
+      itinerary: [
         {
-          day: "Day 1–2",
-          label: "Kathmandu arrival & acclimatization briefing",
+          day: "June 1",
+          title: "Kathmandu to Sherpa-Gaun",
+          description:
+            "Jeep ride of 6-7 hours through the Trishuli River, Shyabru-Besi, and Khamjim, followed by 45 minutes of hiking to reach Sherpa Gaun for overnight stay.",
+          altitude: "1300M",
+          stay: "Hotel",
         },
-        { day: "Day 3", label: "Drive to Syabrubesi — gateway to Langtang" },
-        { day: "Day 4–5", label: "Trek through rhododendron forests to base" },
         {
-          day: "Day 6–12",
-          label: "Bouldering sessions & peak attempt windows",
+          day: "June 2",
+          title: "Sherpa-Gaun to Ghoda Tabela",
+          sections: [
+            {
+              label: "07:00",
+              content:
+                "Morning Briefing & Breakfast: Begin the day with a nutritious breakfast to fuel the upcoming ascent.",
+            },
+            {
+              label: "07:30",
+              content:
+                "Preparation & Warm-up: A guided stretching and mobility session specifically tailored for high-altitude hiking to prevent injury and improve circulation.",
+            },
+            {
+              label: "08:00",
+              content:
+                "Departure: We hit the trail promptly to take advantage of the optimal morning weather conditions.",
+            },
+            {
+              label: "Mid-Day",
+              content:
+                "Field Lunch: Depending on the group's pace and appetite, a curated lunch will be served at either Woodland or Ghoda Tabela.",
+            },
+            {
+              label: "Evening",
+              content:
+                "Base Establishment: We will reach our destination of Thangshyap, where we will establish a multi-night camp. This extended stay allows for proper acclimatization and deeper exploration of the surrounding terrain.",
+            },
+          ],
+          altitude: "2550M",
+          stay: "Tea House",
         },
-        { day: "Day 13", label: "Rest day — monastery visit & local culture" },
         {
-          day: "Day 14–15",
-          label: "Descent & celebration dinner in the valley",
+          day: "June 3",
+          title: "Ghoda-Tabela to Langtang",
+          sections: [
+            {
+              label: "07:00",
+              content:
+                "Morning Wake-up: Rise early to the morning light of the Langtang Valley.",
+            },
+            {
+              label: "07:30",
+              content:
+                "Breakfast: A nutritious morning meal to fuel the day's movement.",
+            },
+            {
+              label: "08:00",
+              content:
+                "Mobility & Stretching: A guided session designed to prepare the body for high-altitude trekking.",
+            },
+            {
+              label: "08:30",
+              content:
+                "Departure: We begin the trail promptly, moving toward the upper reaches of the valley.",
+            },
+            {
+              label: "Mid-Day",
+              content:
+                "Arrival & Lunch: Following a scenic two-hour hike, we will arrive in Langtang Village for a community lunch.",
+            },
+            {
+              label: "Afternoon",
+              content:
+                "Recovery & Acclimatization: The afternoon is dedicated to rest, followed by a light acclimatization hike to assist the body in adapting to the increased elevation.",
+            },
+            {
+              label: "Evening",
+              content:
+                " Briefing & Overnight: We will stay overnight in the village. The evening will conclude with a technical briefing for the following day’s Via Ferrata event, covering safety protocols and gear management.",
+            },
+          ],
+          altitude: "3000M",
+          stay: "Tea House",
+        },
+        {
+          day: "June 4",
+          title: "Langtang Activity Day",
+          sections: [
+            {
+              label: "07:00",
+              content:
+                "Morning Wake-up: Rise early to the morning light of the Langtang Valley.",
+            },
+            {
+              label: "07:30",
+              content:
+                "Mobility & Stretching: A guided warm-up session to prepare for high-altitude movement.",
+            },
+            {
+              label: "08:00",
+              content:
+                "Activity Departure: Participants will transition to their chosen disciplines.",
+            },
+            {
+              label: "Option 1: The Langtang Via Ferrata Experience",
+              content:
+                "This 1.9 km beginner-friendly route offers a safe yet thrilling introduction to technical climbing. The ascent takes approximately 4–5 hours, reaching an elevation of 4,000m. At the summit, climbers are rewarded with a breathtaking bird's-eye view of the Langtang Valley and the majestic south face of Langtang Lirung.",
+            },
+            {
+              label: "Option 2: Langtang Valley Bouldering Session",
+              content:
+                "For those not participating in the Via Ferrata, a guided bouldering session will be held among the diverse granite blocks surrounding the valley. This allows for a focus on technique and movement at a lower intensity.",
+            },
+            {
+              label: "Logistics & Event Coordination",
+              content:
+                "While participants are in the field, half of the organizing team will relocate to the Hard Rock Cafe area to manage the infrastructure for upcoming festival days, including the setup of banners, flyers, and event tents.",
+            },
+            {
+              label: "Overnight",
+              content:
+                "All participants and staff will stay overnight in Langtang Village to continue acclimatization.",
+            },
+          ],
+          altitude: "3450M",
+          stay: "Tea House",
+        },
+        {
+          day: "June 5",
+          title: "Langtang to Hard Rock Cafe Base Camp",
+          sections: [
+            {
+              label: "06:00",
+              content:
+                "Morning Wake-up: An early start to maximize the clear morning weather.",
+            },
+            {
+              label: "06:30",
+              content:
+                "Breakfast: A high-energy meal to prepare for the transition to our base camp.",
+            },
+            {
+              label: "07:00",
+              content:
+                "Expedition Departure: A scenic two-hour trek toward the Hard Rock Cafe bouldering area.",
+            },
+            {
+              label: "10:30",
+              content:
+                "Sacred Puja Ceremony: In alignment with local traditions, we will hold a formal Puja. This ceremony is conducted to show respect to the mountain spirits, seeking their blessing for a safe, successful event and permission to climb among these sacred peaks.",
+            },
+            {
+              label: "11:30",
+              content:
+                "Base Camp Settlement: Distribution of high-altitude tents. Accommodations are provided on a shared-occupancy basis to foster community and minimize our environmental footprint.",
+            },
+            {
+              label: "12:30",
+              content: "Field Lunch: A hot lunch served at the new base camp.",
+            },
+            {
+              label: "14:00",
+              content:
+                "Guided Boulder Orientation: A walkthrough of the primary boulder fields. This session is designed to familiarize participants with the layout, safety zones, and specific problems within the sector.",
+            },
+            {
+              label: "Evening",
+              content:
+                "Alpine Residency: This marks the first of five nights of wilderness camping, where we will live, climb, and celebrate in the heart of the Himalayas.",
+            },
+          ],
+          altitude: "3620M",
+          stay: "Tent",
+        },
+        {
+          day: "June 6",
+          title: "Hard Rock Cafe",
+          description:
+            "Following our arrival at the primary bouldering field, the festival transitions into a flexible, participant-led format. This allows everyone to pursue their specific interests—whether bouldering, high-lining, or calisthenics—at their own pace while maintaining a consistent communal structure for meals and recovery.",
+          sections: [
+            {
+              label: "08:00",
+              content: "Breakfast: Group morning meal and daily briefing.",
+            },
+            {
+              label: "12:30",
+              content:
+                "Lunch: High-energy field lunch served at the base camp.",
+            },
+            {
+              label: "16:00",
+              content:
+                "Afternoon Tea: A dedicated time for recovery, hydration, and social connection.",
+            },
+            {
+              label: "19:00",
+              content:
+                "Dinner: Communal evening meal and reflection on the day’s sends.",
+            },
+            {
+              label: "Flexible Activity & Specialized Workshops",
+              content:
+                "Outside of these scheduled mealtimes, participants are free to explore the valley and engage in their preferred outdoor disciplines.",
+            },
+          ],
+        },
+        {
+          day: "June 10",
+          title: "Hard Rock Cafe to Kyanjin Gompa",
+          sections: [
+            {
+              label: "07:00",
+              content:
+                "Morning Wake-up: Final morning at the current campsite.",
+            },
+            {
+              label: "07:30",
+              content: "Breakfast: Group meal and energy replenishment.",
+            },
+            {
+              label: "08:00–09:00",
+              content:
+                "Camp Deconstruction: A dedicated 'Pack-up Session' to ensure all gear is secured and the site is left in pristine condition (Leave No Trace)",
+            },
+            {
+              label: "09:30",
+              content:
+                "Expedition Departure: A scenic 1.5-hour trek to Kyanjin, our base for the remainder of the festival.",
+            },
+            {
+              label: "12:30",
+              content:
+                "Lunch: Served at our dedicated partner hotel in Kyanjin",
+            },
+            {
+              label: "Afternoon",
+              content:
+                "Recovery & Exploration: The remainder of the day is flexible. Participants may choose to rest and acclimatize or join a guided orientation hike to the nearby boulder fields to scout new lines for the upcoming days",
+            },
+          ],
+          altitude: "3845M",
+        },
+        {
+          day: "June 11",
+          title: "Kyanjin Gompa",
+          description:
+            "Participant-led activities, fixed mealtimes, and specialized workshops continue in Kyanjin region. Overnight at Tea House.",
+          sections: [
+            {
+              label: "08:00",
+              content:
+                "Breakfast & Daily Briefing: Group morning meal and announcement of the day's conditions.",
+            },
+            {
+              label: "12:30:Lunch",
+              content: "Lunch: High-energy meal served at the hotel.",
+            },
+            {
+              label: "16:00",
+              content:
+                "Afternoon Tea: A dedicated window for hydration, recovery, and social connection.",
+            },
+            {
+              label: "19:00",
+              content:
+                "Dinner & Reflection: Communal evening meal to share stories and celebrate the day’s achievements.",
+            },
+            {
+              label: "Flexible Activity & Specialized Workshops",
+              content:
+                "The Kyanjin region offers some of the most spectacular terrain in the valley. Outside of scheduled mealtimes, participants are encouraged to engage in their preferred disciplines, whether that is pushing grades on the Kyanjin boulder fields, high-lining, or practicing calisthenics with a view of Langtang Lirung.",
+            },
+            {
+              label: "Afternoon",
+              content:
+                "Recovery & Exploration: The remainder of the day is flexible. Participants may choose to rest and acclimatize or join a guided orientation hike to the nearby boulder fields to scout new lines for the upcoming days",
+            },
+          ],
+          stay: "Tea House",
+        },
+        {
+          day: "June 15",
+          title: "Closing Ceremony",
+          description:
+            "The final evening in Kyanjin will be dedicated to a communal farewell, intentionally designed without a rigid schedule to allow for a natural and relaxed conclusion to the festival. As the sun sets behind the peaks of Langtang Lirung, we will gather for a final celebratory dinner at our partner hotel to share stories and reflect on the achievements of the past week. This informal closing serves as a time for participants, organizers, and the local community to connect one last time, honoring the bonds formed through high-altitude adventure.",
+          altitude: "3845M",
+          stay: "Tea House",
         },
       ],
       faqs: [
@@ -121,67 +416,27 @@ export const events: FestivalEvent[] = [
     slug: "langtang-winter-fest",
     season: "Winter",
     title: "Langtang Winter Fest",
-    date: "Stay Tuned",
-    location: "Langtang Valley, Nepal",
-    description:
-      "An intimate winter evening with lantern walks, acoustic performances, warm drinks, and stargazing sessions.",
+    date: "December 1 – December 10, 2026",
+    location: "Langtang Valley",
+    description: "A Winter Celebration of Mountains and Adventure",
     icon: "❄️",
-    bgImage: "/landscape_02.jpg",
-    tag: "Selling Fast",
-    accentHex: "#38bdf8",
-    accentFrom: "from-sky-400",
-    accentTo: "to-blue-500",
+    bgImage: "/landscape_winter.jpg",
+    accentHex: "#60a5fa",
+    accentFrom: "from-blue-400",
+    accentTo: "to-indigo-500",
+    comingSoon: true,
     details: {
-      duration: "5 Evenings",
-      difficulty: "Easy",
-      maxAltitude: "3,430m",
-      groupSize: "Up to 180",
-      price: "$320",
-      about:
-        "Winter transforms Langtang into a silent, snow-draped world unlike any other. The Winter Fest is an intimate gathering — folk music echoing off ice-covered peaks, lanterns floating above frozen trails, and telescope sessions revealing skies unspoiled by light pollution. An unforgettable sensory experience.",
-      highlights: [
-        "Lantern procession through snowed-in trails",
-        "Acoustic live sets by Nepali folk artists",
-        "Himalayan stargazing with professional telescopes",
-        "Traditional Tamang food & yak butter tea",
-        "Bonfire storytelling & ice sculpture walk",
-        "Winter photography workshop at golden hour",
-      ],
-      includes: [
-        "5-evening festival pass",
-        "Guided lantern walk",
-        "Welcome dinner",
-        "Stargazing kit",
-        "Festival tote & souvenirs",
-        "Local transport from Syabrubesi",
-      ],
-      notIncluded: [
-        "Accommodation",
-        "International travel",
-        "Personal expenses",
-        "Extra food & drink",
-      ],
-      schedule: [
-        { day: "Eve 1", label: "Opening ceremony & grand lantern lighting" },
-        { day: "Eve 2", label: "Folk music night & traditional Tamang feast" },
-        { day: "Eve 3", label: "Ice sculpture trail & hot spring soak" },
-        { day: "Eve 4", label: "Stargazing summit walk with telescopes" },
-        { day: "Eve 5", label: "Closing bonfire, awards & farewell dinner" },
-      ],
-      faqs: [
-        {
-          q: "How cold does it get?",
-          a: "Evenings range from -5°C to 5°C. Warm gear is provided for all outdoor sessions.",
-        },
-        {
-          q: "Is this family-friendly?",
-          a: "Yes! Easy terrain, no altitude issues, and activities for all ages.",
-        },
-        {
-          q: "When are exact dates announced?",
-          a: "Dates drop 8 weeks before the festival. Register now for priority notification.",
-        },
-      ],
+      duration: "",
+      difficulty: "",
+      maxAltitude: "",
+      groupSize: "",
+      price: "",
+      about: "",
+      highlights: [], // empty
+      includes: [], // empty
+      notIncluded: [], // empty
+      itinerary: [], // empty
+      faqs: [], // empty
     },
   },
 ];

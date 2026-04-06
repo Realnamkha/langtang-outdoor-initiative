@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -37,46 +39,44 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#0a0a0a] relative">
+    <footer className="relative bg-black text-white">
+      {/* Background */}
       <Image
         src="/pic4.JPG"
-        alt="Langtang Mountain"
+        alt="Langtang"
         fill
-        priority
-        // className="object-cover object-[30%_70%] sm:object-[40%_70%]"
         className="object-cover object-[60%_70%]"
       />
-      <div className="absolute inset-0 bg-black/50 z-0" />
+      <div className="absolute inset-0 bg-black/70" />
 
-      {/* Main footer content */}
-      <div className="max-w-7xl mx-auto px-6 pt-16 pb-10 z-10 relative">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          {/* Brand column */}
-          <div className="col-span-2 sm:col-span-1">
-            <Link href="/" className="flex items-center gap-2.5 mb-5">
+      {/* CONTENT */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-16 pb-8">
+        {/* GRID */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+          {/* BRAND */}
+          <div>
+            <Link href="/" className="flex items-center gap-2 mb-4">
               <Image
                 src="/logo_final.jpg"
-                alt="Langtang Outdoor Initiative"
-                width={52}
-                height={52}
-                className="rounded-lg"
+                alt="logo"
+                width={42}
+                height={42}
+                className="rounded-md"
               />
-              <span className="font-bold text-base leading-tight text-white">
+              <span className="text-sm font-semibold leading-tight">
                 Langtang <br />
                 <span className="text-[#01baf0]">Outdoor Initiative</span>
               </span>
             </Link>
 
-            {/* Socials */}
-            <div className="flex items-center gap-3">
+            {/* SOCIALS */}
+            <div className="flex gap-2 mt-2">
               {socials.map(({ Icon, path, label }) => (
                 <a
                   key={label}
                   href={path}
                   target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-9 h-9 rounded-full border border-white/40 flex items-center justify-center text-gray-300 hover:border-[#01baf0] hover:text-[#01baf0] transition-all duration-200"
+                  className="w-8 h-8 flex items-center justify-center rounded-full border border-white/20 text-white/70 hover:text-[#01baf0] hover:border-[#01baf0] transition"
                 >
                   <Icon className="w-4 h-4" />
                 </a>
@@ -84,105 +84,81 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* QUICK LINKS */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-[#01baf0] font-semibold mb-5">
-              Quick Links
+            <h4 className="text-[11px] tracking-widest text-[#01baf0] mb-3">
+              QUICK LINKS
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link
                     href={link.path}
-                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-white/70 hover:text-white flex items-center gap-1 group"
                   >
-                    <span>{link.label}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 -translate-y-0.5 group-hover:opacity-100 transition-all duration-200 text-[#01baf0]" />
+                    {link.label}
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#01baf0]" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Popular Treks */}
+          {/* TREKS */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-[#01baf0] font-semibold mb-5">
-              Popular Treks
+            <h4 className="text-[11px] tracking-widest text-[#01baf0] mb-3">
+              POPULAR TREKS
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {expeditions.map((item) => (
                 <li key={item.path}>
                   <Link
                     href={item.path}
-                    className="text-sm text-gray-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group"
+                    className="text-sm text-white/70 hover:text-white flex items-center gap-1 group"
                   >
-                    <span>{item.label}</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-all duration-200 text-[#01baf0]" />
+                    {item.label}
+                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 text-[#01baf0]" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <div>
-            <h4 className="text-xs uppercase tracking-widest text-[#01baf0] font-semibold mb-5">
-              Get In Touch
+            <h4 className="text-[11px] tracking-widest text-[#01baf0] mb-3">
+              CONTACT
             </h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-[#01baf0] mt-0.5 shrink-0" />
-                <span className="text-sm text-gray-300 leading-relaxed">
-                  Langtang Village, Rasuwa District, Bagmati Province, Nepal
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-[#01baf0] mt-1 shrink-0" />
 
+            <ul className="space-y-3 text-sm text-white/70">
+              <li className="flex gap-2">
+                <MapPin className="w-4 h-4 text-[#01baf0]" />
+                <span>Langtang, Nepal</span>
+              </li>
+
+              <li className="flex gap-2">
+                <Phone className="w-4 h-4 text-[#01baf0]" />
                 <div className="flex flex-col">
-                  <a
-                    href="tel:+9779843023847"
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
-                  >
-                    +977 9843023847
-                  </a>
-                  <a
-                    href="tel:+9779843023847"
-                    className="text-sm text-gray-300 hover:text-white transition-colors"
-                  >
-                    +977 9761662049
-                  </a>
+                  <a href="tel:+9779843023847">+977 9843023847</a>
+                  <a href="tel:+9779761662049">+977 9761662049</a>
                 </div>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-[#01baf0] shrink-0" />
-                <a
-                  href="mailto:info@langtangoutdoor.com"
-                  className="text-sm text-gray-300 hover:text-white transition-colors"
-                >
-                  langtang.outdoor7227@gmail.com
-                </a>
+
+              <li className="flex gap-2">
+                <Mail className="w-4 h-4 text-[#01baf0]" />
+                <a href="mailto:langtang.outdoor7227@gmail.com">Email us</a>
               </li>
             </ul>
           </div>
         </div>
 
-        {/* Divider + Bottom bar */}
-        <div className="mt-14 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-gray-400">
-            © {new Date().getFullYear()} Langtang Outdoor Initiative. All rights
-            reserved.
-          </p>
-          <div className="flex items-center gap-5 text-xs text-gray-400">
-            <Link
-              href="/privacy"
-              className="hover:text-white transition-colors"
-            >
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Use
-            </Link>
+        {/* BOTTOM */}
+        <div className="mt-10 pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/50">
+          <p>© {new Date().getFullYear()} Langtang Outdoor Initiative</p>
+
+          <div className="flex gap-4">
+            <Link href="/privacy">Privacy</Link>
+            <Link href="/terms">Terms</Link>
           </div>
         </div>
       </div>
