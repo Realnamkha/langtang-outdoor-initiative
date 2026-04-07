@@ -9,7 +9,7 @@ import Hero from "./components/Hero";
 
 const features = [
   {
-    img: "/guide_02.JPG",
+    img: "/guide_02.jpg",
     title: "Culture",
     desc: "Sacred Himalayan valley where ancient Tibetan traditions still live—rare, authentic, and fading.",
   },

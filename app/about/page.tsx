@@ -138,20 +138,20 @@ export default function AboutPage() {
               {
                 name: "Thupten Lama",
                 role: "Founder",
-                img: "/pic3.jpeg",
+                img: "/people_01.jpg",
                 founder: true,
                 slug: "thupten-lama",
               },
               {
                 name: "Mr X",
                 role: "Senior Trek Leader",
-                img: "/pic3.jpeg",
+                img: "/people_01.jpg",
                 slug: "mr-x",
               },
               {
                 name: "Mr Z",
                 role: "Logistics Coordinator",
-                img: "/pic3.jpeg",
+                img: "/people_01.jpg",
                 slug: "mr-z",
               },
             ].map((member) => (
@@ -159,7 +159,7 @@ export default function AboutPage() {
                 key={member.name}
                 href={`/about/${member.slug}`}
                 className="group relative rounded-3xl overflow-hidden cursor-pointer block"
-                style={{ aspectRatio: "3/4" }}
+                style={{ aspectRatio: "4/5" }}
               >
                 <Image
                   src={member.img}

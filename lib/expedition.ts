@@ -720,7 +720,7 @@ export const expeditions: Expedition[] = [
   {
     title: "Naya Kanga",
     slug: "naya-kanga",
-    imageSrc: "/pic4.jpg",
+    imageSrc: "/pic4.JPG",
     duration: "16 Days",
     altitude: "5,846 M",
     region: "Langtang, Nepal",

@@ -222,7 +222,7 @@ export const culturalTours: CulturalTour[] = [
   {
     title: "Yak Herding",
     slug: "herding-tourism",
-    imageSrc: "/pic4.jpg",
+    imageSrc: "/pic4.JPG",
     duration: "6 Days",
     difficulty: "Easy – Moderate",
     region: "Langtang,Nepal",

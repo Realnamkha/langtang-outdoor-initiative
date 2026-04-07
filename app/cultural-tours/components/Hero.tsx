@@ -10,13 +10,14 @@ const CulturalHero = () => {
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-10 px-6 md:px-20 py-12 md:py-32">
         {/* Left — Image */}
         <div className="w-full md:w-[55%] flex justify-center">
-          <div className="relative group">
-            <div className="relative w-full max-w-[320px] h-[260px] sm:h-[340px] md:w-[360px] md:h-[500px] rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.15),0_4px_16px_rgba(0,0,0,0.1)]">
+          <div className="relative group w-full">
+            <div className="relative max-w-6xl mx-auto h-72 sm:h-[300px] md:w-[360px] md:h-[500px] rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.15),0_4px_16px_rgba(0,0,0,0.1)]">
               <Image
                 src="/buddhist_03.jpg"
                 alt="Buddhist culture"
                 fill
                 priority
+                sizes="(max-width: 768px) 100vw, 360px"
                 className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>

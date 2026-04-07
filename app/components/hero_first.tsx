@@ -9,10 +9,15 @@ export default function Hero() {
   const [show, setShow] = useState(false);
   const [visible, setVisible] = useState(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 1200);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     if (window.scrollY > window.innerHeight * 0.8) {
+  //       setVisible(false);
+  //     }
+  //   };
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => window.removeEventListener("scroll", handleScroll);
+  // }, []);
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
@@ -54,32 +59,20 @@ export default function Hero() {
 
       {/* ── Focus Toast ── */}
       {visible && (
-        <div
-          className={`
-            fixed bottom-8 right-6 z-50 max-w-[280px]
-            transition-all duration-700 ease-[cubic-bezier(0.34,1.56,0.64,1)]
-            ${
-              show
-                ? "translate-x-0 translate-y-0 opacity-100"
-                : "translate-x-16 translate-y-16 opacity-0"
-            }
-          `}
-        >
+        <div className="fixed bottom-8 right-6 z-50 max-w-[280px]">
           <div
             className="relative rounded-2xl border border-white/20 overflow-hidden"
             style={{
               background:
-                "linear-gradient(135deg, rgba(255,255,255,0.14) 0%, rgba(255,255,255,0.06) 100%)",
+                "linear-gradient(135deg, rgba(6,13,20,0.92) 0%, rgba(6,13,20,0.85) 100%)",
               backdropFilter: "blur(24px) saturate(1.6)",
               WebkitBackdropFilter: "blur(24px) saturate(1.6)",
               boxShadow:
-                "0 24px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.10), inset 0 1px 0 rgba(255,255,255,0.2)",
+                "0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(1,186,240,0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
             }}
           >
-            {/* Top shimmer */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
 
-            {/* Dismiss — top right */}
             <button
               onClick={() => setVisible(false)}
               className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-white/10 transition-all duration-200"
@@ -89,18 +82,7 @@ export default function Hero() {
             </button>
 
             <div className="px-5 py-4 pr-8">
-              {/* Eyebrow */}
-              <div
-                className={`
-                  flex items-center gap-2 mb-2
-                  transition-all duration-500 delay-300
-                  ${
-                    show
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-2"
-                  }
-                `}
-              >
+              <div className="flex items-center gap-2 mb-2">
                 <span className="relative flex h-2 w-2 shrink-0">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#01baf0] opacity-70" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-[#01baf0]" />
@@ -110,34 +92,12 @@ export default function Hero() {
                 </span>
               </div>
 
-              {/* Main text */}
-              <p
-                className={`
-                  text-[15px] font-semibold text-white leading-snug
-                  transition-all duration-600 delay-[400ms]
-                  ${
-                    show
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-3"
-                  }
-                `}
-              >
+              <p className="text-[15px] font-semibold text-white leading-snug">
                 We are focused only on{" "}
                 <span className="text-[#01baf0]">Langtang Valley</span>
               </p>
 
-              {/* Sub text */}
-              <p
-                className={`
-                  mt-1.5 text-[11px] text-white/45 leading-relaxed
-                  transition-all duration-600 delay-500
-                  ${
-                    show
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 translate-y-3"
-                  }
-                `}
-              >
+              <p className="mt-1.5 text-[11px] text-white/45 leading-relaxed">
                 Deep local knowledge. One valley. Done right.
               </p>
             </div>
