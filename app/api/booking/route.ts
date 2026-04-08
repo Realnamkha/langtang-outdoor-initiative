@@ -25,7 +25,7 @@ export async function POST(req: Request) {
 
     const { data: emailData, error } = await resend.emails.send({
       from: "info@langtangoutdoorinitiative.com",
-      to: "077bct025.namga@sagarmatha.edu.np",
+      to: "langtang.outdoor7227@gmail.com",
       replyTo: email,
       subject: `New Booking Request from ${firstName} ${lastName}`,
       html: `

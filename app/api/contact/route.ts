@@ -10,7 +10,7 @@ export async function POST(req: Request) {
   try {
     const { data, error } = await resend.emails.send({
       from: "info@langtangoutdoorinitiative.com",
-      to: "077bct025.namga@sagarmatha.edu.np",
+      to: "langtang.outdoor7227@gmail.com",
       replyTo: email,
       subject: `✉️ New Inquiry from ${firstName} ${lastName}`,
       html: `
