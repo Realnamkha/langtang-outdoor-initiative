@@ -1,7 +1,6 @@
 import { getCulturalTourBySlug } from "@/lib/culture";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import { MapPin, Activity, Clock } from "lucide-react";
 import Navbar from "@/app/components/navbar";
 import Itinerary from "@/components/ui/Itinerary";
 import TripOverview from "./components/TripOverview";
@@ -32,14 +31,15 @@ export default async function CulturalPage({
           <div className="relative z-10 w-full max-w-7xl mx-auto py-12 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10 md:gap-16">
             {/* ── Image — stacks on top on mobile ── */}
             <div className="w-full md:w-[48%] flex justify-center">
-              <div className="relative group">
+              <div className="relative group w-full">
                 {/* Main image — shorter on mobile */}
-                <div className="relative w-full max-w-[320px] h-[260px] sm:h-[340px] md:w-[380px] md:h-[520px] rounded-3xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.18),0_8px_24px_rgba(0,0,0,0.12)] z-10 mx-auto">
+                <div className="relative max-w-6xl mx-auto h-72 sm:h-[300px] md:w-[360px] md:h-[500px] rounded-2xl overflow-hidden shadow-[0_24px_60px_rgba(1,186,240,0.15),0_4px_16px_rgba(0,0,0,0.1)]">
                   <Image
                     src={tour.imageSrc}
                     alt={tour.title}
                     fill
                     priority
+                    sizes="(max-width: 768px) 100vw, 360px"
                     className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#050f1a]/60 via-transparent to-transparent" />

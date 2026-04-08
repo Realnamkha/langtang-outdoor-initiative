@@ -108,7 +108,7 @@ const Navbar = ({ transparent = true }) => {
           <div className="flex items-center gap-2 shrink-0">
             {/* WhatsApp CTA — desktop */}
             <a
-              href="https://wa.me/+9779861608237"
+              href="https://wa.me/+9779761662049"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden md:flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-semibold text-[#25d366] bg-[#25d366]/10 border border-[#25d366]/25 hover:bg-[#25d366]/18 transition-all duration-150"
@@ -119,7 +119,7 @@ const Navbar = ({ transparent = true }) => {
 
             {/* WhatsApp icon only — mobile */}
             <a
-              href="https://wa.me/+9779861608237"
+              href="https://wa.me/+9779761662049"
               target="_blank"
               rel="noopener noreferrer"
               className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl text-[#25d366] bg-[#25d366]/10 border border-[#25d366]/20"
@@ -206,7 +206,7 @@ const Navbar = ({ transparent = true }) => {
             {/* WhatsApp CTA in drawer */}
             <div className="px-4 pb-4 pt-1">
               <a
-                href="https://wa.me/+9779861608237"
+                href="https://wa.me/+9779761662049"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl text-sm font-bold text-white transition-all"

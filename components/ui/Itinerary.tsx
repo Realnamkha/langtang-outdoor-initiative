@@ -42,14 +42,73 @@ function Chip({ icon, label }: { icon: React.ReactNode; label: string }) {
 function getBadgeStyle(badge?: string) {
   switch (badge?.toLowerCase()) {
     case "trek":
-      return { icon: Footprints, label: "Trek" }; // component, not JSX
+      return { icon: Footprints, label: "Trek" };
     case "drive":
-      return { icon: Car, label: "Drive" }; // component, not JSX
+      return { icon: Car, label: "Drive" };
     case "summit":
-      return { icon: Mountain, label: "Summit" }; // component, not JSX
+      return { icon: Mountain, label: "Summit" };
     default:
       return null;
   }
+}
+
+// Detects "Option 1/2/3", "Logistics", "Overnight", "Flexible" type labels
+function isOptionSection(label: string) {
+  return (
+    /^option\s*\d+/i.test(label) ||
+    /^logistics/i.test(label) ||
+    /^flexible/i.test(label)
+  );
+}
+
+function getOptionShortLabel(label: string) {
+  // "Option 1: The Langtang Via Ferrata Experience" → "Option 1 — Via Ferrata"
+  const match = label.match(/^(option\s*\d+)[:\s–-]*/i);
+  if (match) {
+    const rest = label.slice(match[0].length).trim();
+    // Shorten long subtitles
+    const short = rest.length > 30 ? rest.slice(0, 28) + "…" : rest;
+    return `${match[1]} ${short ? "— " + short : ""}`;
+  }
+  if (/^logistics/i.test(label)) return "Logistics & coordination";
+  if (/^flexible/i.test(label)) return "Flexible activities";
+  return label;
+}
+
+function SectionList({ sections }: { sections: DaySection[] }) {
+  return (
+    <div className="flex flex-col gap-0">
+      {sections.map((sec, i) => {
+        if (isOptionSection(sec.label)) {
+          return (
+            <div
+              key={i}
+              className="border-l-2 border-[#01baf0] bg-sky-50/60 rounded-r-xl pl-3 pr-2 py-2.5 mb-2"
+            >
+              <p className="text-[10px] font-bold uppercase tracking-[0.12em] text-sky-600 mb-1">
+                {getOptionShortLabel(sec.label)}
+              </p>
+              <p className="text-[13px] text-gray-500 leading-relaxed">
+                {sec.content}
+              </p>
+            </div>
+          );
+        }
+
+        // Regular time-based row
+        return (
+          <div key={i} className="flex gap-3 mb-2.5 items-start">
+            <span className="shrink-0 w-[52px] text-[10px] uppercase tracking-[0.08em] font-semibold text-gray-300 pt-[3px] leading-tight">
+              {sec.label}
+            </span>
+            <p className="flex-1 text-[13px] text-gray-500 leading-relaxed">
+              {sec.content}
+            </p>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default function Itinerary({
@@ -58,14 +117,12 @@ export default function Itinerary({
   itinerary: ItineraryDay[];
 }) {
   const [showAll, setShowAll] = useState(false);
-
   const visible = showAll ? itinerary : itinerary.slice(0, PREVIEW_COUNT);
   const hasMore = itinerary.length > PREVIEW_COUNT;
 
   return (
     <section className="bg-white px-4 sm:px-6 py-16">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
         <div className="mb-12 text-center">
           <p className="text-[11px] uppercase tracking-[0.22em] font-semibold text-[#01baf0] mb-3">
             Full Schedule
@@ -78,9 +135,7 @@ export default function Itinerary({
           </p>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Spine line */}
           <div className="absolute left-[15px] top-2 bottom-2 w-px bg-gray-100 pointer-events-none" />
 
           <div className="flex flex-col gap-4">
@@ -88,7 +143,6 @@ export default function Itinerary({
               const badgeInfo = getBadgeStyle(item.badge);
               return (
                 <div key={i} className="flex gap-5 items-start group">
-                  {/* Dot */}
                   <div className="relative z-10 shrink-0 flex flex-col items-center pt-4">
                     <div className="w-[30px] h-[30px] rounded-full bg-[#01baf0] flex items-center justify-center">
                       <span className="text-white text-[10px] font-semibold">
@@ -97,41 +151,25 @@ export default function Itinerary({
                     </div>
                   </div>
 
-                  {/* Card */}
                   <div className="flex-1 min-w-0 bg-white rounded-2xl border border-gray-100 p-5 hover:border-[#01baf0]/20 hover:shadow-sm transition-all duration-200">
-                    {/* Day + badge */}
-                    <div className="flex items-center justify-between mb-1">
+                    <div className="mb-1">
                       <span className="text-[10px] uppercase tracking-[0.2em] font-semibold text-[#01baf0]">
                         {item.day}
                       </span>
                     </div>
 
-                    {/* Title */}
                     <h3 className="text-[15px] font-semibold text-gray-900 leading-snug mb-4">
                       {item.title}
                     </h3>
 
-                    {/* Sections or description */}
                     {item.sections && item.sections.length > 0 ? (
-                      <div className="flex flex-col gap-3">
-                        {item.sections.map((sec, si) => (
-                          <div key={si} className="flex gap-3">
-                            <span className="shrink-0 w-20 text-[10px] uppercase tracking-[0.1em] font-semibold text-gray-300 pt-[3px]">
-                              {sec.label}
-                            </span>
-                            <p className="flex-1 text-[13px] text-gray-500 leading-relaxed">
-                              {sec.content}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
+                      <SectionList sections={item.sections} />
                     ) : (
                       <p className="text-[13px] text-gray-500 leading-relaxed">
                         {item.description}
                       </p>
                     )}
 
-                    {/* Meta chips */}
                     {(item.altitude ||
                       item.distance ||
                       item.duration ||
@@ -162,7 +200,7 @@ export default function Itinerary({
                           />
                         )}
                         {item.duration && badgeInfo && (
-                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full text-gray-500 ">
+                          <span className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full text-gray-500">
                             <badgeInfo.icon
                               size={10}
                               strokeWidth={2}
@@ -192,7 +230,6 @@ export default function Itinerary({
           </div>
         </div>
 
-        {/* Show more / collapse */}
         {hasMore && (
           <div className="relative mt-2">
             {!showAll && (

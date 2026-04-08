@@ -100,7 +100,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "7:30 AM departure by private jeep from Kathmandu.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "A 6-hour jeep journey following the Trishuli River, watching the landscape shift from city bustle to terraced alpine farms.",
           },
@@ -126,7 +126,7 @@ What sets this experience apart is the complete freedom of exploration — the o
               "Starting the trek at 8:00 AM with an off-road stretch for an hour to Domen, then shifting onto the proper trekking trail.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Looking for wild 'Mad Honey' on the vertical cliffs above the river. Lunch stop at Bamboo village.",
           },
@@ -151,7 +151,7 @@ What sets this experience apart is the complete freedom of exploration — the o
               "Ascent through 'Alpine Forest'. The dense canopy gives way to wider glacial views at Ghoda Tabela.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Moving into the alpine zone. As the forest thins, we settle into our first Climber's Lodge. The afternoon is spent scouting nearby boulders to begin vertical acclimatization.",
           },
@@ -170,7 +170,7 @@ What sets this experience apart is the complete freedom of exploration — the o
               "Low-intensity flash sessions. Focus on footwork and adapting your breathing to the 3,300m air.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Projecting local V3–V6 lines. Exploring the unique friction of Langtang granite in the cool afternoon shade.",
           },
@@ -194,7 +194,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "A slow 2-hour hike to Langtang Village.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Cultural immersion and active rest. Yoga overlooking Langtang Lirung and optional cold plunges in glacial streams.",
           },
@@ -218,7 +218,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "Trek to the Nespali 'Hard Rock Cafe' bouldering arena.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Setting up tented camp. A light scouting hike to visualize the 80+ lines available in this massive high-altitude arena.",
           },
@@ -266,7 +266,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "Short hike to Kyanjin Gompa.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Sunset acclimatisation hike to the Glacier Lake (4,000m).",
           },
@@ -291,7 +291,7 @@ What sets this experience apart is the complete freedom of exploration — the o
               "Projecting blocks immediately surrounding the village. High exposure and epic backdrops of the Langtang and Jugal Himalayan ranges.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Optional 'Peak vs. Pad' — choose between more bouldering or a trek up Tserko Ri (5,000m) for the ultimate 360° view.",
           },
@@ -316,7 +316,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "Long descent back down the valley.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Refueling at Ghoda Tabela. Notice how much easier breathing feels as altitude drops.",
           },
@@ -340,7 +340,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "Trek back through mixed alpine and sub-alpine forest.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Arrival in Syabrubesi. Final gear packing and a celebratory End of Trail dinner.",
           },
@@ -364,7 +364,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "8:00 AM jeep departure for Kathmandu.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Check into the hotel for a long-overdue hot shower and rest.",
           },
@@ -384,7 +384,7 @@ What sets this experience apart is the complete freedom of exploration — the o
             content: "Final breakfast in Kathmandu.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Private transfer to Tribhuvan International Airport for your onward flight. Safe travels.",
           },
@@ -457,16 +457,16 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
         stay: "Hotel",
         sections: [
           {
-            label: "Departure",
+            label: "Morning",
             content: "7:30 AM departure by private jeep from Kathmandu.",
           },
           {
-            label: "The Journey",
+            label: "Journey",
             content:
               "A 6–7 hour scenic drive through winding mountain roads, passing the roaring Trishuli River and terraced hillside farms.",
           },
           {
-            label: "Overnight",
+            label: "Night",
             content:
               "Arrive at Syabrubesi (1,550m) — a riverside town and the gateway to Langtang. Settle into the hotel and rest.",
           },
@@ -492,7 +492,7 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
               "Hike through the dramatic Langtang River gorge. One-hour lunch stop at Bamboo village.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Steady climb through lush forest arrives at Lama Hotel (2,470m) — your first night in a traditional teahouse.",
           },
@@ -508,12 +508,12 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
         stay: "Tea-House",
         sections: [
           {
-            label: "Highlights",
+            label: "Activity",
             content:
               "Walking through 'Wood Land' — a dense alpine forest threaded with waterfalls and streams. Route: Lama Hotel — Riverside — Wood Land — Ghoda Tabela — Thangshyap — Chamki — Gomba — Langtang Village.",
           },
           {
-            label: "The Transition",
+            label: "",
             content:
               "At Ghoda Tabela (lunch stop), the dense forest opens into wide glacial valleys. Vegetation thins visibly as altitude rises.",
           },
@@ -544,7 +544,7 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
               "Arrive at Kyanjin Gompa (3,855m) by 1:00 PM. Explore the monastery and the famous yak cheese factory.",
           },
           {
-            label: "Acclimat.",
+            label: "",
             content:
               "Sunset acclimatisation hike to the Glacier Lake (4,000m) — a gentle push to help your body adapt to the thin air before tomorrow's summit attempt.",
           },
@@ -638,12 +638,12 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
         stay: "Hotel",
         sections: [
           {
-            label: "Departure",
+            label: "Morning",
             content:
               "8:00 AM jeep departure from Syabrubesi for the return drive to Kathmandu.",
           },
           {
-            label: "Afternoon",
+            label: "Noon",
             content:
               "Check into the hotel for a long-overdue hot shower and rest.",
           },
@@ -665,7 +665,7 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
             content: "Final breakfast in Kathmandu together.",
           },
           {
-            label: "Departure",
+            label: "Noon",
             content:
               "Private transfer to Tribhuvan International Airport for your onward flight. Safe travels — and see you on the next one.",
           },

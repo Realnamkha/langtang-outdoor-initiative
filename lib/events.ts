@@ -177,7 +177,7 @@ export const events: FestivalEvent[] = [
                 "Arrival & Lunch: Following a scenic two-hour hike, we will arrive in Langtang Village for a community lunch.",
             },
             {
-              label: "Afternoon",
+              label: "Noon",
               content:
                 "Recovery & Acclimatization: The afternoon is dedicated to rest, followed by a light acclimatization hike to assist the body in adapting to the increased elevation.",
             },
@@ -225,7 +225,7 @@ export const events: FestivalEvent[] = [
                 "While participants are in the field, half of the organizing team will relocate to the Hard Rock Cafe area to manage the infrastructure for upcoming festival days, including the setup of banners, flyers, and event tents.",
             },
             {
-              label: "Overnight",
+              label: "Night",
               content:
                 "All participants and staff will stay overnight in Langtang Village to continue acclimatization.",
             },
@@ -298,7 +298,7 @@ export const events: FestivalEvent[] = [
             {
               label: "16:00",
               content:
-                "Afternoon Tea: A dedicated time for recovery, hydration, and social connection.",
+                "Noon Tea: A dedicated time for recovery, hydration, and social connection.",
             },
             {
               label: "19:00",
@@ -341,7 +341,7 @@ export const events: FestivalEvent[] = [
                 "Lunch: Served at our dedicated partner hotel in Kyanjin",
             },
             {
-              label: "Afternoon",
+              label: "Noon",
               content:
                 "Recovery & Exploration: The remainder of the day is flexible. Participants may choose to rest and acclimatize or join a guided orientation hike to the nearby boulder fields to scout new lines for the upcoming days",
             },
@@ -360,13 +360,13 @@ export const events: FestivalEvent[] = [
                 "Breakfast & Daily Briefing: Group morning meal and announcement of the day's conditions.",
             },
             {
-              label: "12:30:Lunch",
+              label: "12:30",
               content: "Lunch: High-energy meal served at the hotel.",
             },
             {
               label: "16:00",
               content:
-                "Afternoon Tea: A dedicated window for hydration, recovery, and social connection.",
+                "Noon Tea: A dedicated window for hydration, recovery, and social connection.",
             },
             {
               label: "19:00",
@@ -379,7 +379,7 @@ export const events: FestivalEvent[] = [
                 "The Kyanjin region offers some of the most spectacular terrain in the valley. Outside of scheduled mealtimes, participants are encouraged to engage in their preferred disciplines, whether that is pushing grades on the Kyanjin boulder fields, high-lining, or practicing calisthenics with a view of Langtang Lirung.",
             },
             {
-              label: "Afternoon",
+              label: "Noon",
               content:
                 "Recovery & Exploration: The remainder of the day is flexible. Participants may choose to rest and acclimatize or join a guided orientation hike to the nearby boulder fields to scout new lines for the upcoming days",
             },

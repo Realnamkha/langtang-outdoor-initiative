@@ -351,7 +351,7 @@ function SuccessCard({
         Want to reach us faster?
       </p>
       <a
-        href="https://wa.me/+9779861608237"
+        href="https://wa.me/+9779761662049"
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold transition-all hover:opacity-90"

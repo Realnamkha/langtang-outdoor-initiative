@@ -46,7 +46,7 @@ export default function EventCard({ event }: { event: FestivalEvent }) {
         </div>
 
         {/* Title */}
-        <h2 className="font-display text-4xl font-black text-white leading-none tracking-tight mb-4">
+        <h2 className="font-display text-4xl font-black text-primary leading-none tracking-tight mb-4">
           {event.title}
         </h2>
 
