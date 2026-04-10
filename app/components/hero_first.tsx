@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/30" />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center text-center text-white px-6">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-start pt-[30vh] sm:justify-center sm:pt-0 text-center text-white px-6">
         <h1 className="text-[2.2rem] sm:text-5xl md:text-6xl font-extrabold text-primary leading-[1.1] tracking-tight">
           Langtang
           <br className="sm:hidden" />{" "}
@@ -59,48 +59,29 @@ export default function Hero() {
 
       {/* ── Focus Toast ── */}
       {visible && (
-        <div className="fixed bottom-8 right-6 z-50 max-w-[280px]">
+        <div className="fixed bottom-6 right-6 z-50">
           <div
-            className="relative rounded-2xl border border-white/20 overflow-hidden"
+            className="flex items-center gap-2 rounded-full px-4 py-2 text-white text-xs font-medium"
             style={{
-              background:
-                "linear-gradient(135deg, rgba(6,13,20,0.92) 0%, rgba(6,13,20,0.85) 100%)",
-              backdropFilter: "blur(24px) saturate(1.6)",
-              WebkitBackdropFilter: "blur(24px) saturate(1.6)",
-              boxShadow:
-                "0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(1,186,240,0.25), inset 0 1px 0 rgba(255,255,255,0.08)",
+              background: "rgba(6,13,20,0.75)",
+              backdropFilter: "blur(12px)",
+              border: "1px solid rgba(1,186,240,0.3)",
             }}
           >
-            <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-
+            <span className="relative flex h-1.5 w-1.5 shrink-0">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#01baf0] opacity-70" />
+              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#01baf0]" />
+            </span>
+            Focused only on{" "}
+            <span className="text-[#01baf0] font-semibold">
+              Langtang Valley
+            </span>
             <button
               onClick={() => setVisible(false)}
-              className="absolute top-3 right-3 w-6 h-6 flex items-center justify-center rounded-full text-white/40 hover:text-white hover:bg-white/10 transition-all duration-200"
-              aria-label="Dismiss"
+              className="ml-1 opacity-40 hover:opacity-100 transition-opacity"
             >
               <X className="w-3 h-3" />
             </button>
-
-            <div className="px-5 py-4 pr-8">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="relative flex h-2 w-2 shrink-0">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#01baf0] opacity-70" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#01baf0]" />
-                </span>
-                <span className="text-[9px] font-bold uppercase tracking-[0.22em] text-[#01baf0]">
-                  Our Focus
-                </span>
-              </div>
-
-              <p className="text-[15px] font-semibold text-white leading-snug">
-                We are focused only on{" "}
-                <span className="text-[#01baf0]">Langtang Valley</span>
-              </p>
-
-              <p className="mt-1.5 text-[11px] text-white/45 leading-relaxed">
-                Deep local knowledge. One valley. Done right.
-              </p>
-            </div>
           </div>
         </div>
       )}
