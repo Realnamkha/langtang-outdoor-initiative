@@ -67,9 +67,8 @@ const Footer = () => {
                 height={34}
                 className="rounded-md"
               />
-              <span className="text-sm font-semibold leading-tight">
-                Langtang{" "}
-                <span className="text-[#01baf0]">Outdoor Initiative</span>
+              <span className="text-sm text-primary font-semibold leading-tight">
+                Langtang <span className="text-white">Outdoor Initiative</span>
               </span>
             </Link>
 

@@ -102,12 +102,14 @@ export default function EventCard({ event }: { event: FestivalEvent }) {
           </div>
         ) : (
           <div className="flex items-center gap-3">
-            <Link
-              href={`/events/${event.slug}`}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScONp3QRIcE9QGfcpkwJmmqz3GavnzIkKM96njNxcVrI8l78w/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex-1 py-3 px-5 rounded-xl text-sm font-bold tracking-wide text-white text-center shadow-lg transition-all duration-200 hover:opacity-90 hover:-translate-y-0.5 bg-primary"
             >
               Reserve a Spot →
-            </Link>
+            </a>
             <Link
               href={`/events/${event.slug}`}
               className="py-3 px-5 rounded-xl text-sm font-bold tracking-wide text-white/50 bg-white/5 border border-white/10 transition-all duration-200 hover:text-white/80 hover:bg-white/10 hover:border-white/20 whitespace-nowrap"

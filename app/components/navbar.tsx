@@ -150,29 +150,6 @@ const Navbar = ({ transparent = true }) => {
           }`}
         >
           <div className="mx-3 mb-3 rounded-2xl bg-white shadow-xl border border-gray-100 overflow-hidden">
-            {/* Drawer header */}
-            <div className="flex items-center justify-between px-5 py-3 border-b border-gray-100">
-              <div className="flex items-center gap-2.5">
-                <Image
-                  src="/logo_final.jpg"
-                  alt="LOI"
-                  width={28}
-                  height={28}
-                  className="rounded-md"
-                />
-                <span className="text-[13px] font-bold text-gray-800">
-                  <span className="text-primary">Langtang </span>Outdoor
-                  Initiative
-                </span>
-              </div>
-              <button
-                onClick={() => setOpen(false)}
-                className="w-7 h-7 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100 transition-colors"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </div>
-
             {/* Nav links */}
             <div className="px-2 py-2">
               {navLinks.map((link) => {
@@ -201,21 +178,6 @@ const Navbar = ({ transparent = true }) => {
                   </Link>
                 );
               })}
-            </div>
-
-            {/* WhatsApp CTA in drawer */}
-            <div className="px-4 pb-4 pt-1">
-              <a
-                href="https://wa.me/+9779761662049"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2.5 w-full py-3 rounded-xl text-sm font-bold text-white transition-all"
-                style={{ background: "#25d366" }}
-                onClick={() => setOpen(false)}
-              >
-                <WhatsAppIcon />
-                Chat on WhatsApp
-              </a>
             </div>
           </div>
         </div>
