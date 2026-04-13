@@ -53,12 +53,12 @@ export const culturalTours: CulturalTour[] = [
       { label: "Style", val: "Festival Immersion", icon: "star" },
       {
         label: "Best Season",
-        val: "Sep – Nov · Jan – Feb",
+        val: "July – August · Feb – April",
         icon: "calendar",
       },
       {
         label: "Permits",
-        val: "Heritage Site Entry",
+        val: "TIMS + Langtang NP",
         icon: "fileText",
       },
       { label: "Difficulty", val: "Easy", icon: "activity" },
@@ -146,12 +146,16 @@ export const culturalTours: CulturalTour[] = [
       "Domestic flights Pokhara – Jomsom – Pokhara",
     ],
     quickFacts: [
-      { label: "Starting Point", val: "Jomsom, Mustang", icon: "mapPin" },
+      { label: "Starting Point", val: "Ghodatabela, Langtang", icon: "mapPin" },
       { label: "Style", val: "Horse Trek / Cultural", icon: "mountain" },
-      { label: "Best Season", val: "Mar – May · Sep – Nov", icon: "calendar" },
+      {
+        label: "Best Season",
+        val: "March - November",
+        icon: "calendar",
+      },
       {
         label: "Permits",
-        val: "Upper Mustang RAP + ACAP",
+        val: "TIMS + Langtang NP",
         icon: "fileText",
       },
       { label: "Difficulty", val: "Moderate", icon: "activity" },
@@ -256,7 +260,11 @@ Langtang is more than mountains; it is a living tradition of movement, memory, a
         val: "Agri-Cultural Immersion",
         icon: "activity",
       },
-      { label: "Best Season", val: "Apr – Jun · Aug – Oct", icon: "calendar" },
+      {
+        label: "Best Season",
+        val: "June – Sept",
+        icon: "calendar",
+      },
       {
         label: "Permits",
         val: "TIMS + Langtang NP",

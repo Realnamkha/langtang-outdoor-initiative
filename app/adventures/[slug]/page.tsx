@@ -19,6 +19,7 @@ import {
   includes as defaultIncludes,
   excludes as defaultExcludes,
 } from "@/lib/include_exclude";
+import Link from "next/link";
 
 export function generateStaticParams() {
   return adventures.map((a) => ({ slug: a.slug }));
@@ -163,9 +164,12 @@ export default async function AdventurePage({
               {/* Right */}
               <div className="flex flex-col items-start md:items-end gap-5 shrink-0">
                 <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                  <button className="px-7 py-3.5 rounded-xl bg-[#01baf0] text-white text-sm font-semibold hover:bg-[#0191c8] active:scale-[0.98] transition-all duration-150 shadow-lg shadow-[#01baf0]/20">
+                  <Link
+                    href="/booking"
+                    className="px-7 py-3.5 rounded-xl bg-[#01baf0] text-white text-sm font-semibold hover:bg-[#0191c8] active:scale-[0.98] transition-all duration-150 shadow-lg shadow-[#01baf0]/20 text-center"
+                  >
                     Book This Adventure
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
