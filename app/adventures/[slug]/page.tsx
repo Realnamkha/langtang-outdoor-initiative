@@ -111,7 +111,7 @@ export default async function AdventurePage({
             <EventCardImage
               title="Elevate The Experience"
               subHeadline="Upgrade your Langtang Valley trek with highlining and slack-lining, experience thrilling alpine flow, breathtaking Himalayan views, and a unique adventure that elevates your journey beyond the ordinary."
-              imageSrc="/high_06.jpg"
+              imageSrc="/high_06.JPG"
               duration="6 Hours"
               activity="The Trek Upgrade"
               region="Langtang, Nepal"
