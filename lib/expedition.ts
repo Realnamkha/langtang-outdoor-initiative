@@ -725,7 +725,7 @@ export const expeditions: Expedition[] = [
     altitude: "5,864 M",
     region: "Langtang, Nepal",
     price: "$1,500",
-    description: `Naya Kanga (5,846m), also known as Ganja La Chuli, is one of the finest technical trekking peaks in the Langtang region. Sitting above the high Ganja La pass (5,130m), this peak demands solid mountaineering skills — climbers navigate crevassed glaciers, steep snow slopes, and exposed ridgelines to reach the summit. The reward is extraordinary: a sweeping high-altitude panorama of the entire Langtang massif, Jugal Himal, and across into Tibet. This is a serious mountaineering objective that suits climbers with prior glacier travel experience and a hunger for a genuine alpine challenge.`,
+    description: `Naya Kanga (5,864m), also known as Ganja La Chuli, is one of the finest technical trekking peaks in the Langtang region. Sitting above the high Ganja La pass (5,130m), this peak demands solid mountaineering skills — climbers navigate crevassed glaciers, steep snow slopes, and exposed ridgelines to reach the summit. The reward is extraordinary: a sweeping high-altitude panorama of the entire Langtang massif, Jugal Himal, and across into Tibet. This is a serious mountaineering objective that suits climbers with prior glacier travel experience and a hunger for a genuine alpine challenge.`,
     gallery: ["/pic4.jpg", "/pic2.jpeg", "/people_03.jpg"],
     quickFacts: [
       { label: "Starting Point", val: "Kathmandu, Nepal", icon: "mapPin" },
@@ -1144,7 +1144,7 @@ export const expeditions: Expedition[] = [
     altitude: "5,721 M",
     region: "Langtang, Nepal",
     price: "$950",
-    description: `Scout Peak (5,600m) is a lesser-known but spectacular trekking objective in the upper Langtang Valley, often used as an acclimatization and scouting summit before larger objectives like Naya Kanga. The ascent is non-technical on its standard route but gains altitude quickly, demanding good fitness and careful acclimatization. The summit offers intimate, close-up views of the Langtang Lirung glacier face and surrounding peaks that feel far more raw and immediate than more popular viewpoints. For adventurous trekkers seeking to go beyond the standard trail, Scout Peak delivers a genuine off-the-beaten-path experience.`,
+    description: `Scout Peak (5,721m) is a lesser-known but spectacular trekking objective in the upper Langtang Valley, often used as an acclimatization and scouting summit before larger objectives like Naya Kanga. The ascent is non-technical on its standard route but gains altitude quickly, demanding good fitness and careful acclimatization. The summit offers intimate, close-up views of the Langtang Lirung glacier face and surrounding peaks that feel far more raw and immediate than more popular viewpoints. For adventurous trekkers seeking to go beyond the standard trail, Scout Peak delivers a genuine off-the-beaten-path experience.`,
     gallery: ["/people_03.jpg", "/pic2.jpeg", "/pic4.jpg"],
     quickFacts: [
       { label: "Starting Point", val: "Kathmandu, Nepal", icon: "mapPin" },
