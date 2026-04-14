@@ -26,29 +26,14 @@ export const TEAM = [
       { lang: "French", level: "Conversational" },
     ],
     certifications: ["NMA Certified Guide"],
-    location: "Kathmandu, Nepal",
     origin: "Langtang Valley",
   },
   {
     slug: "ngawang",
     name: "Ngawang Namgyal",
     role: "Trek Guide",
-
     img: "/ngawang.jpg",
   },
 
-  {
-    slug: "zhangbu",
-    name: "Zhangbu Lama",
-    role: "Trek Guide",
-    img: "/avatar.avif",
-  },
-
-  {
-    slug: "kanchi",
-    name: "Kanchi Lama",
-    role: "Trek Guide",
-    img: "/avatar.avif",
-  },
   // add others here...
 ];

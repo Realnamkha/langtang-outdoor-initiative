@@ -15,6 +15,7 @@ export type Adventure = {
   title: string;
   slug: string;
   imageSrc: string;
+  imageSrc2?: string;
   duration: string;
   difficulty: string;
   region?: string;
@@ -676,7 +677,8 @@ Beyond the peaks, the valley is a sanctuary of Tibetan Buddhist culture. Home to
   {
     title: "HighLine-SlackLine",
     slug: "highline",
-    imageSrc: "/high_01.JPG",
+    imageSrc: "/high_05.JPG",
+    imageSrc2: "/high_05.JPG",
     duration: "10 Days",
     difficulty: "Easy – Moderate",
     region: "Langtang, Nepal",

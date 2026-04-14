@@ -10,11 +10,15 @@ export default function Hero({ adventure }: { adventure: Adventure }) {
       style={{ height: "55vh", minHeight: 580 }}
     >
       <Image
-        src={adventure.imageSrc}
+        src={
+          adventure.title === "HighLine-SlackLin"
+            ? adventure.imageSrc2!
+            : adventure.imageSrc
+        }
         alt={adventure.title}
         fill
         priority
-        className="object-cover object-[center_70%]"
+        className="object-cover object-[center_55%]"
       />
 
       {/* bottom fade */}

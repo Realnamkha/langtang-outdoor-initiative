@@ -135,94 +135,82 @@ export default function AboutPage() {
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {[
-              {
-                name: "Thupten Lama",
-                role: "Trek Guide",
-                img: "/thupten.jpeg",
-                founder: true,
-                slug: "thupten-lama",
-              },
-              {
-                name: "Ngawang Namgyal",
-                role: "Trek Guide",
-                img: "/ngawang.jpg",
-                slug: "ngawang",
-              },
-              {
-                name: "Zhangbu Lama",
-                role: "Trek Guide",
-                img: "/avatar.avif",
-                slug: "zhangbu",
-              },
-              {
-                name: "Kanchi Lama",
-                role: "Trek Guide",
-                img: "/avatar.avif",
-                slug: "kanchi",
-              },
-            ].map((member) => (
-              <Link
-                key={member.slug}
-                href={`/about/${member.slug}`}
-                className="group relative block rounded-3xl overflow-hidden bg-black"
-              >
-                {/* FIXED IMAGE WRAPPER (prevents invisible image bug) */}
-                <div className="relative w-full aspect-[4/5]">
-                  <Image
-                    src={member.img}
-                    alt={member.name}
-                    fill
-                    sizes="(max-width: 768px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority={member.founder || false}
-                  />
-                </div>
-
-                {/* Gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
-
-                {/* Hover ring */}
-                <div className="absolute inset-0 rounded-3xl ring-0 group-hover:ring-2 ring-[#01baf0]/40 transition-all duration-300" />
-
-                {/* Arrow */}
-                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path
-                      d="M3 11L11 3M11 3H5M11 3V9"
-                      stroke="white"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
+          <div className="max-w-6xl mx-auto px-4 py-12">
+            <div className="flex flex-wrap justify-center gap-6">
+              {[
+                {
+                  name: "Thupten Lama",
+                  role: "Trek Guide",
+                  img: "/thupten.jpeg",
+                  founder: true,
+                  slug: "thupten-lama",
+                },
+                {
+                  name: "Ngawang Namgyal",
+                  role: "Trek Guide",
+                  img: "/ngawang.jpg",
+                  slug: "ngawang",
+                },
+              ].map((member) => (
+                <Link
+                  key={member.slug}
+                  href={`/about/${member.slug}`}
+                  className="group relative block rounded-3xl overflow-hidden bg-black w-full max-w-sm"
+                >
+                  {/* IMAGE */}
+                  <div className="relative w-full aspect-[4/5]">
+                    <Image
+                      src={member.img}
+                      alt={member.name}
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority={member.founder || false}
                     />
-                  </svg>
-                </div>
+                  </div>
 
-                {/* Bottom content */}
-                <div className="absolute bottom-0 left-0 right-0 p-5">
-                  {member.founder && (
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-[#01baf0] px-3 py-1 rounded-full mb-2">
-                      Founder
-                    </span>
-                  )}
+                  {/* overlays */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                  <div className="absolute inset-0 rounded-3xl ring-0 group-hover:ring-2 ring-[#01baf0]/40 transition-all duration-300" />
 
-                  <p className="font-black text-white text-base leading-tight">
-                    {member.name}
-                  </p>
+                  {/* arrow */}
+                  <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path
+                        d="M3 11L11 3M11 3H5M11 3V9"
+                        stroke="white"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
 
-                  <div className="flex items-center justify-between mt-1">
-                    <p className="text-[11px] text-[#01baf0] font-semibold uppercase tracking-widest">
-                      {member.role}
+                  {/* bottom text */}
+                  <div className="absolute bottom-0 left-0 right-0 p-5">
+                    {member.founder && (
+                      <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-[#01baf0] px-3 py-1 rounded-full mb-2">
+                        Founder
+                      </span>
+                    )}
+
+                    <p className="font-black text-white text-base leading-tight">
+                      {member.name}
                     </p>
 
-                    <span className="text-[11px] text-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      View →
-                    </span>
+                    <div className="flex items-center justify-between mt-1">
+                      <p className="text-[11px] text-[#01baf0] font-semibold uppercase tracking-widest">
+                        {member.role}
+                      </p>
+
+                      <span className="text-[11px] text-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        View →
+                      </span>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </section>
