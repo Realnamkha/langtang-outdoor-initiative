@@ -280,7 +280,7 @@ export const events: FestivalEvent[] = [
           stay: "Tent",
         },
         {
-          day: "June 6",
+          day: "June 6- June 9",
           title: "Hard Rock Cafe",
           description:
             "Following our arrival at the primary bouldering field, the festival transitions into a flexible, participant-led format. This allows everyone to pursue their specific interests—whether bouldering, high-lining, or calisthenics—at their own pace while maintaining a consistent communal structure for meals and recovery.",

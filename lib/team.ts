@@ -33,6 +33,20 @@ export const TEAM = [
     name: "Ngawang Namgyal",
     role: "Trek Guide",
     img: "/ngawang.jpg",
+    title: "Trek Guide · Langtang Outdoor Initiative",
+    bio: ["Ngawang was also born and raised in Langtang."],
+    specialties: [
+      "High Altitude Trekking",
+      "Cultural Immersion",
+      "Langtang Region",
+      "Expedition Planning",
+    ],
+    languages: [
+      { lang: "Nepali", level: "Native" },
+      { lang: "English", level: "Fluent" },
+    ],
+    certifications: ["NMA Certified Guide"],
+    origin: "Langtang Valley",
   },
 
   // add others here...
