@@ -82,8 +82,7 @@ export default async function AdventurePage({
             {/* Card 2 */}
             <EventCardImage
               title="Via Ferrate Over Langtang"
-              subHeadline="Catch the first rays over the Himalayan peaks."
-              hook="An early morning trek with breathtaking views. Suitable for beginners."
+              subHeadline="Elevate your Langtang Valley trek with an exciting Via Ferrata, clip in, climb higher, and experience the Himalayas from a whole new perspective."
               imageSrc="/via_02.jpg"
               duration="6 Hours"
               activity="The Trek Upgrade"
@@ -101,7 +100,7 @@ export default async function AdventurePage({
               title="The Alpine Flow"
               subHeadline="Step onto the line and feel the pure alpine flow of highlining and slacklining, surrounded by towering 6,000m–7,000m Himalayan peaks."
               hook="Suspended above the valley, it’s a perfect blend of balance, thrill, and connection with nature."
-              imageSrc="/via_01.jpg"
+              imageSrc="/high_07.JPG"
               duration="6 Hours"
               activity="The Day Adventure"
               region="Langtang, Nepal"
@@ -112,7 +111,7 @@ export default async function AdventurePage({
             <EventCardImage
               title="Elevate The Experience"
               subHeadline="Upgrade your Langtang Valley trek with highlining and slack-lining, experience thrilling alpine flow, breathtaking Himalayan views, and a unique adventure that elevates your journey beyond the ordinary."
-              imageSrc="/via_02.jpg"
+              imageSrc="/high_06.jpg"
               duration="6 Hours"
               activity="The Trek Upgrade"
               region="Langtang, Nepal"

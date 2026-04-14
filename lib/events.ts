@@ -46,7 +46,7 @@ export const events: FestivalEvent[] = [
     date: "June 1 – June 15, 2026",
     location: "Langtang Valley",
     description: "The World's Highest Outdoor Festival",
-    bgImage: "/event_01.jpeg",
+    bgImage: "/event_06.jpeg",
     accentHex: "#38bdf8",
     accentFrom: "from-sky-400",
     accentTo: "to-blue-500",

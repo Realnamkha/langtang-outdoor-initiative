@@ -28,7 +28,7 @@ export default function EventsPage() {
       {/* Fixed background */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url('/event_05.jpeg')` }}
+        style={{ backgroundImage: `url('/event_01.jpeg')` }}
         aria-hidden="true"
       />
       <div className="fixed inset-0 z-0 bg-black/70" aria-hidden="true" />
