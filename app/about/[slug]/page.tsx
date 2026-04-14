@@ -126,10 +126,7 @@ export default async function TeamMemberPage({
 
               <div className="bg-[#f8f7f4] p-5 rounded-2xl">
                 <p className="text-xs uppercase text-gray-400 mb-1">Based In</p>
-                <p className="text-sm">{member.location}</p>
-                <p className="text-xs text-gray-400">
-                  Originally from {member.origin}
-                </p>
+                {member.origin}
               </div>
             </div>
           </div>

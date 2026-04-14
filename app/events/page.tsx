@@ -31,35 +31,47 @@ export default function EventsPage() {
         style={{ backgroundImage: `url('/event_01.jpeg')` }}
         aria-hidden="true"
       />
-      <div className="fixed inset-0 z-0 bg-black/70" aria-hidden="true" />
+      {/* Slightly lighter overlay on mobile so imagery reads better on small screens */}
+      <div
+        className="fixed inset-0 z-0 bg-black/60 md:bg-black/70"
+        aria-hidden="true"
+      />
 
       {/* Page content */}
-      <div className="relative z-10 min-h-screen px-4 py-24 md:px-6 md:py-28">
+      <div className="relative z-10 min-h-screen px-4 pt-16 pb-20 sm:px-6 md:px-6 md:py-28">
         <div className="max-w-6xl mx-auto">
-          {/* Hero heading */}
+          {/* Hero heading — tighter on mobile, generous on desktop */}
           <div
-            className="text-center mb-14"
+            className="text-center mb-10 md:mb-14"
             style={{
               animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both",
             }}
           >
-            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl text-white leading-tight tracking-tight mb-4">
-              <span className="text-primary">Langtang </span>Outdoor Festival
+            {/* Eyebrow label — adds context on small screens */}
+            <p className="text-white/40 text-[10px] tracking-[0.25em] uppercase mb-3 md:hidden">
+              Langtang Valley · Nepal
+            </p>
+
+            <h1 className="font-display text-[2.4rem] leading-[1.1] sm:text-6xl md:text-7xl text-white tracking-tight mb-3 md:mb-4">
+              <span className="text-primary">Langtang </span>
+              <br className="sm:hidden" />
+              Outdoor Festival
             </h1>
-            <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-sm mx-auto">
+
+            <p className="text-white/50 text-sm leading-relaxed max-w-[260px] sm:max-w-sm mx-auto">
               Curated experiences for every season. Reserve your place before
               spots run out.
             </p>
           </div>
 
-          {/* Event cards grid */}
-          <div className="grid sm:grid-cols-2 gap-6">
+          {/* Event cards — single column on mobile, 2-col on sm+ */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
             {events.map((event, i) => (
               <div
                 key={event.id}
                 style={{
                   animation: `fadeUp 0.6s ${
-                    0.2 + i * 0.15
+                    0.15 + i * 0.1
                   }s cubic-bezier(0.22,1,0.36,1) both`,
                 }}
               >
@@ -68,7 +80,7 @@ export default function EventsPage() {
             ))}
           </div>
 
-          <p className="text-center text-white/15 text-xs mt-14 tracking-[0.2em] uppercase">
+          <p className="text-center text-white/15 text-[10px] mt-12 tracking-[0.2em] uppercase">
             All events · Langtang Valley
           </p>
         </div>
@@ -76,7 +88,7 @@ export default function EventsPage() {
 
       <style>{`
         @keyframes fadeUp {
-          from { opacity: 0; transform: translateY(24px); }
+          from { opacity: 0; transform: translateY(20px); }
           to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
