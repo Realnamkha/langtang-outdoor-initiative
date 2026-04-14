@@ -65,7 +65,7 @@ export default async function EventDetailPage({
             alt={event.title}
             fill
             priority
-            className="object-cover"
+            className="object-cover object-[50%_70%]"
             sizes="100vw"
           />
           {/* Richer gradient layering */}

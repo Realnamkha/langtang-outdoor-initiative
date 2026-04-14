@@ -25,13 +25,13 @@ export default function EventsPage() {
     <main
       className={`${playfair.variable} ${dmSans.variable} font-body min-h-screen relative overflow-x-hidden`}
     >
-      {/* Fixed background */}
+      {/* Fixed background — no bg-fixed here, the div itself is fixed */}
       <div
-        className="fixed inset-0 z-0 bg-cover bg-center bg-fixed"
+        className="fixed inset-0 z-0 bg-cover bg-center"
         style={{ backgroundImage: `url('/event_01.jpeg')` }}
         aria-hidden="true"
       />
-      {/* Slightly lighter overlay on mobile so imagery reads better on small screens */}
+      {/* Overlay */}
       <div
         className="fixed inset-0 z-0 bg-black/60 md:bg-black/70"
         aria-hidden="true"
