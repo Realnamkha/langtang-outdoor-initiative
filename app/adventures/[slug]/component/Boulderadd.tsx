@@ -85,7 +85,7 @@ export default function BoulderAddOns({ activityId }: Props) {
 
                 {/* Content */}
                 <div
-                  className={`p-5 transition-colors duration-300 bg-red-800 ${
+                  className={`p-5 transition-colors duration-300 ${
                     isSelected ? "bg-[#f0fbff]" : "bg-white"
                   }`}
                 >

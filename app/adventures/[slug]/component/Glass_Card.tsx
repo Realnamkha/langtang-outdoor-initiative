@@ -115,7 +115,7 @@ export default function EventCardImage({
             }}
             className="w-full sm:w-auto flex items-center justify-center gap-2 bg-[#01baf0] hover:bg-[#0199cc] text-white text-[14px] font-semibold px-5 py-3 rounded-full transition-all duration-200 sm:group-hover:gap-3"
           >
-            <span>Check Today’s Availability</span>
+            <span>Check Availability</span>
             <ArrowRight
               className="w-4 h-4 transition-transform duration-200 sm:group-hover:translate-x-1"
               strokeWidth={2.5}

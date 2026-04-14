@@ -113,11 +113,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── Team ── */}
-      <section className=" py-6 px-6">
+
+      <section className="py-10 px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="flex flex-col items-center text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-[#0a0a0a] tracking-tight leading-tight mb-4">
+          <div className="flex flex-col items-center text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-black text-[#0a0a0a] tracking-tight">
               Meet the{" "}
               <span
                 className="text-transparent bg-clip-text"
@@ -126,89 +127,97 @@ export default function AboutPage() {
                 Team
               </span>
             </h2>
-            <p className="text-gray-400 text-[15px] max-w-sm leading-relaxed">
+
+            <p className="mt-4 text-gray-500 text-[15px] max-w-md leading-relaxed">
               Local experts, seasoned guides, and mountain lovers — united by a
               passion for the Himalayas.
             </p>
           </div>
 
           {/* Cards */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
                 name: "Thupten Lama",
-                role: "Founder",
-                img: "/people_01.jpg",
+                role: "Trek Guide",
+                img: "/thupten.jpeg",
                 founder: true,
                 slug: "thupten-lama",
               },
               {
-                name: "Mr X",
-                role: "Senior Trek Leader",
-                img: "/people_01.jpg",
-                slug: "mr-x",
+                name: "Ngawang Namgyal",
+                role: "Trek Guide",
+                img: "/ngawang.jpg",
+                slug: "ngawang",
               },
               {
-                name: "Mr Z",
-                role: "Logistics Coordinator",
-                img: "/people_01.jpg",
-                slug: "mr-z",
+                name: "Zhangbu Lama",
+                role: "Trek Guide",
+                img: "/avatar.avif",
+                slug: "zhangbu",
+              },
+              {
+                name: "Kanchi Lama",
+                role: "Trek Guide",
+                img: "/avatar.avif",
+                slug: "kanchi",
               },
             ].map((member) => (
               <Link
-                key={member.name}
+                key={member.slug}
                 href={`/about/${member.slug}`}
-                className="group relative rounded-3xl overflow-hidden cursor-pointer block"
-                style={{ aspectRatio: "4/5" }}
+                className="group relative block rounded-3xl overflow-hidden bg-black"
               >
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
-                />
+                {/* FIXED IMAGE WRAPPER (prevents invisible image bug) */}
+                <div className="relative w-full aspect-[4/5]">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    priority={member.founder || false}
+                  />
+                </div>
 
-                {/* Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                {/* Gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
 
-                {/* Hover border ring */}
+                {/* Hover ring */}
                 <div className="absolute inset-0 rounded-3xl ring-0 group-hover:ring-2 ring-[#01baf0]/40 transition-all duration-300" />
 
                 {/* Arrow */}
-                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 14 14"
-                    fill="none"
-                    aria-hidden="true"
-                  >
+                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 backdrop-blur-md border border-white/15 flex items-center justify-center opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-300">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path
                       d="M3 11L11 3M11 3H5M11 3V9"
                       stroke="white"
-                      strokeWidth="1.5"
+                      strokeWidth="1.6"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
                   </svg>
                 </div>
 
-                {/* Bottom info */}
+                {/* Bottom content */}
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   {member.founder && (
-                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-[#01baf0] px-2.5 py-1 rounded-full mb-2.5">
+                    <span className="inline-block text-[10px] font-bold uppercase tracking-widest text-white bg-[#01baf0] px-3 py-1 rounded-full mb-2">
                       Founder
                     </span>
                   )}
-                  <p className="font-black text-white text-base tracking-tight leading-tight">
+
+                  <p className="font-black text-white text-base leading-tight">
                     {member.name}
                   </p>
+
                   <div className="flex items-center justify-between mt-1">
                     <p className="text-[11px] text-[#01baf0] font-semibold uppercase tracking-widest">
                       {member.role}
                     </p>
-                    <span className="text-[11px] text-white/40 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      View Profile →
+
+                    <span className="text-[11px] text-white/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      View →
                     </span>
                   </div>
                 </div>

@@ -28,7 +28,7 @@ export default function EventsPage() {
       {/* Fixed background */}
       <div
         className="fixed inset-0 z-0 bg-cover bg-center bg-fixed"
-        style={{ backgroundImage: `url('/landscape_02.jpg')` }}
+        style={{ backgroundImage: `url('/event_05.jpeg')` }}
         aria-hidden="true"
       />
       <div className="fixed inset-0 z-0 bg-black/70" aria-hidden="true" />
@@ -43,7 +43,7 @@ export default function EventsPage() {
               animation: "fadeUp 0.7s cubic-bezier(0.22,1,0.36,1) both",
             }}
           >
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl text-white leading-tight tracking-tight mb-4">
+            <h1 className="font-display text-4xl sm:text-6xl md:text-7xl text-white leading-tight tracking-tight mb-4">
               <span className="text-primary">Langtang </span>Outdoor Festival
             </h1>
             <p className="text-white/50 text-sm sm:text-base leading-relaxed max-w-sm mx-auto">

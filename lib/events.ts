@@ -27,7 +27,7 @@ export type FestivalEvent = {
   date: string;
   location: string;
   description: string;
-  icon: string;
+  icon?: string;
   bgImage: string;
   tag?: string;
   accentHex: string;
@@ -46,8 +46,7 @@ export const events: FestivalEvent[] = [
     date: "June 1 – June 15, 2026",
     location: "Langtang Valley",
     description: "The World's Highest Outdoor Festival",
-    icon: "☀️",
-    bgImage: "/landscape_02.jpg",
+    bgImage: "/event_01.jpeg",
     accentHex: "#38bdf8",
     accentFrom: "from-sky-400",
     accentTo: "to-blue-500",
@@ -419,7 +418,6 @@ export const events: FestivalEvent[] = [
     date: "December 1 – December 10, 2026",
     location: "Langtang Valley",
     description: "A Winter Celebration of Mountains and Adventure",
-    icon: "❄️",
     bgImage: "/landscape_winter.jpg",
     accentHex: "#60a5fa",
     accentFrom: "from-blue-400",

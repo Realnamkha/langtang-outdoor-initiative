@@ -98,7 +98,7 @@ export default function Adventures() {
                 <div className="inline-flex items-center gap-2.5 w-fit">
                   <span className="h-px w-5 bg-[#01baf0]" />
                   <span className="text-[10px] font-semibold uppercase tracking-[0.25em] text-[#01baf0]">
-                    Further Expedition
+                    Further Adventures
                   </span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight font-serif">
@@ -106,9 +106,7 @@ export default function Adventures() {
                   <span className="italic text-[#01baf0]">Langtang Valley</span>
                 </h2>
                 <p className="text-white/55 text-[14px] leading-relaxed">
-                  Beyond the standard trek lies a world of high passes, glacial
-                  peaks, and sacred lakes — all within one valley. Talk to us
-                  directly and we'll craft the right expedition for you.
+                  Deeper valleys, Higher Experiences
                 </p>
               </div>
 
@@ -137,11 +135,9 @@ export default function Adventures() {
                 {[
                   { label: "Timlan Pass", alt: "5,000m+" },
                   { label: "Ganja La Pass", alt: "5,106m" },
-                  { label: "Yala Peak Climb", alt: "5,500m" },
                   { label: "Gosainkunda Lake", alt: "4,380m" },
                   { label: "Langtang Lirung BC", alt: "7,246m" },
                   { label: "Tamang Heritage Trail", alt: "6 days" },
-                  { label: "Laurebina La", alt: "4,610m" },
                 ].map((item) => (
                   <div
                     key={item.label}

@@ -116,12 +116,14 @@ export default function Expeditions() {
                 </div>
                 <h2 className="text-3xl md:text-4xl font-black text-white tracking-tight leading-tight font-serif">
                   Go Deeper into{" "}
-                  <span className="italic text-[#01baf0]">Langtang Valley</span>
+                  <span className="italic text-[#01baf0]">
+                    Langtang Himalayas
+                  </span>
                 </h2>
                 <p className="text-white/55 text-[14px] leading-relaxed">
-                  Beyond the standard trek lies a world of high passes, glacial
-                  peaks, and sacred lakes — all within one valley. Talk to us
-                  directly and we'll craft the right expedition for you.
+                  Beyond the expeditions we currently offer, we also create an
+                  expedition to other stunning peaks of the Langtang Himalayas
+                  tailored entirely to your vision
                 </p>
               </div>
 
@@ -148,13 +150,13 @@ export default function Expeditions() {
               </p>
               <div className="flex flex-wrap gap-2.5">
                 {[
-                  { label: "Timlan Pass", alt: "5,000m+" },
-                  { label: "Ganja La Pass", alt: "5,106m" },
-                  { label: "Yala Peak Climb", alt: "5,500m" },
-                  { label: "Gosainkunda Lake", alt: "4,380m" },
-                  { label: "Langtang Lirung BC", alt: "7,246m" },
-                  { label: "Tamang Heritage Trail", alt: "6 days" },
-                  { label: "Laurebina La", alt: "4,610m" },
+                  { label: "Gangchempo", alt: "6,378m" },
+                  { label: "Langshisha Ri", alt: "6,412m" },
+                  { label: "Gurkarpo Ri", alt: "6,891m" },
+                  { label: "Kunga Ri", alt: "6,599m" },
+                  { label: "Yangsa Tsengji", alt: "6,690m" },
+                  { label: "Yubra Himal", alt: "6035m" },
+                  { label: "Langtang Ri", alt: "7205m" },
                 ].map((item) => (
                   <div
                     key={item.label}
