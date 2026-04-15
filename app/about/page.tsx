@@ -91,12 +91,12 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                img: "/nature_01.JPG",
+                img: "/buddhist_04.jpg",
                 title: "Reviving the Vanishing",
                 desc: "We integrate the fading traditions and unique cultural identity of Langtang into every adventure, ensuring our history survives alongside our trails.",
               },
               {
-                img: "/people_02.JPG",
+                img: "/trekking_01.jpg",
                 title: "Radical Authenticity",
                 desc: "While others look across the map, we look deeper into our own backyard. By focusing exclusively on the Langtang region, we provide a level of intimate, expert knowledge that only a local can offer.",
               },
